@@ -1,0 +1,33 @@
+//
+//  NSManagedObject+BTIAdditions.h
+//  BTICoreDataKit
+//
+//  Created by Brian Slick in April 2014
+//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
+//  https://github.com/BriTerIdeas/BTICoreDataKit
+//
+
+@import CoreData;
+
+@interface NSManagedObject (BTIAdditions)
+
+/**
+ Returns an NSEntityDescription for with a name matching the class name.
+ 
+ @param context The NSManagedObjectContext in which to search for the entity
+ 
+ @return An NSEntityDescription matching the class name.
+ */
++ (NSEntityDescription *)entityDescriptionInContextBTI:(NSManagedObjectContext *)context;
+
+/**
+ Returns a new instance of this NSManagedObject class in the specified context.
+ Uses entityDescriptionInContextBTI:, so the class name and entity name need to match.
+ 
+ @param context The NSManagedObjectContext in which to create the managed object
+
+ @return A new managed object
+ */
++ (instancetype)newManagedObjectInContextBTI:(NSManagedObjectContext *)context;
+
+@end

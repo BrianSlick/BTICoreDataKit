@@ -1,0 +1,151 @@
+//
+//  BTITableRowInfo.m
+//  BTIKit
+//
+//  Created by Brian Slick in March 2014
+//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
+//  https://github.com/BriTerIdeas/BTIKit
+//
+
+#import "BTITableRowInfo.h"
+
+#import "BTIKit.h"
+
+// Models and other global
+
+// Private Constants
+
+@interface BTITableRowInfo ()
+
+// Private Properties
+@property (nonatomic, copy) NSString *UUIDString;
+
+@end
+
+@implementation BTITableRowInfo
+
+#pragma mark - Synthesized Properties
+
+
+#pragma mark - Dealloc and Memory Management
+
+
+#pragma mark - Custom Getters and Setters
+
+
+#pragma mark - Initialization
+
+- (id)init
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    self = [super init];
+    if (self)
+    {
+        [self setUUIDString:[[NSUUID UUID] UUIDString]];
+        [self setCellAccessoryType:UITableViewCellAccessoryNone];
+    }
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return self;
+}
+
+#pragma mark - NSObject Methods
+
+- (NSUInteger)hash
+{
+    return [[self UUIDString] hash];
+}
+
+- (BOOL)isEqual:(id)anObject
+{
+    BOOL isEqual = NO;
+    
+    if ([anObject isKindOfClass:[self class]])
+    {
+        isEqual = ([[(BTITableRowInfo *)anObject UUIDString] isEqualToString:[self UUIDString]]);
+    }
+    
+    return isEqual;
+}
+
+#pragma mark - Misc Methods
+
+- (void)reset
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    [self setIdentifier:nil];
+
+    [self setRepresentedObject:nil];
+    
+    [self setParentSectionInfo:nil];
+    
+    [self setText:nil];
+    [self setDetailText:nil];
+    [self setCellAccessoryType:UITableViewCellAccessoryNone];
+    [self setRowHeight:0.0];
+    
+    [self setImage:nil];
+    [self setImageName:nil];
+    [self setImageFileURL:nil];
+    
+    [self setRowSelectionBlock:nil];
+    [self setRowAccessorySelectionBlock:nil];
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
+- (void)populateCell:(UITableViewCell *)cell
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    [[cell textLabel] setText:[self text]];
+    [[cell detailTextLabel] setText:[self detailText]];
+    [cell setAccessoryType:[self cellAccessoryType]];
+    
+    UIImage *image = nil;
+    
+    if ([self image] != nil)
+    {
+        image = [self image];
+    }
+    else if ([self imageName] != nil)
+    {
+        image = [UIImage imageNamed:[self imageName]];
+    }
+    else if ([self imageFileURL] != nil)
+    {
+        image = [UIImage imageWithContentsOfFile:[[self imageFileURL] path]];
+    }
+    
+    [[cell imageView] setImage:image];
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
+- (void)executeRowSelectionBlock
+{
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    if ([self rowSelectionBlock] != nil)
+    {
+        [self rowSelectionBlock]();
+    }
+
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
+- (void)executeRowAccessorySelectionBlock
+{
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    if ([self rowAccessorySelectionBlock] != nil)
+    {
+        [self rowAccessorySelectionBlock]();
+    }
+
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
+@end

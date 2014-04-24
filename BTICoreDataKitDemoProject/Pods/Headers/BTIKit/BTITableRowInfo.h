@@ -1,0 +1,1 @@
+../../BTIKit/BTIKit/Models/BTITableRowInfo.h

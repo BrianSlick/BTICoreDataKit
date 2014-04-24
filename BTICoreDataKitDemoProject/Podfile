@@ -1,0 +1,5 @@
+platform :ios
+
+pod 'BTIKit', :git =>'https://github.com/BriTerIdeas/BTIKit.git'
+
+link_with 'BTICoreDataKitDemoProject', 'BTICoreDataKitDemoProjectTests'

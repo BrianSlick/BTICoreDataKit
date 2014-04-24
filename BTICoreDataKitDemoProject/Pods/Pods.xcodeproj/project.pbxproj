@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03661187FCCA46DBB90DD1A5 /* BTIManagerTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */; };
+		0B1792690ED7456C96FBB605 /* BTITableSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		109AF23880874BBEB88E6BC7 /* NSNotificationCenter+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		1354C641969747A89D213026 /* BTITableRowInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */; };
+		1C3AD679DD664C4F96E4EECA /* UIDevice+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		1EF6D3F6617E4B7D969273F1 /* BTITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */; };
+		233BA328C6A249FDBB3C49F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972843260D2B4F188D051C17 /* UIKit.framework */; };
+		2D7888D0B7C84537A31F6A24 /* BTINotificationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		309492C7DDA841EFB953787E /* BTIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 347EA0DD191D433E91D87C98 /* BTIKit.h */; };
+		359D518A802B4E779763A413 /* BTINotificationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */; };
+		35B3C509C2594645A6D3D866 /* NSFileManager+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */; };
+		3863CC71989B4738979205CC /* BTITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E86873FBAF4138B00B89F0 /* BTITableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		46ACA85D6FB142CFA5E21E5E /* BTITableRowInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B02B1C84AD44518630244F /* BTITableRowInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		485DBC5525A342379B6C7628 /* BTITableContentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53876269BB4B58A003C869 /* BTITableContentsManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		53E1A733944541A98B6982F0 /* NSMutableArray+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		5B48D6A5061E4896A71FF22E /* BTITableContentsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F753091C78F443187BB794F /* BTITableContentsManager.h */; };
+		5BAC5FEA164E4EC08258E98C /* NSFileManager+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		67F645D22B9841138EBC369A /* BTIObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 314F627FF19B4882B37D9A6C /* BTIObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		6C7A276A8BD24E8A9EC7D13E /* BTIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A8DB5DA10942F695851036 /* BTIViewController.h */; };
+		6EF664E7620A490AB62DCD71 /* BTITableSectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */; };
+		6F9AB552A306414D8CD865AD /* libPods-BTIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */; };
+		711D14621B414BDA83A1A373 /* BTIArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		79987E36358A4608B9A6C384 /* NSString+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		7CB244DF738B4F00A0E0981A /* BTIArrayTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */; };
+		8BEA1DE5DE1F4D8BAB11BA17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CB101238074B96BF830D77 /* Foundation.framework */; };
+		98AEABF423E647AAA660725C /* NSMutableArray+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */; };
+		A1D9D1769AB14645B912F263 /* BTITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8191C25009F346BC928003EF /* BTITableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		A2599C3D89CF4C41A68CF591 /* UITableViewCell+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		AA2DDD5994DC4FF69B6EF7F2 /* BTIManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		AD34D0D990754564BFF4C6B7 /* UITableView+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */; };
+		AE3D7A79A99444308D6BEFCC /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C49BD23E44A088B3C44F /* Pods-dummy.m */; };
+		AEB3B6EE4E4641AA8CBEF366 /* UITableView+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		B6BE2F0628DA4A3197783F4D /* UIDevice+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */; };
+		BDE6E405B731402680A7A7D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CB101238074B96BF830D77 /* Foundation.framework */; };
+		C50A281ECC8C490FA1A375A3 /* BTITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */; };
+		C939DDB0EE9C496AABAD7730 /* NSNotificationCenter+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */; };
+		D1A5536F77174184A7F5DA4D /* BTIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D65D880729348E9AD6FF239 /* BTIObject.h */; };
+		D55231F3247B41AF9A51F00B /* BTIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15688C17D0C84DF28A9C676C /* BTIViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		E00C286CF7E44FBCBCE336D6 /* NSString+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */; };
+		E0C6F860E9A9445081E35645 /* Pods-BTIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */; };
+		EFBAA4A2574448EFA5CC8BDA /* UITableViewCell+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A3018BEF8E242B782EFF96C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D06462808205400B9018690D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 311387D3BAEB4395B92D7DDD;
+			remoteInfo = "Pods-BTIKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableSectionInfo.m; path = BTIKit/Models/BTITableSectionInfo.m; sourceTree = "<group>"; };
+		026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+BTIAdditions.h"; path = "BTIKit/Categories/NSMutableArray+BTIAdditions.h"; sourceTree = "<group>"; };
+		056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BTIKit-dummy.m"; sourceTree = "<group>"; };
+		09E86873FBAF4138B00B89F0 /* BTITableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableViewController.m; path = "BTIKit/View Controllers/BTITableViewController.m"; sourceTree = "<group>"; };
+		0A59A445C5E848F1AB02345B /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIManagerTableViewController.h; path = "BTIKit/View Controllers/BTIManagerTableViewController.h"; sourceTree = "<group>"; };
+		15688C17D0C84DF28A9C676C /* BTIViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIViewController.m; path = "BTIKit/View Controllers/BTIViewController.m"; sourceTree = "<group>"; };
+		1B53876269BB4B58A003C869 /* BTITableContentsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableContentsManager.m; path = BTIKit/Models/BTITableContentsManager.m; sourceTree = "<group>"; };
+		2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIArrayTableViewController.m; path = "BTIKit/View Controllers/BTIArrayTableViewController.m"; sourceTree = "<group>"; };
+		27B8C49BD23E44A088B3C44F /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BTIKit-Private.xcconfig"; sourceTree = "<group>"; };
+		314F627FF19B4882B37D9A6C /* BTIObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIObject.m; path = BTIKit/Models/BTIObject.m; sourceTree = "<group>"; };
+		347EA0DD191D433E91D87C98 /* BTIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIKit.h; path = BTIKit/BTIKit.h; sourceTree = "<group>"; };
+		35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableViewController.h; path = "BTIKit/View Controllers/BTITableViewController.h"; sourceTree = "<group>"; };
+		3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableRowInfo.h; path = BTIKit/Models/BTITableRowInfo.h; sourceTree = "<group>"; };
+		4F9D6DB88A09465F83A003C6 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		54E96B4B1F79405E86E75875 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+BTIAdditions.h"; path = "BTIKit/Categories/NSNotificationCenter+BTIAdditions.h"; sourceTree = "<group>"; };
+		5F03BF41E8B8439399EA9C7D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		67A8DB5DA10942F695851036 /* BTIViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIViewController.h; path = "BTIKit/View Controllers/BTIViewController.h"; sourceTree = "<group>"; };
+		6D65D880729348E9AD6FF239 /* BTIObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIObject.h; path = BTIKit/Models/BTIObject.h; sourceTree = "<group>"; };
+		6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableViewCell.h; path = BTIKit/Views/BTITableViewCell.h; sourceTree = "<group>"; };
+		71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BTIAdditions.m"; path = "BTIKit/Categories/UITableView+BTIAdditions.m"; sourceTree = "<group>"; };
+		76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+BTIAdditions.h"; path = "BTIKit/Categories/NSString+BTIAdditions.h"; sourceTree = "<group>"; };
+		77576969D5134DA0B38787A9 /* Pods-BTIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BTIKit.xcconfig"; sourceTree = "<group>"; };
+		7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BTIAdditions.m"; path = "BTIKit/Categories/NSString+BTIAdditions.m"; sourceTree = "<group>"; };
+		8191C25009F346BC928003EF /* BTITableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableViewCell.m; path = BTIKit/Views/BTITableViewCell.m; sourceTree = "<group>"; };
+		84251741DEB9485DAB79FFCD /* Pods-BTIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BTIKit-prefix.pch"; sourceTree = "<group>"; };
+		84B02B1C84AD44518630244F /* BTITableRowInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableRowInfo.m; path = BTIKit/Models/BTITableRowInfo.m; sourceTree = "<group>"; };
+		890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BTIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F753091C78F443187BB794F /* BTITableContentsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableContentsManager.h; path = BTIKit/Models/BTITableContentsManager.h; sourceTree = "<group>"; };
+		8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+BTIAdditions.h"; path = "BTIKit/Categories/NSFileManager+BTIAdditions.h"; sourceTree = "<group>"; };
+		8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BTIAdditions.h"; path = "BTIKit/Categories/UITableView+BTIAdditions.h"; sourceTree = "<group>"; };
+		95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+BTIAdditions.m"; path = "BTIKit/Categories/UIDevice+BTIAdditions.m"; sourceTree = "<group>"; };
+		95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIManagerTableViewController.m; path = "BTIKit/View Controllers/BTIManagerTableViewController.m"; sourceTree = "<group>"; };
+		972843260D2B4F188D051C17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableSectionInfo.h; path = BTIKit/Models/BTITableSectionInfo.h; sourceTree = "<group>"; };
+		A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTINotificationInfo.h; path = BTIKit/Models/BTINotificationInfo.h; sourceTree = "<group>"; };
+		AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BTIAdditions.m"; path = "BTIKit/Categories/UITableViewCell+BTIAdditions.m"; sourceTree = "<group>"; };
+		B023CF52C15940C589755BB5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+BTIAdditions.m"; path = "BTIKit/Categories/NSNotificationCenter+BTIAdditions.m"; sourceTree = "<group>"; };
+		BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+BTIAdditions.m"; path = "BTIKit/Categories/NSFileManager+BTIAdditions.m"; sourceTree = "<group>"; };
+		C5E2A23238F24463AF9154B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
+		C6CB101238074B96BF830D77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+BTIAdditions.m"; path = "BTIKit/Categories/NSMutableArray+BTIAdditions.m"; sourceTree = "<group>"; };
+		DACDD3E389484D06A5B9AA41 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+BTIAdditions.h"; path = "BTIKit/Categories/UIDevice+BTIAdditions.h"; sourceTree = "<group>"; };
+		E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTINotificationInfo.m; path = BTIKit/Models/BTINotificationInfo.m; sourceTree = "<group>"; };
+		ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BTIAdditions.h"; path = "BTIKit/Categories/UITableViewCell+BTIAdditions.h"; sourceTree = "<group>"; };
+		F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIArrayTableViewController.h; path = "BTIKit/View Controllers/BTIArrayTableViewController.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0786670BA38641C98EA41BE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEA1DE5DE1F4D8BAB11BA17 /* Foundation.framework in Frameworks */,
+				6F9AB552A306414D8CD865AD /* libPods-BTIKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0809917AC7DD4D4483DC226F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE6E405B731402680A7A7D9 /* Foundation.framework in Frameworks */,
+				233BA328C6A249FDBB3C49F3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		020EFF26D7B24E479131A9CE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB101238074B96BF830D77 /* Foundation.framework */,
+				972843260D2B4F188D051C17 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		486B785FF55F4891B911A24D /* BTIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */,
+				2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */,
+				347EA0DD191D433E91D87C98 /* BTIKit.h */,
+				10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */,
+				95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */,
+				A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */,
+				E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */,
+				6D65D880729348E9AD6FF239 /* BTIObject.h */,
+				314F627FF19B4882B37D9A6C /* BTIObject.m */,
+				8F753091C78F443187BB794F /* BTITableContentsManager.h */,
+				1B53876269BB4B58A003C869 /* BTITableContentsManager.m */,
+				3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */,
+				84B02B1C84AD44518630244F /* BTITableRowInfo.m */,
+				9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */,
+				0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */,
+				6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */,
+				8191C25009F346BC928003EF /* BTITableViewCell.m */,
+				35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */,
+				09E86873FBAF4138B00B89F0 /* BTITableViewController.m */,
+				67A8DB5DA10942F695851036 /* BTIViewController.h */,
+				15688C17D0C84DF28A9C676C /* BTIViewController.m */,
+				8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */,
+				BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */,
+				026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */,
+				C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */,
+				5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */,
+				B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */,
+				76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */,
+				7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */,
+				DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */,
+				95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */,
+				8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */,
+				71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */,
+				ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */,
+				AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */,
+				587CCC222977446D884AC42D /* Support Files */,
+			);
+			path = BTIKit;
+			sourceTree = "<group>";
+		};
+		55D2B74AB6C249C1980142D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5E2A23238F24463AF9154B1 /* Pods.xcconfig */,
+				DACDD3E389484D06A5B9AA41 /* Pods-acknowledgements.markdown */,
+				5F03BF41E8B8439399EA9C7D /* Pods-acknowledgements.plist */,
+				27B8C49BD23E44A088B3C44F /* Pods-dummy.m */,
+				0A59A445C5E848F1AB02345B /* Pods-environment.h */,
+				4F9D6DB88A09465F83A003C6 /* Pods-resources.sh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		565954A82FBA4281A8192555 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				54E96B4B1F79405E86E75875 /* libPods.a */,
+				890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		587CCC222977446D884AC42D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77576969D5134DA0B38787A9 /* Pods-BTIKit.xcconfig */,
+				2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */,
+				056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */,
+				84251741DEB9485DAB79FFCD /* Pods-BTIKit-prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		6B2F4BDCDDDE47E09AE1E861 = {
+			isa = PBXGroup;
+			children = (
+				B023CF52C15940C589755BB5 /* Podfile */,
+				923A75BD3B88433D9FCF6173 /* Frameworks */,
+				DA0368363944436D84688640 /* Pods */,
+				565954A82FBA4281A8192555 /* Products */,
+				C1DB14539B6149FDAEBCD3B2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		923A75BD3B88433D9FCF6173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				020EFF26D7B24E479131A9CE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C1DB14539B6149FDAEBCD3B2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				55D2B74AB6C249C1980142D2 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DA0368363944436D84688640 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				486B785FF55F4891B911A24D /* BTIKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C3E4ACFA188A4D89B278E3CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CB244DF738B4F00A0E0981A /* BTIArrayTableViewController.h in Headers */,
+				309492C7DDA841EFB953787E /* BTIKit.h in Headers */,
+				03661187FCCA46DBB90DD1A5 /* BTIManagerTableViewController.h in Headers */,
+				359D518A802B4E779763A413 /* BTINotificationInfo.h in Headers */,
+				D1A5536F77174184A7F5DA4D /* BTIObject.h in Headers */,
+				5B48D6A5061E4896A71FF22E /* BTITableContentsManager.h in Headers */,
+				1354C641969747A89D213026 /* BTITableRowInfo.h in Headers */,
+				6EF664E7620A490AB62DCD71 /* BTITableSectionInfo.h in Headers */,
+				C50A281ECC8C490FA1A375A3 /* BTITableViewCell.h in Headers */,
+				1EF6D3F6617E4B7D969273F1 /* BTITableViewController.h in Headers */,
+				6C7A276A8BD24E8A9EC7D13E /* BTIViewController.h in Headers */,
+				35B3C509C2594645A6D3D866 /* NSFileManager+BTIAdditions.h in Headers */,
+				98AEABF423E647AAA660725C /* NSMutableArray+BTIAdditions.h in Headers */,
+				C939DDB0EE9C496AABAD7730 /* NSNotificationCenter+BTIAdditions.h in Headers */,
+				E00C286CF7E44FBCBCE336D6 /* NSString+BTIAdditions.h in Headers */,
+				B6BE2F0628DA4A3197783F4D /* UIDevice+BTIAdditions.h in Headers */,
+				AD34D0D990754564BFF4C6B7 /* UITableView+BTIAdditions.h in Headers */,
+				EFBAA4A2574448EFA5CC8BDA /* UITableViewCell+BTIAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		26DEEBDDD5C84DB2906890D3 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06458513A9F14269825ECF9B /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A04EDA58D7234F408A509F12 /* Sources */,
+				0786670BA38641C98EA41BE6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B36065F52A904F97B21ABE47 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 54E96B4B1F79405E86E75875 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		311387D3BAEB4395B92D7DDD /* Pods-BTIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F306FEB385E94055867E4557 /* Build configuration list for PBXNativeTarget "Pods-BTIKit" */;
+			buildPhases = (
+				A2D0E95907D64C3191ED997F /* Sources */,
+				0809917AC7DD4D4483DC226F /* Frameworks */,
+				C3E4ACFA188A4D89B278E3CD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BTIKit";
+			productName = "Pods-BTIKit";
+			productReference = 890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D06462808205400B9018690D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = E56AC331C360469EB74ED15D /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6B2F4BDCDDDE47E09AE1E861;
+			productRefGroup = 565954A82FBA4281A8192555 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26DEEBDDD5C84DB2906890D3 /* Pods */,
+				311387D3BAEB4395B92D7DDD /* Pods-BTIKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A04EDA58D7234F408A509F12 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE3D7A79A99444308D6BEFCC /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2D0E95907D64C3191ED997F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711D14621B414BDA83A1A373 /* BTIArrayTableViewController.m in Sources */,
+				AA2DDD5994DC4FF69B6EF7F2 /* BTIManagerTableViewController.m in Sources */,
+				2D7888D0B7C84537A31F6A24 /* BTINotificationInfo.m in Sources */,
+				67F645D22B9841138EBC369A /* BTIObject.m in Sources */,
+				485DBC5525A342379B6C7628 /* BTITableContentsManager.m in Sources */,
+				46ACA85D6FB142CFA5E21E5E /* BTITableRowInfo.m in Sources */,
+				0B1792690ED7456C96FBB605 /* BTITableSectionInfo.m in Sources */,
+				A1D9D1769AB14645B912F263 /* BTITableViewCell.m in Sources */,
+				3863CC71989B4738979205CC /* BTITableViewController.m in Sources */,
+				D55231F3247B41AF9A51F00B /* BTIViewController.m in Sources */,
+				5BAC5FEA164E4EC08258E98C /* NSFileManager+BTIAdditions.m in Sources */,
+				53E1A733944541A98B6982F0 /* NSMutableArray+BTIAdditions.m in Sources */,
+				109AF23880874BBEB88E6BC7 /* NSNotificationCenter+BTIAdditions.m in Sources */,
+				79987E36358A4608B9A6C384 /* NSString+BTIAdditions.m in Sources */,
+				E0C6F860E9A9445081E35645 /* Pods-BTIKit-dummy.m in Sources */,
+				1C3AD679DD664C4F96E4EECA /* UIDevice+BTIAdditions.m in Sources */,
+				AEB3B6EE4E4641AA8CBEF366 /* UITableView+BTIAdditions.m in Sources */,
+				A2599C3D89CF4C41A68CF591 /* UITableViewCell+BTIAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B36065F52A904F97B21ABE47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 311387D3BAEB4395B92D7DDD /* Pods-BTIKit */;
+			targetProxy = 0A3018BEF8E242B782EFF96C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29A3231D8DB543958DF69EC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-BTIKit-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4B382944D3604B6BA57E7222 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63085C8338EB492F825C4E8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E2A23238F24463AF9154B1 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92C8357600E94297A040D07A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		D5D3CBD91E2844C990CD25AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E2A23238F24463AF9154B1 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F682CC879A3C41F79E40B319 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-BTIKit-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06458513A9F14269825ECF9B /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D3CBD91E2844C990CD25AF /* Debug */,
+				63085C8338EB492F825C4E8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E56AC331C360469EB74ED15D /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92C8357600E94297A040D07A /* Debug */,
+				4B382944D3604B6BA57E7222 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F306FEB385E94055867E4557 /* Build configuration list for PBXNativeTarget "Pods-BTIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A3231D8DB543958DF69EC5 /* Debug */,
+				F682CC879A3C41F79E40B319 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D06462808205400B9018690D /* Project object */;
+}
