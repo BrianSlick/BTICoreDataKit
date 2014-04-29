@@ -42,8 +42,8 @@
 
 - (void)viewDidLoad
 {
-    NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     [super viewDidLoad];
     
     [self setTitle:@"People"];
@@ -52,14 +52,14 @@
                                                                                target:self
                                                                                action:@selector(addButtonPressed:)];
     [[self navigationItem] setRightBarButtonItem:addButton];
-
-    NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     [super viewWillAppear:animated];
     
     BTICoreDataStackManager *coreDataManager = [BTICoreDataStackManager sharedCoreDataStackManager];
@@ -68,29 +68,29 @@
     [self setManagedObjectContext:[coreDataManager mainThreadContext]];
     
     [[self tableView] reloadData];
-
-    NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - BTITableViewController Overrides
 
 - (void)handleSearchForTerm:(NSString *)searchTerm
 {
-    NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     [super handleSearchForTerm:searchTerm];
     
     [self setSearchFetchedResultsController:nil];
-
-    NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - BTICoreDataTableViewController Overrides
 
 - (void)loadMainFetchedResultsController
 {
-	NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     NSManagedObjectContext *context = [self managedObjectContext];
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -109,24 +109,24 @@
     [self setMainFetchedResultsController:controller];
     
     [controller performFetchBTI];
-	
-	NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)loadSearchFetchedResultsController
 {
-	NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     NSString *searchTerm = [self savedSearchTerm];
     
     if ([searchTerm length] == 0)
     {
         [self setSearchFetchedResultsController:nil];
         
-        NSLog(@"<<< Leaving  <%p> %s >>> EARLY - No search criteria", self, __PRETTY_FUNCTION__);
+        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No search criteria", self, __PRETTY_FUNCTION__);
         return;
     }
-
+    
     NSFetchedResultsController *mainController = [self mainFetchedResultsController];
     
     NSFetchRequest *fetchRequest = [mainController fetchRequest];
@@ -144,8 +144,8 @@
     [self setSearchFetchedResultsController:controller];
     
     [controller performFetchBTI];
-
-	NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - Notification Handlers
@@ -155,7 +155,7 @@
 
 - (void)addButtonPressed:(UIBarButtonItem *)button
 {
-    NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSArray *firstNames = @[ @"Bob", @"Tom", @"Chick", @"Kristy", @"Jason", @"Gunner", @"Scott" ];
     NSArray *lastNames = @[ @"Kevoian", @"Griswold", @"McGee", @"Lee", @"Potasnik" ];
@@ -171,7 +171,7 @@
     
     [context saveBTI];
     
-    NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - Misc Methods
@@ -180,43 +180,43 @@
 #pragma mark - UITableViewDataSource Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
-	// Build Cell
-	
-	static NSString *cellIdentifier = @"cellIdentifier";
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-	if (cell == nil)
-	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-	}
-	
-	// Acquire Data
-	
-	DemoPerson *person = [self itemInTableView:tableView atIndexPath:indexPath];
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    // Build Cell
+    
+    static NSString *cellIdentifier = @"cellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    // Acquire Data
+    
+    DemoPerson *person = [self itemInTableView:tableView atIndexPath:indexPath];
     NSString *fullName = [NSString stringWithFormat:@"%@ %@", [person firstName], [person lastName]];
-	
-	// Populate Cell
-	
-	[[cell textLabel] setText:fullName];
-	
-	NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return cell;
+    
+    // Populate Cell
+    
+    [[cell textLabel] setText:fullName];
+    
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView
 commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     if (editingStyle == UITableViewCellEditingStyleDelete)
     {
         DemoPerson *person = [self itemInTableView:tableView atIndexPath:indexPath];
-
+        
         NSManagedObjectContext *context = [person managedObjectContext];
         
         [context deleteObject:person];
@@ -224,7 +224,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         [context saveBTI];
     }
     
-    NSLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - UITableViewDelegate Methods

@@ -44,36 +44,36 @@
 
 - (NSFetchedResultsController *)mainFetchedResultsController
 {
-	if (_mainFetchedResultsController == nil)
-	{
-		[self loadMainFetchedResultsController];
-	}
-	
-	return _mainFetchedResultsController;
+    if (_mainFetchedResultsController == nil)
+    {
+        [self loadMainFetchedResultsController];
+    }
+    
+    return _mainFetchedResultsController;
 }
 
 - (void)setMainFetchedResultsController:(NSFetchedResultsController *)mainFetchedResultsController
 {
     [[self mainTableViewManager] setFetchedResultsController:mainFetchedResultsController];
-	
-	_mainFetchedResultsController = mainFetchedResultsController;
+    
+    _mainFetchedResultsController = mainFetchedResultsController;
 }
 
 - (NSFetchedResultsController *)searchFetchedResultsController
 {
-	if (_searchFetchedResultsController == nil)
-	{
-		[self loadSearchFetchedResultsController];
-	}
-	
-	return _searchFetchedResultsController;
+    if (_searchFetchedResultsController == nil)
+    {
+        [self loadSearchFetchedResultsController];
+    }
+    
+    return _searchFetchedResultsController;
 }
 
 - (void)setSearchFetchedResultsController:(NSFetchedResultsController *)searchFetchedResultsController
 {
     [[self searchTableViewManager] setFetchedResultsController:searchFetchedResultsController];
-	
-	_searchFetchedResultsController = searchFetchedResultsController;
+    
+    _searchFetchedResultsController = searchFetchedResultsController;
 }
 
 - (BTIFetchedResultsControllerTableViewManager *)mainTableViewManager
@@ -99,11 +99,11 @@
 - (void)viewDidLoad
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     [super viewDidLoad];
     
     [[self mainTableViewManager] setTableView:[self tableView]];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -113,16 +113,16 @@
 #pragma mark - BTITableViewController Overrides
 
 - (id)itemInTableView:(UITableView *)tableView
-		  atIndexPath:(NSIndexPath *)indexPath
+          atIndexPath:(NSIndexPath *)indexPath
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     NSFetchedResultsController *controller = [self fetchedResultsControllerForTableView:tableView];
     
-	id object = [controller objectAtIndexPath:indexPath];
-		
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return object;
+    id object = [controller objectAtIndexPath:indexPath];
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return object;
 }
 
 #pragma mark - Notification Handlers
@@ -135,28 +135,28 @@
 
 - (void)loadMainFetchedResultsController
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
-	// Subclasses should override, do not need to call super
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    // Subclasses should override, do not need to call super
     // Subclass implementation should populate the mainFetchedResultsController property
-	
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)loadSearchFetchedResultsController
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
-	// Subclasses should override, do not need to call super
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    // Subclasses should override, do not need to call super
     // Subclass implementation should populate the searchFetchedResultsController property
-
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     NSFetchedResultsController *controller = nil;
     
     if (tableView == [self tableView])
@@ -164,10 +164,10 @@
         controller = [self mainFetchedResultsController];
     }
     else if (tableView == [[self searchDisplayController] searchResultsTableView])
-	{
+    {
         controller = [self searchFetchedResultsController];
-	}
-
+    }
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return controller;
 }
@@ -176,56 +176,56 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
     NSFetchedResultsController *controller = [self fetchedResultsControllerForTableView:tableView];
     
-	NSInteger sections = [[controller sections] count];
-		
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return sections;
+    NSInteger sections = [[controller sections] count];
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return sections;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
-    NSFetchedResultsController *controller = [self fetchedResultsControllerForTableView:tableView];
-
-	id <NSFetchedResultsSectionInfo> sectionInfo = [[controller sections] objectAtIndex:section];
-		
-	NSInteger rows = [sectionInfo numberOfObjects];
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return rows;
+    NSFetchedResultsController *controller = [self fetchedResultsControllerForTableView:tableView];
+    
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[controller sections] objectAtIndex:section];
+    
+    NSInteger rows = [sectionInfo numberOfObjects];
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return rows;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-		 cellForRowAtIndexPath:(NSIndexPath *)indexPath
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-	
-	// Build Cell
-	
-	static NSString *blankCellIdentifier = @"blankCellIdentifier";
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:blankCellIdentifier];
-	if (cell == nil)
-	{
-		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:blankCellIdentifier];
-	}
-	
-	// Acquire Data
-	
-	id rowObject = [self itemInTableView:tableView atIndexPath:indexPath];
-	
-	// Populate Cell
-	
-	[[cell textLabel] setText:[rowObject description]];
-	
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return cell;
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    // Build Cell
+    
+    static NSString *blankCellIdentifier = @"blankCellIdentifier";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:blankCellIdentifier];
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:blankCellIdentifier];
+    }
+    
+    // Acquire Data
+    
+    id rowObject = [self itemInTableView:tableView atIndexPath:indexPath];
+    
+    // Populate Cell
+    
+    [[cell textLabel] setText:[rowObject description]];
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return cell;
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -237,9 +237,9 @@
   didLoadSearchResultsTableView:(UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     [[self searchTableViewManager] setTableView:tableView];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 

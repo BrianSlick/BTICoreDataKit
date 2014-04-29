@@ -37,18 +37,18 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 - (void)dealloc
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - Initialization
 
 - (id)init
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     self = [super init];
     if (self)
@@ -59,20 +59,20 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
                                                    object:nil];
     }
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return self;
 }
 
 - (instancetype)initForUnitTesting
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     self = [super init];
     if (self)
     {
         [self setUnitTesting:YES];
     }
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return self;
 }
@@ -125,14 +125,14 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 - (void)managedObjectContextDidSave:(NSNotification *)notification
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSManagedObjectContext *context = [notification object];
     NSManagedObjectContext *parentContext = [context parentContext];
     
     if (parentContext == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - MOC does not have a parent", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - MOC does not have a parent", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -145,27 +145,27 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
         
     }];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     [[self mainThreadContext] saveBTI];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - File and Utilty Methods
 
 - (BOOL)isDatabaseFilePresent
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSURL *url = [self persistentStoreURL];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [[NSFileManager defaultManager] fileExistsAtPath:[url path]];
 }
 
@@ -236,11 +236,11 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 - (NSDictionary *)persistentStoreOptions
 {
-	BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-	NSMutableDictionary *options = [NSMutableDictionary dictionary];
-	[options setObject:@YES forKey:NSMigratePersistentStoresAutomaticallyOption];
-	[options setObject:@YES forKey:NSInferMappingModelAutomaticallyOption];
+    NSMutableDictionary *options = [NSMutableDictionary dictionary];
+    [options setObject:@YES forKey:NSMigratePersistentStoresAutomaticallyOption];
+    [options setObject:@YES forKey:NSInferMappingModelAutomaticallyOption];
     
     // https://developer.apple.com/library/ios/releasenotes/DataManagement/WhatsNew_CoreData_iOS/
     NSMutableDictionary *pragmaOptions = [NSMutableDictionary dictionary];
@@ -248,21 +248,21 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [options setObject:[NSDictionary dictionaryWithDictionary:pragmaOptions] forKey:NSSQLitePragmasOption];
     
-	BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return [NSDictionary dictionaryWithDictionary:options];
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return [NSDictionary dictionaryWithDictionary:options];
 }
 
 #pragma mark - Persistent Store Methods
 
 - (void)loadPersistentStore
 {
-	BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSPersistentStore *store = [self persistentStore];
     
     if (store != nil)
     {
-		BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store already loaded", self, __PRETTY_FUNCTION__);
+        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store already loaded", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -270,7 +270,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     if (coordinator == nil)
     {
-		BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - PSC does not exist", self, __PRETTY_FUNCTION__);
+        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - PSC does not exist", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -292,18 +292,18 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     }
     [self setPersistentStore:store];
     
-	BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)unloadPersistentStore
 {
-	BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSPersistentStore *store = [self persistentStore];
     
     if (store == nil)
     {
-		BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Fallback store doesn't exist", self, __PRETTY_FUNCTION__);
+        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Fallback store doesn't exist", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -313,7 +313,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     {
         [self setPersistentStore:nil];
         
-		BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store does not belong to PSC", self, __PRETTY_FUNCTION__);
+        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store does not belong to PSC", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -321,21 +321,21 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [self setPersistentStore:nil];
     
-	BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - Major Database Operations
 
 - (NSURL *)generateBackupFile
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     NSPersistentStore *store = [self persistentStore];
     
     NSString *fileName = [@"export" stringByAppendingPathExtension:kBTIDatabaseFileExtension];
     NSString *exportStorePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
-	NSURL *exportStoreURL = [NSURL fileURLWithPath:exportStorePath];
+    NSURL *exportStoreURL = [NSURL fileURLWithPath:exportStorePath];
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:exportStorePath])
@@ -354,7 +354,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     {
         NSLog(@"Error with store migration\n%@", [error localizedDescription]);
         
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Error creating export store", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Error creating export store", self, __PRETTY_FUNCTION__);
         return nil;
     }
     
@@ -367,13 +367,13 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     [self unloadPersistentStore];
     [self loadPersistentStore];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return exportStoreURL;
 }
 
 - (void)resetDatabase
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     [self unloadPersistentStore];
     
@@ -381,16 +381,16 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [self loadPersistentStore];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)replaceDatabaseWithSQLiteData:(NSData *)data
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSString *fileName = [@"import" stringByAppendingPathExtension:kBTIDatabaseFileExtension];
     NSString *importFilePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
-	NSURL *importFileURL = [NSURL fileURLWithPath:importFilePath];
+    NSURL *importFileURL = [NSURL fileURLWithPath:importFilePath];
     
     [data writeToURL:importFileURL atomically:YES];
     
@@ -398,16 +398,16 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [[NSFileManager defaultManager] removeItemAtPathBTI:importFilePath];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)replaceDatabaseWithSQLiteFile:(NSURL *)url
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     if (url == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No input URL", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No input URL", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -415,7 +415,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     if (![fileManager fileExistsAtPath:[url path]])
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No file found at URL", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No file found at URL", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -425,7 +425,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     if (coordinator == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Coordinator does not exist", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Coordinator does not exist", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -436,7 +436,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     if (importStore == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - <reason not specified>", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - <reason not specified>", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -453,7 +453,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     {
         NSLog(@"Error with store migration\n%@", [error localizedDescription]);
         
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store Migration Error", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store Migration Error", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -464,12 +464,12 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [self loadPersistentStore];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)deleteDatabaseFiles
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSURL *fallbackURL = [self persistentStoreURL];
     
@@ -490,20 +490,20 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
         }
     }
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - MOC Methods
 
 - (void)saveManagedObjectContext:(NSManagedObjectContext *)context
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     if (context == [self mainThreadContext])
     {
         [context saveBTI];
         
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Saving mainThreadContext", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Saving mainThreadContext", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -523,48 +523,48 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [notificationInfo startListening];
     
-	[context saveBTI];
+    [context saveBTI];
     
     [notificationInfo stopListening];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (NSManagedObjectContext *)newMainQueueManagedObjectContext
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSManagedObjectContext *parentContext = [self mainThreadContext];
     
     if (parentContext == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Parent Context Not Available", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Parent Context Not Available", self, __PRETTY_FUNCTION__);
         return nil;
     }
     
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     [context setParentContext:parentContext];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return context;
 }
 
 - (NSManagedObjectContext *)newPrivateQueueManagedObjectContext
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSManagedObjectContext *parentContext = [self mainThreadContext];
     
     if (parentContext == nil)
     {
-		//BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Parent Context Not Available", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Parent Context Not Available", self, __PRETTY_FUNCTION__);
         return nil;
     }
     
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     [context setParentContext:parentContext];
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return context;
 }
 
@@ -573,16 +573,16 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 + (instancetype)sharedCoreDataStackManager
 {
-	static dispatch_once_t pred;
-	static BTICoreDataStackManager *shared = nil;
+    static dispatch_once_t pred;
+    static BTICoreDataStackManager *shared = nil;
     
-	dispatch_once(&pred, ^{
+    dispatch_once(&pred, ^{
         
-		shared = [[[self class] alloc] init];
+        shared = [[[self class] alloc] init];
         
-	});
+    });
     
-	return shared;
+    return shared;
 }
 
 @end

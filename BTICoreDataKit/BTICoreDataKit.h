@@ -1,6 +1,6 @@
 //
 //  BTICoreDataKit.h
-//  v1.0.0
+//  v1.0.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.

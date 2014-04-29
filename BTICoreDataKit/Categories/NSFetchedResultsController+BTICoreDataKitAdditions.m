@@ -15,17 +15,17 @@
 
 - (BOOL)performFetchBTI
 {
-	//BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-	NSError *error = nil;
-	BOOL isFetchSuccessful = [self performFetch:&error];
-	if (!isFetchSuccessful)
-	{
-		NSLog(@"BTI ERROR: Perform Fetch: %@", [error localizedDescription]);
-	}
+    NSError *error = nil;
+    BOOL isFetchSuccessful = [self performFetch:&error];
+    if (!isFetchSuccessful)
+    {
+        NSLog(@"BTI ERROR: Perform Fetch: %@", [error localizedDescription]);
+    }
     
-	//BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-	return isFetchSuccessful;
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return isFetchSuccessful;
 }
 
 @end

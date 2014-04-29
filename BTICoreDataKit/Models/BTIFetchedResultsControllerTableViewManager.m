@@ -21,6 +21,7 @@
 @property (nonatomic, strong) NSMutableArray *deletedRowIndexPaths;
 @property (nonatomic, strong) NSMutableArray *insertedRowIndexPaths;
 @property (nonatomic, strong) NSMutableArray *updatedRowIndexPaths;
+
 @end
 
 @implementation BTIFetchedResultsControllerTableViewManager
@@ -98,12 +99,12 @@
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if ([[self auxiliaryFetchedResultsControllerDelegate] respondsToSelector:@selector(controllerWillChangeContent:)])
     {
         [[self auxiliaryFetchedResultsControllerDelegate] controllerWillChangeContent:controller];
     }
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -114,7 +115,7 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if ([[self auxiliaryFetchedResultsControllerDelegate] respondsToSelector:@selector(controller:didChangeObject:atIndexPath:forChangeType:newIndexPath:)])
     {
         [[self auxiliaryFetchedResultsControllerDelegate] controller:controller
@@ -125,8 +126,8 @@
     }
     
     NSInteger section = [indexPath section];
-	NSInteger newSection = [newIndexPath section];
-
+    NSInteger newSection = [newIndexPath section];
+    
     switch (type)
     {
         case NSFetchedResultsChangeInsert:
@@ -182,7 +183,7 @@
      forChangeType:(NSFetchedResultsChangeType)type
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if ([[self auxiliaryFetchedResultsControllerDelegate] respondsToSelector:@selector(controller:didChangeSection:atIndex:forChangeType:)])
     {
         [[self auxiliaryFetchedResultsControllerDelegate] controller:controller
@@ -190,7 +191,7 @@
                                                              atIndex:sectionIndex
                                                        forChangeType:type];
     }
-
+    
     switch (type)
     {
         case NSFetchedResultsChangeInsert:
@@ -206,7 +207,7 @@
         default:
             break;
     }
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -218,7 +219,7 @@
     {
         [[self auxiliaryFetchedResultsControllerDelegate] controllerDidChangeContent:controller];
     }
-
+    
     UITableView *tableView = [self tableView];
     
     NSInteger totalChanges = [[self deletedSectionIndexes] count] + [[self insertedSectionIndexes] count] + [[self deletedRowIndexPaths] count] + [[self insertedRowIndexPaths] count] + [[self updatedRowIndexPaths] count];
