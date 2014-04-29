@@ -36,12 +36,18 @@
 
 #pragma mark - IBOutlet Properties
 
+/// Returns the table view managed by this class. If it has not been supplied via IB or viewDidLoad, a plain table view will be created in viewWillAppear:
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 #pragma mark - Other Public Properties
 
+/// A collection of "selected" objects. This is not automatically used anywhere, merely provided for convenience. Can be used with checkmarks. Items in the set are "selected", all others are not, etc.
 @property (nonatomic, strong, readonly) NSMutableSet *selectionSet;
+
+/// A single "selected" object. This is not automatically used anywhere, merely provided for convenience. Can be used with checkmarks. This item is "selected", all others are not, etc.
 @property (nonatomic, strong) id selectedObject;
+
+/// If the UISearchDisplayController, this will be populated with the search field text. Subclasses should use this combined with handleSearchForTerm: to filter contents.
 @property (nonatomic, copy) NSString *savedSearchTerm;
 
 #pragma mark - Public Methods

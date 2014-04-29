@@ -1,5 +1,5 @@
 //
-//  NSMutableArray+BTIAdditions.m
+//  NSMutableArray+BTIKitAdditions.m
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "NSMutableArray+BTIAdditions.h"
+#import "NSMutableArray+BTIKitAdditions.h"
 
 #import "BTIKit.h"
 
-@implementation NSMutableArray (BTIAdditions)
+@implementation NSMutableArray (BTIKitAdditions)
 
 - (void)removeFirstObjectBTI
 {

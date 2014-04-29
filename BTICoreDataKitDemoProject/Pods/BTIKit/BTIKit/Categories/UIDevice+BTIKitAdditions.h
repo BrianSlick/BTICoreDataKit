@@ -1,5 +1,5 @@
 //
-//  UIDevice+BTIAdditions.h
+//  UIDevice+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIDevice (BTIAdditions)
+@interface UIDevice (BTIKitAdditions)
 
 + (BOOL)isIpadBTI;
 + (BOOL)isIphoneBTI;

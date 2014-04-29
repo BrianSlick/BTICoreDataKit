@@ -1,5 +1,5 @@
 //
-//  NSMutableArray+BTIAdditions.h
+//  NSMutableArray+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,10 +9,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSMutableArray (BTIAdditions)
+@interface NSMutableArray (BTIKitAdditions)
 
 /**
- Removes the first object in the array.
+ Removes the first object in the array. Safe to use in the event the array is empty.
  */
 - (void)removeFirstObjectBTI;
 

@@ -1,5 +1,5 @@
 //
-//  NSFileManager+BTIAdditions.h
+//  NSFileManager+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSFileManager (BTIAdditions)
+@interface NSFileManager (BTIKitAdditions)
 
 /** Passes directly through to contentsOfDirectoryAtPath:error:
  */

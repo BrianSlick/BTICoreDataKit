@@ -1,5 +1,5 @@
 //
-//  UITableViewCell+BTIAdditions.h
+//  UITableViewCell+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableViewCell (BTIAdditions)
+@interface UITableViewCell (BTIKitAdditions)
 
 /**
  Returns the nearest ancestor UITableView object containing the receiver. Inspired by the NSView method enclosingScrollView.

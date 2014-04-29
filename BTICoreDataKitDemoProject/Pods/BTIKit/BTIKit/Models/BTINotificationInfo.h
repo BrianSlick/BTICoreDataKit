@@ -53,7 +53,7 @@ typedef NS_ENUM(NSInteger, BTINotificationInfoLifespan) {
  Most values are passed straight through to NSNotificationCenter, so refer to Apple documentation for specifics.  lifeSpan is a constant (declared above) that defines when this notification should be registered. This class does not use this value directly.  It is up to other classes, specifically view controllers, to make use of the property.  The intention is that "Lifetime" would be registered for the life of the observing object, and that "Visible" would be registered only when that view controller's view is on screen.
 
  @param observer Object registering as an observer. This value must not be nil.
- @param selector Selector that specifies the message the receiver sends notificationObserver to notify it of the notification posting. The method specified by notificationSelector must have one and only one argument (an instance of NSNotification).
+ @param selector Selector that specifies the message the receiver sends \em observer to notify it of the notification posting. The method specified by \em selector must have one and only one argument (an instance of NSNotification).
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  @param lifespan The amount of time the listener should be active

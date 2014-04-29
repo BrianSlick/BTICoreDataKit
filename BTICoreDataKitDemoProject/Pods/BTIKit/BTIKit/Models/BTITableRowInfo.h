@@ -11,7 +11,7 @@
  
  OVERVIEW
  
- The intention of this class is to reduce the amount of if/else, if/else statements that often go along with manually-driven table views.  Some if/else statements in cellForRow, more if/else statements in didSelectRow, maybe even more for setting a section header, etc.  Instead of spreading all of that information out across numerous methods, this class can be used to encapsulate a considerable amount of definition in one spot.  A single BTIRowInfo object can contain textLabel and detailTextLabel contents, as well as blocks for handling row selection or row accessory selection.  This can easily be expanded to include image paths and accessory definitions; basically all of the UITableViewCell properties that might be interesting.
+ The intention of this class is to reduce the amount of if/else, if/else statements that often go along with manually-driven table views.  Some if/else statements in cellForRow, more if/else statements in didSelectRow, maybe even more for setting a section header, etc.  Instead of spreading all of that information out across numerous methods, this class can be used to encapsulate a considerable amount of definition in one spot.  A single BTITableRowInfo object can contain textLabel and detailTextLabel contents, image details, accessory definitions, as well as blocks for handling row selection or row accessory selection.  Basically most of the UITableViewCell properties that might be interesting.
  
  This class can be used standalone, but it draws inspiration from NSTreeNode and provides a representedObject property allowing it to be used with any other model objects.
  
@@ -56,7 +56,7 @@ typedef void(^BTIRowSelectionBlock)(void);
 @property (nonatomic, assign) CGFloat rowHeight;
 
 // Only one of the following properties needs to be supplied in order for an image to be placed in a cell using the populateCell: method.
-// The checking order will be: 1) image, 2) imageName, 3) imagePath
+// The checking order will be: 1) image, 2) imageName, 3) imageFileURL
 
 /// Image object to be supplied to cell's imageView
 @property (nonatomic, strong) UIImage *image;
@@ -78,7 +78,7 @@ typedef void(^BTIRowSelectionBlock)(void);
 #pragma mark - Misc Methods
 
 /**
- Clears all properties
+ Clears all properties. There probably isn't much of a reason to call this manually. It can/will be called when used with BTITableContentsManager.
  */
 - (void)reset;
 
@@ -90,11 +90,11 @@ typedef void(^BTIRowSelectionBlock)(void);
 /**
  Executes the rowSelectionBlock. Safe to call even if there is no block.
  */
-- (void)executeRowSelectionBlock;
+- (void)safelyPerformRowSelectionBlock;
 
 /**
  Executes the rowAccessorySelectionBlock. Safe to call even if there is no block.
  */
-- (void)executeRowAccessorySelectionBlock;
+- (void)safelyPerformRowAccessorySelectionBlock;
 
 @end

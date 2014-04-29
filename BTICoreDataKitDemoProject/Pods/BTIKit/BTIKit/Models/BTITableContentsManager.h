@@ -17,6 +17,8 @@
  
  This class has not yet reached the goal of emulating NSFRC.  There is currently no means of providing a pool of objects or a sort descriptor that then automatically sorts the pool of objects.  And there is no delegate, so changes to the table view still have to be handled manually.  These are wishlist capabilities for future development.
  
+ This class supports fast enumeration, so you can do for (BTITableSectionInfo *sectionInfo in tableContentsManager) if you want.
+
  */
 
 // Libraries

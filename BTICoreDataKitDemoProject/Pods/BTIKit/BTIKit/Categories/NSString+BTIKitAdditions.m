@@ -1,5 +1,5 @@
 //
-//  NSString+BTIAdditions.m
+//  NSString+BTIKitAdditions.m
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,9 +7,9 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "NSString+BTIAdditions.h"
+#import "NSString+BTIKitAdditions.h"
 
-@implementation NSString (BTIAdditions)
+@implementation NSString (BTIKitAdditions)
 
 - (BOOL)writeToURLBTI:(NSURL *)url
            atomically:(BOOL)useAuxiliaryFile

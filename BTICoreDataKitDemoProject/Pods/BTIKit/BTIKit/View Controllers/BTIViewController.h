@@ -68,7 +68,7 @@
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.
  
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer. 
- @param selector Selector that specifies the message the receiver sends notificationObserver to notify it of the notification posting. The method specified by notificationSelector must have one and only one argument (an instance of NSNotification).
+ @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  */
 - (void)addLifetimeNotificationInfoForName:(NSString *)name
@@ -90,7 +90,7 @@
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.
  
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
- @param selector Selector that specifies the message the receiver sends notificationObserver to notify it of the notification posting. The method specified by notificationSelector must have one and only one argument (an instance of NSNotification).
+ @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  */- (void)addVisibleNotificationInfoForName:(NSString *)name
                                  selector:(SEL)selector

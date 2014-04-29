@@ -11,7 +11,6 @@
 
 // Models and other global
 #import "BTIKit.h"
-#import "BTITableContentsManager.h"
 
 // Sub-controllers
 

@@ -1,607 +1,1859 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		03661187FCCA46DBB90DD1A5 /* BTIManagerTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */; };
-		0B1792690ED7456C96FBB605 /* BTITableSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		109AF23880874BBEB88E6BC7 /* NSNotificationCenter+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		1354C641969747A89D213026 /* BTITableRowInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */; };
-		1C3AD679DD664C4F96E4EECA /* UIDevice+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		1EF6D3F6617E4B7D969273F1 /* BTITableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */; };
-		233BA328C6A249FDBB3C49F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972843260D2B4F188D051C17 /* UIKit.framework */; };
-		2D7888D0B7C84537A31F6A24 /* BTINotificationInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		309492C7DDA841EFB953787E /* BTIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 347EA0DD191D433E91D87C98 /* BTIKit.h */; };
-		359D518A802B4E779763A413 /* BTINotificationInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */; };
-		35B3C509C2594645A6D3D866 /* NSFileManager+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */; };
-		3863CC71989B4738979205CC /* BTITableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E86873FBAF4138B00B89F0 /* BTITableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		46ACA85D6FB142CFA5E21E5E /* BTITableRowInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B02B1C84AD44518630244F /* BTITableRowInfo.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		485DBC5525A342379B6C7628 /* BTITableContentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B53876269BB4B58A003C869 /* BTITableContentsManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		53E1A733944541A98B6982F0 /* NSMutableArray+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		5B48D6A5061E4896A71FF22E /* BTITableContentsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F753091C78F443187BB794F /* BTITableContentsManager.h */; };
-		5BAC5FEA164E4EC08258E98C /* NSFileManager+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		67F645D22B9841138EBC369A /* BTIObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 314F627FF19B4882B37D9A6C /* BTIObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		6C7A276A8BD24E8A9EC7D13E /* BTIViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A8DB5DA10942F695851036 /* BTIViewController.h */; };
-		6EF664E7620A490AB62DCD71 /* BTITableSectionInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */; };
-		6F9AB552A306414D8CD865AD /* libPods-BTIKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */; };
-		711D14621B414BDA83A1A373 /* BTIArrayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		79987E36358A4608B9A6C384 /* NSString+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		7CB244DF738B4F00A0E0981A /* BTIArrayTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */; };
-		8BEA1DE5DE1F4D8BAB11BA17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CB101238074B96BF830D77 /* Foundation.framework */; };
-		98AEABF423E647AAA660725C /* NSMutableArray+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */; };
-		A1D9D1769AB14645B912F263 /* BTITableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8191C25009F346BC928003EF /* BTITableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		A2599C3D89CF4C41A68CF591 /* UITableViewCell+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		AA2DDD5994DC4FF69B6EF7F2 /* BTIManagerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		AD34D0D990754564BFF4C6B7 /* UITableView+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */; };
-		AE3D7A79A99444308D6BEFCC /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B8C49BD23E44A088B3C44F /* Pods-dummy.m */; };
-		AEB3B6EE4E4641AA8CBEF366 /* UITableView+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		B6BE2F0628DA4A3197783F4D /* UIDevice+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */; };
-		BDE6E405B731402680A7A7D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CB101238074B96BF830D77 /* Foundation.framework */; };
-		C50A281ECC8C490FA1A375A3 /* BTITableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */; };
-		C939DDB0EE9C496AABAD7730 /* NSNotificationCenter+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */; };
-		D1A5536F77174184A7F5DA4D /* BTIObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D65D880729348E9AD6FF239 /* BTIObject.h */; };
-		D55231F3247B41AF9A51F00B /* BTIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15688C17D0C84DF28A9C676C /* BTIViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
-		E00C286CF7E44FBCBCE336D6 /* NSString+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */; };
-		E0C6F860E9A9445081E35645 /* Pods-BTIKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */; };
-		EFBAA4A2574448EFA5CC8BDA /* UITableViewCell+BTIAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0A3018BEF8E242B782EFF96C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D06462808205400B9018690D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 311387D3BAEB4395B92D7DDD;
-			remoteInfo = "Pods-BTIKit";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableSectionInfo.m; path = BTIKit/Models/BTITableSectionInfo.m; sourceTree = "<group>"; };
-		026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+BTIAdditions.h"; path = "BTIKit/Categories/NSMutableArray+BTIAdditions.h"; sourceTree = "<group>"; };
-		056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BTIKit-dummy.m"; sourceTree = "<group>"; };
-		09E86873FBAF4138B00B89F0 /* BTITableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableViewController.m; path = "BTIKit/View Controllers/BTITableViewController.m"; sourceTree = "<group>"; };
-		0A59A445C5E848F1AB02345B /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIManagerTableViewController.h; path = "BTIKit/View Controllers/BTIManagerTableViewController.h"; sourceTree = "<group>"; };
-		15688C17D0C84DF28A9C676C /* BTIViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIViewController.m; path = "BTIKit/View Controllers/BTIViewController.m"; sourceTree = "<group>"; };
-		1B53876269BB4B58A003C869 /* BTITableContentsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableContentsManager.m; path = BTIKit/Models/BTITableContentsManager.m; sourceTree = "<group>"; };
-		2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIArrayTableViewController.m; path = "BTIKit/View Controllers/BTIArrayTableViewController.m"; sourceTree = "<group>"; };
-		27B8C49BD23E44A088B3C44F /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BTIKit-Private.xcconfig"; sourceTree = "<group>"; };
-		314F627FF19B4882B37D9A6C /* BTIObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIObject.m; path = BTIKit/Models/BTIObject.m; sourceTree = "<group>"; };
-		347EA0DD191D433E91D87C98 /* BTIKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIKit.h; path = BTIKit/BTIKit.h; sourceTree = "<group>"; };
-		35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableViewController.h; path = "BTIKit/View Controllers/BTITableViewController.h"; sourceTree = "<group>"; };
-		3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableRowInfo.h; path = BTIKit/Models/BTITableRowInfo.h; sourceTree = "<group>"; };
-		4F9D6DB88A09465F83A003C6 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		54E96B4B1F79405E86E75875 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+BTIAdditions.h"; path = "BTIKit/Categories/NSNotificationCenter+BTIAdditions.h"; sourceTree = "<group>"; };
-		5F03BF41E8B8439399EA9C7D /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		67A8DB5DA10942F695851036 /* BTIViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIViewController.h; path = "BTIKit/View Controllers/BTIViewController.h"; sourceTree = "<group>"; };
-		6D65D880729348E9AD6FF239 /* BTIObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIObject.h; path = BTIKit/Models/BTIObject.h; sourceTree = "<group>"; };
-		6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableViewCell.h; path = BTIKit/Views/BTITableViewCell.h; sourceTree = "<group>"; };
-		71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BTIAdditions.m"; path = "BTIKit/Categories/UITableView+BTIAdditions.m"; sourceTree = "<group>"; };
-		76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+BTIAdditions.h"; path = "BTIKit/Categories/NSString+BTIAdditions.h"; sourceTree = "<group>"; };
-		77576969D5134DA0B38787A9 /* Pods-BTIKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BTIKit.xcconfig"; sourceTree = "<group>"; };
-		7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BTIAdditions.m"; path = "BTIKit/Categories/NSString+BTIAdditions.m"; sourceTree = "<group>"; };
-		8191C25009F346BC928003EF /* BTITableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableViewCell.m; path = BTIKit/Views/BTITableViewCell.m; sourceTree = "<group>"; };
-		84251741DEB9485DAB79FFCD /* Pods-BTIKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BTIKit-prefix.pch"; sourceTree = "<group>"; };
-		84B02B1C84AD44518630244F /* BTITableRowInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTITableRowInfo.m; path = BTIKit/Models/BTITableRowInfo.m; sourceTree = "<group>"; };
-		890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BTIKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F753091C78F443187BB794F /* BTITableContentsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableContentsManager.h; path = BTIKit/Models/BTITableContentsManager.h; sourceTree = "<group>"; };
-		8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+BTIAdditions.h"; path = "BTIKit/Categories/NSFileManager+BTIAdditions.h"; sourceTree = "<group>"; };
-		8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BTIAdditions.h"; path = "BTIKit/Categories/UITableView+BTIAdditions.h"; sourceTree = "<group>"; };
-		95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIDevice+BTIAdditions.m"; path = "BTIKit/Categories/UIDevice+BTIAdditions.m"; sourceTree = "<group>"; };
-		95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTIManagerTableViewController.m; path = "BTIKit/View Controllers/BTIManagerTableViewController.m"; sourceTree = "<group>"; };
-		972843260D2B4F188D051C17 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTITableSectionInfo.h; path = BTIKit/Models/BTITableSectionInfo.h; sourceTree = "<group>"; };
-		A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTINotificationInfo.h; path = BTIKit/Models/BTINotificationInfo.h; sourceTree = "<group>"; };
-		AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableViewCell+BTIAdditions.m"; path = "BTIKit/Categories/UITableViewCell+BTIAdditions.m"; sourceTree = "<group>"; };
-		B023CF52C15940C589755BB5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+BTIAdditions.m"; path = "BTIKit/Categories/NSNotificationCenter+BTIAdditions.m"; sourceTree = "<group>"; };
-		BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+BTIAdditions.m"; path = "BTIKit/Categories/NSFileManager+BTIAdditions.m"; sourceTree = "<group>"; };
-		C5E2A23238F24463AF9154B1 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = "<group>"; };
-		C6CB101238074B96BF830D77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+BTIAdditions.m"; path = "BTIKit/Categories/NSMutableArray+BTIAdditions.m"; sourceTree = "<group>"; };
-		DACDD3E389484D06A5B9AA41 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIDevice+BTIAdditions.h"; path = "BTIKit/Categories/UIDevice+BTIAdditions.h"; sourceTree = "<group>"; };
-		E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BTINotificationInfo.m; path = BTIKit/Models/BTINotificationInfo.m; sourceTree = "<group>"; };
-		ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableViewCell+BTIAdditions.h"; path = "BTIKit/Categories/UITableViewCell+BTIAdditions.h"; sourceTree = "<group>"; };
-		F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BTIArrayTableViewController.h; path = "BTIKit/View Controllers/BTIArrayTableViewController.h"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		0786670BA38641C98EA41BE6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8BEA1DE5DE1F4D8BAB11BA17 /* Foundation.framework in Frameworks */,
-				6F9AB552A306414D8CD865AD /* libPods-BTIKit.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0809917AC7DD4D4483DC226F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDE6E405B731402680A7A7D9 /* Foundation.framework in Frameworks */,
-				233BA328C6A249FDBB3C49F3 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		020EFF26D7B24E479131A9CE /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				C6CB101238074B96BF830D77 /* Foundation.framework */,
-				972843260D2B4F188D051C17 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		486B785FF55F4891B911A24D /* BTIKit */ = {
-			isa = PBXGroup;
-			children = (
-				F9CFFAB6834F40818E434B67 /* BTIArrayTableViewController.h */,
-				2402FFC326914470BA1B4D11 /* BTIArrayTableViewController.m */,
-				347EA0DD191D433E91D87C98 /* BTIKit.h */,
-				10E09FE7BABF4113A70ED3C9 /* BTIManagerTableViewController.h */,
-				95DF5639CDD24A179C216934 /* BTIManagerTableViewController.m */,
-				A65CBE7F9C0A4B7E8FD6F071 /* BTINotificationInfo.h */,
-				E34A93A050FC4971BB358DB3 /* BTINotificationInfo.m */,
-				6D65D880729348E9AD6FF239 /* BTIObject.h */,
-				314F627FF19B4882B37D9A6C /* BTIObject.m */,
-				8F753091C78F443187BB794F /* BTITableContentsManager.h */,
-				1B53876269BB4B58A003C869 /* BTITableContentsManager.m */,
-				3985DB7D1BF04887BCEBC503 /* BTITableRowInfo.h */,
-				84B02B1C84AD44518630244F /* BTITableRowInfo.m */,
-				9E935C4D94BB4EB9B1D19871 /* BTITableSectionInfo.h */,
-				0228E2AF7FCA45E5B1A37BDD /* BTITableSectionInfo.m */,
-				6FF71C8B36024079BE7DBA8B /* BTITableViewCell.h */,
-				8191C25009F346BC928003EF /* BTITableViewCell.m */,
-				35EFDACA47BA4B27B33964D9 /* BTITableViewController.h */,
-				09E86873FBAF4138B00B89F0 /* BTITableViewController.m */,
-				67A8DB5DA10942F695851036 /* BTIViewController.h */,
-				15688C17D0C84DF28A9C676C /* BTIViewController.m */,
-				8F8F5E33E52A4765B63A4EE5 /* NSFileManager+BTIAdditions.h */,
-				BEAA9B875F354369993D6962 /* NSFileManager+BTIAdditions.m */,
-				026879A0A8B74FDBB7D851AE /* NSMutableArray+BTIAdditions.h */,
-				C96FEDEB39F24988A6FAE6BF /* NSMutableArray+BTIAdditions.m */,
-				5DF11F8291F346799A9A4CD7 /* NSNotificationCenter+BTIAdditions.h */,
-				B8D519C22B7D4DB194D76E0E /* NSNotificationCenter+BTIAdditions.m */,
-				76EB39B437674C3EAEC04C37 /* NSString+BTIAdditions.h */,
-				7F4C6B76E0C443EBB8629AEB /* NSString+BTIAdditions.m */,
-				DE818FC825034592921E808E /* UIDevice+BTIAdditions.h */,
-				95B6BB6EDC524831B8F1D70B /* UIDevice+BTIAdditions.m */,
-				8FB0BDBEE1854F3289ABA39A /* UITableView+BTIAdditions.h */,
-				71A6CB17B777468E8C9C0166 /* UITableView+BTIAdditions.m */,
-				ED70865DC06B403E98028577 /* UITableViewCell+BTIAdditions.h */,
-				AB145E40EA4A460E932DB610 /* UITableViewCell+BTIAdditions.m */,
-				587CCC222977446D884AC42D /* Support Files */,
-			);
-			path = BTIKit;
-			sourceTree = "<group>";
-		};
-		55D2B74AB6C249C1980142D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C5E2A23238F24463AF9154B1 /* Pods.xcconfig */,
-				DACDD3E389484D06A5B9AA41 /* Pods-acknowledgements.markdown */,
-				5F03BF41E8B8439399EA9C7D /* Pods-acknowledgements.plist */,
-				27B8C49BD23E44A088B3C44F /* Pods-dummy.m */,
-				0A59A445C5E848F1AB02345B /* Pods-environment.h */,
-				4F9D6DB88A09465F83A003C6 /* Pods-resources.sh */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		565954A82FBA4281A8192555 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				54E96B4B1F79405E86E75875 /* libPods.a */,
-				890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		587CCC222977446D884AC42D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				77576969D5134DA0B38787A9 /* Pods-BTIKit.xcconfig */,
-				2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */,
-				056B241385DE4ACFB0B5D7BA /* Pods-BTIKit-dummy.m */,
-				84251741DEB9485DAB79FFCD /* Pods-BTIKit-prefix.pch */,
-			);
-			name = "Support Files";
-			sourceTree = SOURCE_ROOT;
-		};
-		6B2F4BDCDDDE47E09AE1E861 = {
-			isa = PBXGroup;
-			children = (
-				B023CF52C15940C589755BB5 /* Podfile */,
-				923A75BD3B88433D9FCF6173 /* Frameworks */,
-				DA0368363944436D84688640 /* Pods */,
-				565954A82FBA4281A8192555 /* Products */,
-				C1DB14539B6149FDAEBCD3B2 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		923A75BD3B88433D9FCF6173 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				020EFF26D7B24E479131A9CE /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C1DB14539B6149FDAEBCD3B2 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				55D2B74AB6C249C1980142D2 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		DA0368363944436D84688640 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				486B785FF55F4891B911A24D /* BTIKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		C3E4ACFA188A4D89B278E3CD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7CB244DF738B4F00A0E0981A /* BTIArrayTableViewController.h in Headers */,
-				309492C7DDA841EFB953787E /* BTIKit.h in Headers */,
-				03661187FCCA46DBB90DD1A5 /* BTIManagerTableViewController.h in Headers */,
-				359D518A802B4E779763A413 /* BTINotificationInfo.h in Headers */,
-				D1A5536F77174184A7F5DA4D /* BTIObject.h in Headers */,
-				5B48D6A5061E4896A71FF22E /* BTITableContentsManager.h in Headers */,
-				1354C641969747A89D213026 /* BTITableRowInfo.h in Headers */,
-				6EF664E7620A490AB62DCD71 /* BTITableSectionInfo.h in Headers */,
-				C50A281ECC8C490FA1A375A3 /* BTITableViewCell.h in Headers */,
-				1EF6D3F6617E4B7D969273F1 /* BTITableViewController.h in Headers */,
-				6C7A276A8BD24E8A9EC7D13E /* BTIViewController.h in Headers */,
-				35B3C509C2594645A6D3D866 /* NSFileManager+BTIAdditions.h in Headers */,
-				98AEABF423E647AAA660725C /* NSMutableArray+BTIAdditions.h in Headers */,
-				C939DDB0EE9C496AABAD7730 /* NSNotificationCenter+BTIAdditions.h in Headers */,
-				E00C286CF7E44FBCBCE336D6 /* NSString+BTIAdditions.h in Headers */,
-				B6BE2F0628DA4A3197783F4D /* UIDevice+BTIAdditions.h in Headers */,
-				AD34D0D990754564BFF4C6B7 /* UITableView+BTIAdditions.h in Headers */,
-				EFBAA4A2574448EFA5CC8BDA /* UITableViewCell+BTIAdditions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		26DEEBDDD5C84DB2906890D3 /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 06458513A9F14269825ECF9B /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				A04EDA58D7234F408A509F12 /* Sources */,
-				0786670BA38641C98EA41BE6 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B36065F52A904F97B21ABE47 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 54E96B4B1F79405E86E75875 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		311387D3BAEB4395B92D7DDD /* Pods-BTIKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F306FEB385E94055867E4557 /* Build configuration list for PBXNativeTarget "Pods-BTIKit" */;
-			buildPhases = (
-				A2D0E95907D64C3191ED997F /* Sources */,
-				0809917AC7DD4D4483DC226F /* Frameworks */,
-				C3E4ACFA188A4D89B278E3CD /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-BTIKit";
-			productName = "Pods-BTIKit";
-			productReference = 890A81B5B9C749099B8DB932 /* libPods-BTIKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D06462808205400B9018690D /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-			};
-			buildConfigurationList = E56AC331C360469EB74ED15D /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 6B2F4BDCDDDE47E09AE1E861;
-			productRefGroup = 565954A82FBA4281A8192555 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				26DEEBDDD5C84DB2906890D3 /* Pods */,
-				311387D3BAEB4395B92D7DDD /* Pods-BTIKit */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		A04EDA58D7234F408A509F12 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AE3D7A79A99444308D6BEFCC /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A2D0E95907D64C3191ED997F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				711D14621B414BDA83A1A373 /* BTIArrayTableViewController.m in Sources */,
-				AA2DDD5994DC4FF69B6EF7F2 /* BTIManagerTableViewController.m in Sources */,
-				2D7888D0B7C84537A31F6A24 /* BTINotificationInfo.m in Sources */,
-				67F645D22B9841138EBC369A /* BTIObject.m in Sources */,
-				485DBC5525A342379B6C7628 /* BTITableContentsManager.m in Sources */,
-				46ACA85D6FB142CFA5E21E5E /* BTITableRowInfo.m in Sources */,
-				0B1792690ED7456C96FBB605 /* BTITableSectionInfo.m in Sources */,
-				A1D9D1769AB14645B912F263 /* BTITableViewCell.m in Sources */,
-				3863CC71989B4738979205CC /* BTITableViewController.m in Sources */,
-				D55231F3247B41AF9A51F00B /* BTIViewController.m in Sources */,
-				5BAC5FEA164E4EC08258E98C /* NSFileManager+BTIAdditions.m in Sources */,
-				53E1A733944541A98B6982F0 /* NSMutableArray+BTIAdditions.m in Sources */,
-				109AF23880874BBEB88E6BC7 /* NSNotificationCenter+BTIAdditions.m in Sources */,
-				79987E36358A4608B9A6C384 /* NSString+BTIAdditions.m in Sources */,
-				E0C6F860E9A9445081E35645 /* Pods-BTIKit-dummy.m in Sources */,
-				1C3AD679DD664C4F96E4EECA /* UIDevice+BTIAdditions.m in Sources */,
-				AEB3B6EE4E4641AA8CBEF366 /* UITableView+BTIAdditions.m in Sources */,
-				A2599C3D89CF4C41A68CF591 /* UITableViewCell+BTIAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B36065F52A904F97B21ABE47 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 311387D3BAEB4395B92D7DDD /* Pods-BTIKit */;
-			targetProxy = 0A3018BEF8E242B782EFF96C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		29A3231D8DB543958DF69EC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pods-BTIKit-prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		4B382944D3604B6BA57E7222 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		63085C8338EB492F825C4E8E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5E2A23238F24463AF9154B1 /* Pods.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		92C8357600E94297A040D07A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-			};
-			name = Debug;
-		};
-		D5D3CBD91E2844C990CD25AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5E2A23238F24463AF9154B1 /* Pods.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		F682CC879A3C41F79E40B319 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2EA6C6E0BAC54DCA83F2D484 /* Pods-BTIKit-Private.xcconfig */;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				COPY_PHASE_STRIP = YES;
-				DSTROOT = /tmp/xcodeproj.dst;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Pods-BTIKit-prefix.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				OTHER_CFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNS_BLOCK_ASSERTIONS=1",
-					"$(inherited)",
-				);
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		06458513A9F14269825ECF9B /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D5D3CBD91E2844C990CD25AF /* Debug */,
-				63085C8338EB492F825C4E8E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E56AC331C360469EB74ED15D /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92C8357600E94297A040D07A /* Debug */,
-				4B382944D3604B6BA57E7222 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F306FEB385E94055867E4557 /* Build configuration list for PBXNativeTarget "Pods-BTIKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				29A3231D8DB543958DF69EC5 /* Debug */,
-				F682CC879A3C41F79E40B319 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D06462808205400B9018690D /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>00232B83E9B54FF9BD5CEE75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E0FC026D059349DCA1A5CA37</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0070A16376CA4DAFB017460F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1DC9118F9C694C78BDD57932</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>04D866FF464B462B89CB9817</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>15A31F36D56246C5A333A8AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04F6911F7C8E48AD8B81C680</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CB74499C724F476689348509</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-BTIKit-prefix.pch</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0527A9EEE9304CAA83855303</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>NO</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>0B565544CDA94753A5D728D2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FA5F4276A7514684B52B215F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0D8293D05F4E4F4380899FFA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0DB14821911640B781B5F5A8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0D8293D05F4E4F4380899FFA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0E2F2E2F82A24449B4EC516D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>183A630678AA45EDA36896EE</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BF6B17A6CD994A389EE2BB90</string>
+				<string>D5F483C2E34246E2A0A0E337</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>3A8F69C79E2B4A55981BCF26</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>836BAF5ECF624E55967332B9</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>0F4BB2793B8A484C9EA5AA8F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0D8293D05F4E4F4380899FFA</string>
+				<string>16A8CFE856A7455A91947472</string>
+				<string>75A0DB71D2664A3780995A39</string>
+				<string>F8E44B6619D44909BC8BD205</string>
+				<string>480D660505E34DB7B63A2E2F</string>
+				<string>171D4CA9885C473886088DBD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>128660CAC9F9419F8FA2B161</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>NO</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>12E892BCDFA8429C81913C7F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BDB42683F8AA4713AEE0C54F</string>
+				<string>97D1C470BA074A2DB672FC84</string>
+				<string>FA5F4276A7514684B52B215F</string>
+				<string>8025DDAD1AC1453EB0FECDB7</string>
+				<string>8516A6D99CB04826AFF6E83C</string>
+				<string>37E687BD4C56473B8116736E</string>
+				<string>A40739C239134E768FA30086</string>
+				<string>D7950792322D41DD8170C7B8</string>
+				<string>5DD1C15D945D4EF29A9B1829</string>
+				<string>5C4257F60E074F7EA00A5281</string>
+				<string>1FB8EC6369A040F6A7AAAEB0</string>
+				<string>F5AAB24EDD0A4114B58F52E5</string>
+				<string>36B4E6598D3A492CAA72FAB8</string>
+				<string>878338A5F7E14DFE82B0DCA0</string>
+				<string>D6A369FC48A64E8AAEA1118A</string>
+				<string>69BAB6D770B4409EBB9166ED</string>
+				<string>789C175452CB495E83BA7727</string>
+				<string>764BCABEA3704B499249C893</string>
+				<string>7381111EBA594A2A903D1925</string>
+				<string>86A58E57C95643088B165BEC</string>
+				<string>F00EC7E2B5FB4EC2B8BAD08B</string>
+				<string>5E29EF093A404317A153DA3F</string>
+				<string>5D8F94A8B27F4E3EADEABBC6</string>
+				<string>C9697E133F694A589B0F0BDD</string>
+				<string>6F7FED25921F47FCB9D7D102</string>
+				<string>724BCCE11A094576B7894EA2</string>
+				<string>9644070D14444A629F32AC87</string>
+				<string>E0FC026D059349DCA1A5CA37</string>
+				<string>5AB7F10201BB4C4D9FF4BA6E</string>
+				<string>2605AC2159374E74ACD09473</string>
+				<string>1DC9118F9C694C78BDD57932</string>
+				<string>B9CDD77516C84E1B999E937E</string>
+				<string>7BE6732645AA4202806545D3</string>
+				<string>49CD152058584E8DB45F4B44</string>
+				<string>CEA8EA6C236F4217AFF2C484</string>
+				<string>23E75C36E6524AA1AF7D2C57</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BTIKit</string>
+			<key>path</key>
+			<string>BTIKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1358B2FB840549408E1FADD4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AB7F10201BB4C4D9FF4BA6E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>15A31F36D56246C5A333A8AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EBE72677728E4BE5B2581EB0</string>
+				<string>2549FDD69AE04B5BBD37C4B7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>16A8CFE856A7455A91947472</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>171D4CA9885C473886088DBD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>183A630678AA45EDA36896EE</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0DB14821911640B781B5F5A8</string>
+				<string>75CF1C6ACAE2489E877F61D5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1DC9118F9C694C78BDD57932</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIDevice+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UIDevice+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1FB8EC6369A040F6A7AAAEB0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTITableContentsManager.m</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableContentsManager.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>23E75C36E6524AA1AF7D2C57</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4196BC59F19F42A68282580A</string>
+				<string>CB74499C724F476689348509</string>
+				<string>B74ECAA392374D8EA1AF7542</string>
+				<string>8F3F71CF66164127BB78117B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>23F623CBC375417880835F47</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-BTIKit.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2549FDD69AE04B5BBD37C4B7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>2605AC2159374E74ACD09473</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIDevice+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UIDevice+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>26FD0B14222E409F889FFF6C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8516A6D99CB04826AFF6E83C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>28A1ECC7374345EE9B42F21C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>764BCABEA3704B499249C893</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2BBFDF170B6643F69BB903A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>878338A5F7E14DFE82B0DCA0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3090EC47416C47578254EACC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5D8F94A8B27F4E3EADEABBC6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>35C57BFF2C1048CCA3018F47</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>76A59CABBC9C4960A9833F2E</string>
+				<string>0B565544CDA94753A5D728D2</string>
+				<string>9BA3F2224AED4679B53C7C81</string>
+				<string>4E3B9F05FD1346C99FAB1AA3</string>
+				<string>789EFC80AFD3468690D6FBC1</string>
+				<string>E6622BFD4DC247778C51923E</string>
+				<string>7ACE1D5BB9A54EAEB4D7F9F2</string>
+				<string>2BBFDF170B6643F69BB903A0</string>
+				<string>D19D3BA1260E41F0B74A02B7</string>
+				<string>28A1ECC7374345EE9B42F21C</string>
+				<string>39B5F1E203AE45F081E71ABF</string>
+				<string>5DA4CC537A144F20B53E55E4</string>
+				<string>47D9F00A02504027ACF85CEF</string>
+				<string>5C6A8334246848D087DF5FF9</string>
+				<string>00232B83E9B54FF9BD5CEE75</string>
+				<string>F5ABBE252ACA40EDB2D4B12A</string>
+				<string>82DBC0FFEC8F4E20A4F86260</string>
+				<string>FF13B3BE6DC74DD786B4D7BA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>36B4E6598D3A492CAA72FAB8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTITableRowInfo.m</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableRowInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37E687BD4C56473B8116736E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTINotificationInfo.h</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTINotificationInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>396CB633793D4CDAB641A511</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2549FDD69AE04B5BBD37C4B7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>39B5F1E203AE45F081E71ABF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>86A58E57C95643088B165BEC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3A28DDE4A1B743719CF69D44</key>
+		<dict>
+			<key>fileRef</key>
+			<string>23F623CBC375417880835F47</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3A8F69C79E2B4A55981BCF26</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>5C69523422784A8383F6A4D8</string>
+			<key>targetProxy</key>
+			<string>3C05236A63644E1A9BBFC8A9</string>
+		</dict>
+		<key>3AAEF06779C445E6A020F361</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D6A369FC48A64E8AAEA1118A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>3C05236A63644E1A9BBFC8A9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>769134E843D346F6A9C5C802</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5C69523422784A8383F6A4D8</string>
+			<key>remoteInfo</key>
+			<string>Pods-BTIKit</string>
+		</dict>
+		<key>3D595F6D78344CB793458FAA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E886FFC3D2D74F658D8A3770</string>
+				<string>04D866FF464B462B89CB9817</string>
+				<string>607D143A287E48638759F2E8</string>
+				<string>94EB9B970F464EA58A132AC5</string>
+				<string>6E97630445F34536AF65D4F6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4196BC59F19F42A68282580A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-BTIKit.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47D9F00A02504027ACF85CEF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C9697E133F694A589B0F0BDD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>480D660505E34DB7B63A2E2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>49CD152058584E8DB45F4B44</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UITableViewCell+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UITableViewCell+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4DF8F553F3A3407399A0D9B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9644070D14444A629F32AC87</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>4E3B9F05FD1346C99FAB1AA3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>37E687BD4C56473B8116736E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4F669B759CC4470294EC657C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D7F21DB9EED34C8D83A00809</string>
+				<string>04F6911F7C8E48AD8B81C680</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>506300C10FCD4F22A8FB4B4C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6F7FED25921F47FCB9D7D102</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>5AB7F10201BB4C4D9FF4BA6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSString+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSString+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C4257F60E074F7EA00A5281</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTITableContentsManager.h</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableContentsManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C69523422784A8383F6A4D8</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4F669B759CC4470294EC657C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>A1E641E09DE44126A241AFC7</string>
+				<string>DDE8A0AB6FD642B8B63A4715</string>
+				<string>35C57BFF2C1048CCA3018F47</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-BTIKit</string>
+			<key>productName</key>
+			<string>Pods-BTIKit</string>
+			<key>productReference</key>
+			<string>23F623CBC375417880835F47</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>5C6A8334246848D087DF5FF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>724BCCE11A094576B7894EA2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5D8F94A8B27F4E3EADEABBC6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSFileManager+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSFileManager+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5DA4CC537A144F20B53E55E4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5E29EF093A404317A153DA3F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5DD1C15D945D4EF29A9B1829</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTIObject.m</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTIObject.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5E29EF093A404317A153DA3F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSFileManager+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSFileManager+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>607D143A287E48638759F2E8</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>12E892BCDFA8429C81913C7F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>676F6480B41E4FB6B7BD377C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7BE6732645AA4202806545D3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>683FFB5F930547E99B9CC5A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEA8EA6C236F4217AFF2C484</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>689CC4D48BD740C9A9C82957</key>
+		<dict>
+			<key>fileRef</key>
+			<string>97D1C470BA074A2DB672FC84</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>69BAB6D770B4409EBB9166ED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTITableViewCell.h</string>
+			<key>path</key>
+			<string>BTIKit/Views/BTITableViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E7C904499A94DA188188F59</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EBE72677728E4BE5B2581EB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6E97630445F34536AF65D4F6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0F4BB2793B8A484C9EA5AA8F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6F7FED25921F47FCB9D7D102</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSMutableArray+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSMutableArray+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>724BCCE11A094576B7894EA2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSNotificationCenter+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSNotificationCenter+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7381111EBA594A2A903D1925</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTITableViewController.m</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTITableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75A0DB71D2664A3780995A39</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75CF1C6ACAE2489E877F61D5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0D8293D05F4E4F4380899FFA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>764BCABEA3704B499249C893</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTITableViewController.h</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTITableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>769134E843D346F6A9C5C802</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>C211FA1E22CD4A00AB3EDE3E</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>3D595F6D78344CB793458FAA</string>
+			<key>productRefGroup</key>
+			<string>94EB9B970F464EA58A132AC5</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>0E2F2E2F82A24449B4EC516D</string>
+				<string>5C69523422784A8383F6A4D8</string>
+			</array>
+		</dict>
+		<key>76A59CABBC9C4960A9833F2E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BDB42683F8AA4713AEE0C54F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>789C175452CB495E83BA7727</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTITableViewCell.m</string>
+			<key>path</key>
+			<string>BTIKit/Views/BTITableViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>789EFC80AFD3468690D6FBC1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D7950792322D41DD8170C7B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7ACE1D5BB9A54EAEB4D7F9F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F5AAB24EDD0A4114B58F52E5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7BE6732645AA4202806545D3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UITableView+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UITableView+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8025DDAD1AC1453EB0FECDB7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTIManagerTableViewController.h</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIManagerTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>82DBC0FFEC8F4E20A4F86260</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B9CDD77516C84E1B999E937E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>836BAF5ECF624E55967332B9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>8516A6D99CB04826AFF6E83C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTIManagerTableViewController.m</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIManagerTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>86A58E57C95643088B165BEC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTIViewController.h</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>878338A5F7E14DFE82B0DCA0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTITableSectionInfo.h</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableSectionInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8F3F71CF66164127BB78117B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-BTIKit-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94EB9B970F464EA58A132AC5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>836BAF5ECF624E55967332B9</string>
+				<string>23F623CBC375417880835F47</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>96129736F4D64A8FA9A6EC33</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B74ECAA392374D8EA1AF7542</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9644070D14444A629F32AC87</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSNotificationCenter+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSNotificationCenter+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>97D1C470BA074A2DB672FC84</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTIArrayTableViewController.m</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIArrayTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9BA3F2224AED4679B53C7C81</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8025DDAD1AC1453EB0FECDB7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A1E641E09DE44126A241AFC7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>689CC4D48BD740C9A9C82957</string>
+				<string>26FD0B14222E409F889FFF6C</string>
+				<string>BEEDC64F2D7C46AD95C4B64C</string>
+				<string>AC3AC7EC703E4EECBB396A21</string>
+				<string>E7BF3FBDF8FC44FEA4ED6BD6</string>
+				<string>F3CBE54D3E374166A523E30E</string>
+				<string>3AAEF06779C445E6A020F361</string>
+				<string>BB039FECBD1C4ED1AED42EFA</string>
+				<string>C339B404EAD549319C71D2B0</string>
+				<string>C4A1B4F1FBF14A61A9B4CA8C</string>
+				<string>3090EC47416C47578254EACC</string>
+				<string>506300C10FCD4F22A8FB4B4C</string>
+				<string>4DF8F553F3A3407399A0D9B0</string>
+				<string>1358B2FB840549408E1FADD4</string>
+				<string>96129736F4D64A8FA9A6EC33</string>
+				<string>0070A16376CA4DAFB017460F</string>
+				<string>676F6480B41E4FB6B7BD377C</string>
+				<string>683FFB5F930547E99B9CC5A3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>A40739C239134E768FA30086</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTINotificationInfo.m</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTINotificationInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AC3AC7EC703E4EECBB396A21</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5DD1C15D945D4EF29A9B1829</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>B74ECAA392374D8EA1AF7542</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-BTIKit-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B9CDD77516C84E1B999E937E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UITableView+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UITableView+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BB039FECBD1C4ED1AED42EFA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>789C175452CB495E83BA7727</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>BDB42683F8AA4713AEE0C54F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTIArrayTableViewController.h</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIArrayTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BEEDC64F2D7C46AD95C4B64C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A40739C239134E768FA30086</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>BF6B17A6CD994A389EE2BB90</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C42C28C3814F4C519F721A3B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C211FA1E22CD4A00AB3EDE3E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>128660CAC9F9419F8FA2B161</string>
+				<string>0527A9EEE9304CAA83855303</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>C339B404EAD549319C71D2B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7381111EBA594A2A903D1925</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>C42C28C3814F4C519F721A3B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F8E44B6619D44909BC8BD205</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C4A1B4F1FBF14A61A9B4CA8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F00EC7E2B5FB4EC2B8BAD08B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>C9697E133F694A589B0F0BDD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSMutableArray+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSMutableArray+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CB74499C724F476689348509</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-BTIKit-Private.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEA8EA6C236F4217AFF2C484</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UITableViewCell+BTIKitAdditions.m</string>
+			<key>path</key>
+			<string>BTIKit/Categories/UITableViewCell+BTIKitAdditions.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D19D3BA1260E41F0B74A02B7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>69BAB6D770B4409EBB9166ED</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D5F483C2E34246E2A0A0E337</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6E7C904499A94DA188188F59</string>
+				<string>3A28DDE4A1B743719CF69D44</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D6A369FC48A64E8AAEA1118A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTITableSectionInfo.m</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableSectionInfo.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D7950792322D41DD8170C7B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTIObject.h</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTIObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D7F21DB9EED34C8D83A00809</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>CB74499C724F476689348509</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-BTIKit-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>4.3</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DDE8A0AB6FD642B8B63A4715</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>DEAB8CF6D67A4CF780BCCC05</string>
+				<string>396CB633793D4CDAB641A511</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>DEAB8CF6D67A4CF780BCCC05</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EBE72677728E4BE5B2581EB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E0FC026D059349DCA1A5CA37</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSString+BTIKitAdditions.h</string>
+			<key>path</key>
+			<string>BTIKit/Categories/NSString+BTIKitAdditions.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6622BFD4DC247778C51923E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5C4257F60E074F7EA00A5281</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E7BF3FBDF8FC44FEA4ED6BD6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1FB8EC6369A040F6A7AAAEB0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>E886FFC3D2D74F658D8A3770</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>EBE72677728E4BE5B2581EB0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F00EC7E2B5FB4EC2B8BAD08B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>BTIViewController.m</string>
+			<key>path</key>
+			<string>BTIKit/View Controllers/BTIViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F3CBE54D3E374166A523E30E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>36B4E6598D3A492CAA72FAB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>F5AAB24EDD0A4114B58F52E5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTITableRowInfo.h</string>
+			<key>path</key>
+			<string>BTIKit/Models/BTITableRowInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5ABBE252ACA40EDB2D4B12A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2605AC2159374E74ACD09473</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F8E44B6619D44909BC8BD205</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FA5F4276A7514684B52B215F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>BTIKit.h</string>
+			<key>path</key>
+			<string>BTIKit/BTIKit.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF13B3BE6DC74DD786B4D7BA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>49CD152058584E8DB45F4B44</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>769134E843D346F6A9C5C802</string>
+</dict>
+</plist>

@@ -1,5 +1,5 @@
 //
-//  NSFileManager+BTIAdditions.m
+//  NSFileManager+BTIKitAdditions.m
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,9 +7,9 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "NSFileManager+BTIAdditions.h"
+#import "NSFileManager+BTIKitAdditions.h"
 
-@implementation NSFileManager (BTIAdditions)
+@implementation NSFileManager (BTIKitAdditions)
 
 - (NSArray *)contentsOfDirectoryAtPathBTI:(NSString *)path
 {

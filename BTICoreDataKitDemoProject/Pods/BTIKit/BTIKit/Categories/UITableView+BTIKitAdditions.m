@@ -1,5 +1,5 @@
 //
-//  UITableView+BTIAdditions.h
+//  UITableView+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "UITableView+BTIAdditions.h"
+#import "UITableView+BTIKitAdditions.h"
 
 #import "BTIKit.h"
 
-@implementation UITableView (BTIAdditions)
+@implementation UITableView (BTIKitAdditions)
 
 - (NSIndexPath *)indexPathForRowContainingViewBTI:(UIView *)view
 {

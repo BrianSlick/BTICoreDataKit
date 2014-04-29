@@ -1,5 +1,5 @@
 //
-//  NSString+BTIAdditions.h
+//  NSString+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (BTIAdditions)
+@interface NSString (BTIKitAdditions)
 
 /** Passes directly through to writeToURL:atomically:encoding:error:
  */

@@ -1,6 +1,6 @@
 //
 //  BTIKit.h
-//  v1.0.0
+//  v1.0.1
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -40,12 +40,13 @@
 
 #pragma mark - Categories
 
-#import "NSFileManager+BTIAdditions.h"
-#import "NSMutableArray+BTIAdditions.h"
-#import "NSNotificationCenter+BTIAdditions.h"
-#import "NSString+BTIAdditions.h"
-#import "UIDevice+BTIAdditions.h"
-#import "UITableView+BTIAdditions.h"
+#import "NSFileManager+BTIKitAdditions.h"
+#import "NSMutableArray+BTIKitAdditions.h"
+#import "NSNotificationCenter+BTIKitAdditions.h"
+#import "NSString+BTIKitAdditions.h"
+#import "UIDevice+BTIKitAdditions.h"
+#import "UITableView+BTIKitAdditions.h"
+#import "UITableViewCell+BTIKitAdditions.h"
 
 #pragma mark - View Controllers
 

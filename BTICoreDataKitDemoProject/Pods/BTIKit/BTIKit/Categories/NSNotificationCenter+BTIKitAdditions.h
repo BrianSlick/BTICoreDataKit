@@ -1,5 +1,5 @@
 //
-//  NSNotificationCenter+BTIAdditions.h
+//  NSNotificationCenter+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -9,7 +9,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSNotificationCenter (BTIAdditions)
+@interface NSNotificationCenter (BTIKitAdditions)
+
+/**
+ Posts a notification on the main thread.
+ 
+ @param notification The notification to be posted.
+ */
+- (void)postNotificationOnMainThreadBTI:(NSNotification *)notification;
 
 /**
  Posts a notification on the main thread. Parameters are passed through to a NSNotification object; refer to Apple documentation for specifics.

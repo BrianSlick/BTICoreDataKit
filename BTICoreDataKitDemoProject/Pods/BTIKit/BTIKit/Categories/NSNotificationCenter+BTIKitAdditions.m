@@ -1,5 +1,5 @@
 //
-//  NSNotificationCenter+BTIAdditions.m
+//  NSNotificationCenter+BTIKitAdditions.m
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,11 +7,31 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "NSNotificationCenter+BTIAdditions.h"
+#import "NSNotificationCenter+BTIKitAdditions.h"
 
 #import "BTIKit.h"
 
-@implementation NSNotificationCenter (BTIAdditions)
+@implementation NSNotificationCenter (BTIKitAdditions)
+
+- (void)postNotificationOnMainThreadBTI:(NSNotification *)notification
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if ([NSThread isMainThread])
+    {
+        [[NSNotificationCenter defaultCenter] postNotification:notification];
+    }
+    else
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            [[NSNotificationCenter defaultCenter] postNotification:notification];
+            
+        });
+    }
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
 
 - (void)postNotificationNameOnMainThreadBTI:(NSString *)notificationName
 {
@@ -46,18 +66,7 @@
                                                                  object:object
                                                                userInfo:userInfo];
     
-    if ([NSThread isMainThread])
-    {
-        [[NSNotificationCenter defaultCenter] postNotification:notification];
-    }
-    else
-    {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            [[NSNotificationCenter defaultCenter] postNotification:notification];
-            
-        });
-    }
+    [self postNotificationOnMainThreadBTI:notification];
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }

@@ -1,5 +1,5 @@
 //
-//  UITableViewCell+BTIAdditions.m
+//  UITableViewCell+BTIKitAdditions.m
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import "UITableViewCell+BTIAdditions.h"
+#import "UITableViewCell+BTIKitAdditions.h"
 
 #import "BTIKit.h"
 
-@implementation UITableViewCell (BTIAdditions)
+@implementation UITableViewCell (BTIKitAdditions)
 
 - (UITableView *)enclosingTableViewBTI
 {

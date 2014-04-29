@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "311387D3BAEB4395B92D7DDD"
+               BlueprintIdentifier = "5C69523422784A8383F6A4D8"
                BuildableName = "libPods-BTIKit.a"
                BlueprintName = "Pods-BTIKit"
                ReferencedContainer = "container:Pods.xcodeproj">

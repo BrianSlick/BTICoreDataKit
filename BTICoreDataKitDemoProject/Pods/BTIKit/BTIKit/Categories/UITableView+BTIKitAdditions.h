@@ -1,5 +1,5 @@
 //
-//  UITableView+BTIAdditions.h
+//  UITableView+BTIKitAdditions.h
 //  BTIKit
 //
 //  Created by Brian Slick in March 2014
@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface UITableView (BTIAdditions)
+@interface UITableView (BTIKitAdditions)
 
 
 //  Taken from http://pragprog.com/titles/cdirec/ios-recipes

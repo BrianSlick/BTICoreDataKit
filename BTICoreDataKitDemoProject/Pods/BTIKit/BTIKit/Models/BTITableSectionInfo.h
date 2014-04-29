@@ -15,6 +15,8 @@
  
  The goal is to encapsulate all useful information about a section - ex: header, footer - here in a single object, rather than having multiple if/else statements spread out across multiple delegate methods.  This information can instead be defined in one place, and referenced later as needed.
  
+ This class supports fast enumeration, so you can do for (id object in tableSectionInfo) if you want.
+ 
  */
 
 // Libraries
@@ -53,7 +55,7 @@
 #pragma mark - Misc Methods
 
 /**
- Clears all properties
+ Clears all properties. There probably isn't much of a reason to call this manually. It can/will be called when used with BTITableContentsManager.
  */
 - (void)reset;
 
