@@ -1,5 +1,5 @@
 //
-//  NSManagedObjectContext+BTIAdditions.h
+//  NSManagedObjectContext+BTICoreDataKitAdditions.h
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -9,7 +9,7 @@
 
 @import CoreData;
 
-@interface NSManagedObjectContext (BTIAdditions)
+@interface NSManagedObjectContext (BTICoreDataKitAdditions)
 
 /** Passes directly through to countForFetchRequest:error:
  */

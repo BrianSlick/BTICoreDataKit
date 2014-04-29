@@ -1,5 +1,5 @@
 //
-//  NSManagedObject+BTIAdditions.m
+//  NSManagedObject+BTICoreDataKitAdditions.m
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTICoreDataKit
 //
 
-#import "NSManagedObject+BTIAdditions.h"
+#import "NSManagedObject+BTICoreDataKitAdditions.h"
 
 #import "BTICoreDataKit.h"
 
-@implementation NSManagedObject (BTIAdditions)
+@implementation NSManagedObject (BTICoreDataKitAdditions)
 
 + (NSEntityDescription *)entityDescriptionInContextBTI:(NSManagedObjectContext *)context
 {

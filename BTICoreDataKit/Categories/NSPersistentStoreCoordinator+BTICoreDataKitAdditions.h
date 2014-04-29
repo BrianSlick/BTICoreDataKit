@@ -1,5 +1,5 @@
 //
-//  NSPersistentStoreCoordinator+BTIAdditions.h
+//  NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -9,7 +9,7 @@
 
 @import CoreData;
 
-@interface NSPersistentStoreCoordinator (BTIAdditions)
+@interface NSPersistentStoreCoordinator (BTICoreDataKitAdditions)
 
 /** Passes directly through to addPersistentStoreWithType:configuration:URL:options:error:
  */

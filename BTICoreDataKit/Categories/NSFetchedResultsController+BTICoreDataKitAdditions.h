@@ -1,5 +1,5 @@
 //
-//  NSFetchedResultsController+BTIAdditions.h
+//  NSFetchedResultsController+BTICoreDataKitAdditions.h
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -9,7 +9,7 @@
 
 @import CoreData;
 
-@interface NSFetchedResultsController (BTIAdditions)
+@interface NSFetchedResultsController (BTICoreDataKitAdditions)
 
 /** Passes directly through to performFetch:
  */

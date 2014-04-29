@@ -19,10 +19,10 @@
 		366395F01905B1FC00BE44E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366395D21905B1FC00BE44E8 /* UIKit.framework */; };
 		366395F81905B1FC00BE44E8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 366395F61905B1FC00BE44E8 /* InfoPlist.strings */; };
 		366396091905F39800BE44E8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366396081905F39800BE44E8 /* CoreData.framework */; };
-		3663960C1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3663960B1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.m */; };
-		3663960F1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.m */; };
-		366396121906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.m */; };
-		366396151906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.m */; };
+		3663960C1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3663960B1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m */; };
+		3663960F1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m */; };
+		366396121906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m */; };
+		366396151906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m */; };
 		366396181906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 366396171906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m */; };
 		366983F11906EEC1002D1E65 /* BTICoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 366983F01906EEC1002D1E65 /* BTICoreDataTableViewController.m */; };
 		366983F419073043002D1E65 /* BTICoreDataStackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 366983F319073043002D1E65 /* BTICoreDataStackManager.m */; };
@@ -68,14 +68,14 @@
 		366395F71905B1FC00BE44E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		366396041905F33A00BE44E8 /* BTICoreDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTICoreDataKit.h; sourceTree = "<group>"; };
 		366396081905F39800BE44E8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		3663960A1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+BTIAdditions.h"; sourceTree = "<group>"; };
-		3663960B1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+BTIAdditions.m"; sourceTree = "<group>"; };
-		3663960D1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+BTIAdditions.h"; sourceTree = "<group>"; };
-		3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+BTIAdditions.m"; sourceTree = "<group>"; };
-		366396101906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+BTIAdditions.h"; sourceTree = "<group>"; };
-		366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+BTIAdditions.m"; sourceTree = "<group>"; };
-		366396131906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+BTIAdditions.h"; sourceTree = "<group>"; };
-		366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+BTIAdditions.m"; sourceTree = "<group>"; };
+		3663960A1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+BTICoreDataKitAdditions.h"; sourceTree = "<group>"; };
+		3663960B1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+BTICoreDataKitAdditions.m"; sourceTree = "<group>"; };
+		3663960D1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+BTICoreDataKitAdditions.h"; sourceTree = "<group>"; };
+		3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+BTICoreDataKitAdditions.m"; sourceTree = "<group>"; };
+		366396101906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+BTICoreDataKitAdditions.h"; sourceTree = "<group>"; };
+		366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+BTICoreDataKitAdditions.m"; sourceTree = "<group>"; };
+		366396131906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h"; sourceTree = "<group>"; };
+		366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m"; sourceTree = "<group>"; };
 		366396161906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIFetchedResultsControllerTableViewManager.h; sourceTree = "<group>"; };
 		366396171906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIFetchedResultsControllerTableViewManager.m; sourceTree = "<group>"; };
 		366983EF1906EEC1002D1E65 /* BTICoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTICoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -213,14 +213,14 @@
 		366396051905F33A00BE44E8 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				3663960D1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.h */,
-				3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.m */,
-				3663960A1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.h */,
-				3663960B1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.m */,
-				366396101906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.h */,
-				366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.m */,
-				366396131906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.h */,
-				366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.m */,
+				3663960D1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.h */,
+				3663960E1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m */,
+				3663960A1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.h */,
+				3663960B1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m */,
+				366396101906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.h */,
+				366396111906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m */,
+				366396131906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h */,
+				366396141906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -452,13 +452,13 @@
 				366983F11906EEC1002D1E65 /* BTICoreDataTableViewController.m in Sources */,
 				366395DF1905B1FC00BE44E8 /* BTIAppDelegate.m in Sources */,
 				366395DB1905B1FC00BE44E8 /* main.m in Sources */,
-				366396151906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTIAdditions.m in Sources */,
-				366396121906BB5C00BE44E8 /* NSManagedObjectContext+BTIAdditions.m in Sources */,
+				366396151906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m in Sources */,
+				366396121906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m in Sources */,
 				366983F919081080002D1E65 /* DemoProject.xcdatamodeld in Sources */,
 				3669840019081168002D1E65 /* SampleTableViewController.m in Sources */,
-				3663960C1906B81B00BE44E8 /* NSManagedObject+BTIAdditions.m in Sources */,
+				3663960C1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m in Sources */,
 				366983FC190810F3002D1E65 /* DemoPerson.m in Sources */,
-				3663960F1906BA1D00BE44E8 /* NSFetchedResultsController+BTIAdditions.m in Sources */,
+				3663960F1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m in Sources */,
 				366396181906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  NSFetchedResultsController+BTIAdditions.m
+//  NSFetchedResultsController+BTICoreDataKitAdditions.m
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTICoreDataKit
 //
 
-#import "NSFetchedResultsController+BTIAdditions.h"
+#import "NSFetchedResultsController+BTICoreDataKitAdditions.h"
 
 #import "BTICoreDataKit.h"
 
-@implementation NSFetchedResultsController (BTIAdditions)
+@implementation NSFetchedResultsController (BTICoreDataKitAdditions)
 
 - (BOOL)performFetchBTI
 {

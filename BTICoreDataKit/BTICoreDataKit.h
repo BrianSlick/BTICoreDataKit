@@ -18,10 +18,10 @@
 
 #pragma mark - Categories
 
-#import "NSFetchedResultsController+BTIAdditions.h"
-#import "NSManagedObject+BTIAdditions.h"
-#import "NSManagedObjectContext+BTIAdditions.h"
-#import "NSPersistentStoreCoordinator+BTIAdditions.h"
+#import "NSFetchedResultsController+BTICoreDataKitAdditions.h"
+#import "NSManagedObject+BTICoreDataKitAdditions.h"
+#import "NSManagedObjectContext+BTICoreDataKitAdditions.h"
+#import "NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h"
 
 #pragma mark - View Controllers
 

@@ -1,5 +1,5 @@
 //
-//  NSManagedObject+BTIAdditions.h
+//  NSManagedObject+BTICoreDataKitAdditions.h
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -9,7 +9,7 @@
 
 @import CoreData;
 
-@interface NSManagedObject (BTIAdditions)
+@interface NSManagedObject (BTICoreDataKitAdditions)
 
 /**
  Returns an NSEntityDescription for with a name matching the class name.

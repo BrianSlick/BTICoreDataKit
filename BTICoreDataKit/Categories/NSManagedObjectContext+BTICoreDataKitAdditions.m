@@ -1,5 +1,5 @@
 //
-//  NSManagedObjectContext+BTIAdditions.m
+//  NSManagedObjectContext+BTICoreDataKitAdditions.m
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTICoreDataKit
 //
 
-#import "NSManagedObjectContext+BTIAdditions.h"
+#import "NSManagedObjectContext+BTICoreDataKitAdditions.h"
 
 #import "BTICoreDataKit.h"
 
-@implementation NSManagedObjectContext (BTIAdditions)
+@implementation NSManagedObjectContext (BTICoreDataKitAdditions)
 
 - (NSUInteger)countForFetchRequestBTI:(NSFetchRequest *)fetchRequest
 {

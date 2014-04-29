@@ -1,5 +1,5 @@
 //
-//  NSPersistentStoreCoordinator+BTIAdditions.m
+//  NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m
 //  BTICoreDataKit
 //
 //  Created by Brian Slick in April 2014
@@ -7,11 +7,11 @@
 //  https://github.com/BriTerIdeas/BTICoreDataKit
 //
 
-#import "NSPersistentStoreCoordinator+BTIAdditions.h"
+#import "NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h"
 
 #import "BTICoreDataKit.h"
 
-@implementation NSPersistentStoreCoordinator (BTIAdditions)
+@implementation NSPersistentStoreCoordinator (BTICoreDataKitAdditions)
 
 - (NSPersistentStore *)addPersistentStoreWithTypeBTI:(NSString *)storeType
 									   configuration:(NSString *)configuration
