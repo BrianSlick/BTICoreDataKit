@@ -1,13 +1,15 @@
 //
 //  NSFileManager+BTIKitAdditions.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import <Foundation/Foundation.h>
+// Libraries
+@import Foundation;
 
 @interface NSFileManager (BTIKitAdditions)
 
@@ -26,6 +28,10 @@
 /** Passes directly through to createDirectoryAtURL:withIntermediateDirectories:attributes:error:
  */
 - (BOOL)createDirectoryAtURLBTI:(NSURL *)url withIntermediateDirectories:(BOOL)createIntermediates attributes:(NSDictionary *)attributes;
+
+/** Takes the path value of the provided url and passes it along to fileExistsAtPath:
+ */
+- (BOOL)fileExistsAtFileURLBTI:(NSURL *)url;
 
 /** Passes directly through to removeItemAtPath:error:
  */

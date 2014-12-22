@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36571C7719B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 36571C7619B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.m */; };
+		36571C7A19B0D44300041811 /* BTICoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36571C7919B0D44300041811 /* BTICoreDataCollectionViewController.m */; };
 		366395CF1905B1FC00BE44E8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366395CE1905B1FC00BE44E8 /* Foundation.framework */; };
 		366395D11905B1FC00BE44E8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366395D01905B1FC00BE44E8 /* CoreGraphics.framework */; };
 		366395D31905B1FC00BE44E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366395D21905B1FC00BE44E8 /* UIKit.framework */; };
@@ -50,8 +52,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		219EE5B787C3406B996DF439 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		36571C7519B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTIFetchedResultsControllerCollectionViewManager.h; sourceTree = "<group>"; };
+		36571C7619B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIFetchedResultsControllerCollectionViewManager.m; sourceTree = "<group>"; };
+		36571C7819B0D44300041811 /* BTICoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTICoreDataCollectionViewController.h; sourceTree = "<group>"; };
+		36571C7919B0D44300041811 /* BTICoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTICoreDataCollectionViewController.m; sourceTree = "<group>"; };
 		366395CB1905B1FC00BE44E8 /* BTICoreDataKitDemoProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BTICoreDataKitDemoProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		366395CE1905B1FC00BE44E8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		366395D01905B1FC00BE44E8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,7 +64,6 @@
 		366395D61905B1FC00BE44E8 /* BTICoreDataKitDemoProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BTICoreDataKitDemoProject-Info.plist"; sourceTree = "<group>"; };
 		366395D81905B1FC00BE44E8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		366395DA1905B1FC00BE44E8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		366395DC1905B1FC00BE44E8 /* BTICoreDataKitDemoProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BTICoreDataKitDemoProject-Prefix.pch"; sourceTree = "<group>"; };
 		366395DD1905B1FC00BE44E8 /* BTIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BTIAppDelegate.h; sourceTree = "<group>"; };
 		366395DE1905B1FC00BE44E8 /* BTIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTIAppDelegate.m; sourceTree = "<group>"; };
 		366395E61905B1FC00BE44E8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		3669840519085B4A002D1E65 /* BTINSManagedObjectContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTINSManagedObjectContextTests.m; sourceTree = "<group>"; };
 		3669840819089F2D002D1E65 /* BTIFetchedResultsControllerTableViewManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTIFetchedResultsControllerTableViewManagerTests.m; sourceTree = "<group>"; };
 		3669840A190989CB002D1E65 /* BTICoreDataStackManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTICoreDataStackManagerTests.m; sourceTree = "<group>"; };
+		3FD27673F30C7E357D555BA5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		47F9E759293646E55800508E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +137,7 @@
 				366395F31905B1FC00BE44E8 /* BTICoreDataKitDemoProjectTests */,
 				366395CD1905B1FC00BE44E8 /* Frameworks */,
 				366395CC1905B1FC00BE44E8 /* Products */,
-				04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */,
+				E76BD8F76A4F0E9FF2952BE8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,7 +183,6 @@
 				366395D61905B1FC00BE44E8 /* BTICoreDataKitDemoProject-Info.plist */,
 				366395D71905B1FC00BE44E8 /* InfoPlist.strings */,
 				366395DA1905B1FC00BE44E8 /* main.m */,
-				366395DC1905B1FC00BE44E8 /* BTICoreDataKitDemoProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -233,10 +238,12 @@
 		366396061905F33A00BE44E8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				366396161906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.h */,
-				366396171906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m */,
 				366983F219073043002D1E65 /* BTICoreDataStackManager.h */,
 				366983F319073043002D1E65 /* BTICoreDataStackManager.m */,
+				366396161906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.h */,
+				366396171906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m */,
+				36571C7519B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.h */,
+				36571C7619B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +253,8 @@
 			children = (
 				366983EF1906EEC1002D1E65 /* BTICoreDataTableViewController.h */,
 				366983F01906EEC1002D1E65 /* BTICoreDataTableViewController.m */,
+				36571C7819B0D44300041811 /* BTICoreDataCollectionViewController.h */,
+				36571C7919B0D44300041811 /* BTICoreDataCollectionViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -286,6 +295,15 @@
 				3669840A190989CB002D1E65 /* BTICoreDataStackManagerTests.m */,
 			);
 			name = "Model Tests";
+			sourceTree = "<group>";
+		};
+		E76BD8F76A4F0E9FF2952BE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				47F9E759293646E55800508E /* Pods.debug.xcconfig */,
+				3FD27673F30C7E357D555BA5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9BC9040D557E40078A8BC00B /* Copy Pods Resources */ = {
@@ -413,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C473A1AEEF0440E9A90E4D03 /* Check Pods Manifest.lock */ = {
@@ -460,9 +478,11 @@
 				366395DB1905B1FC00BE44E8 /* main.m in Sources */,
 				366396151906BCC900BE44E8 /* NSPersistentStoreCoordinator+BTICoreDataKitAdditions.m in Sources */,
 				366396121906BB5C00BE44E8 /* NSManagedObjectContext+BTICoreDataKitAdditions.m in Sources */,
+				36571C7719B0D00900041811 /* BTIFetchedResultsControllerCollectionViewManager.m in Sources */,
 				366983F919081080002D1E65 /* DemoProject.xcdatamodeld in Sources */,
 				3669840019081168002D1E65 /* SampleTableViewController.m in Sources */,
 				3663960C1906B81B00BE44E8 /* NSManagedObject+BTICoreDataKitAdditions.m in Sources */,
+				36571C7A19B0D44300041811 /* BTICoreDataCollectionViewController.m in Sources */,
 				366983FC190810F3002D1E65 /* DemoPerson.m in Sources */,
 				3663960F1906BA1D00BE44E8 /* NSFetchedResultsController+BTICoreDataKitAdditions.m in Sources */,
 				366396181906C10200BE44E8 /* BTIFetchedResultsControllerTableViewManager.m in Sources */,
@@ -582,12 +602,12 @@
 		};
 		366395FE1905B1FC00BE44E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */;
+			baseConfigurationReference = 47F9E759293646E55800508E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -597,12 +617,12 @@
 		};
 		366395FF1905B1FC00BE44E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */;
+			baseConfigurationReference = 3FD27673F30C7E357D555BA5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,7 +632,7 @@
 		};
 		366396011905B1FC00BE44E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */;
+			baseConfigurationReference = 47F9E759293646E55800508E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BTICoreDataKitDemoProject.app/BTICoreDataKitDemoProject";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -621,7 +641,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -635,7 +655,7 @@
 		};
 		366396021905B1FC00BE44E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04C9C6E476D54B1CBF7AFFE8 /* Pods.xcconfig */;
+			baseConfigurationReference = 3FD27673F30C7E357D555BA5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BTICoreDataKitDemoProject.app/BTICoreDataKitDemoProject";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -644,7 +664,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "BTICoreDataKitDemoProject/BTICoreDataKitDemoProject-Prefix.pch";
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "BTICoreDataKitDemoProjectTests/BTICoreDataKitDemoProjectTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

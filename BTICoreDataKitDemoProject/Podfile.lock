@@ -1,5 +1,5 @@
 PODS:
-  - BTIKit (1.0.1)
+  - BTIKit (1.2)
 
 DEPENDENCIES:
   - BTIKit (from `https://github.com/BriTerIdeas/BTIKit.git`)
@@ -8,7 +8,12 @@ EXTERNAL SOURCES:
   BTIKit:
     :git: https://github.com/BriTerIdeas/BTIKit.git
 
-SPEC CHECKSUMS:
-  BTIKit: 74eb54f4b2b71d641eab352bb345d4660c6d27f0
+CHECKOUT OPTIONS:
+  BTIKit:
+    :commit: fceaa7cce39ecf86f55ce17f9dac27470bb1f9c5
+    :git: https://github.com/BriTerIdeas/BTIKit.git
 
-COCOAPODS: 0.32.1
+SPEC CHECKSUMS:
+  BTIKit: 70d78ea011d806605392745b46d6648330176c1a
+
+COCOAPODS: 0.35.0

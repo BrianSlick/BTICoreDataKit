@@ -1,6 +1,7 @@
 //
 //  NSManagedObjectContext+BTICoreDataKitAdditions.m
 //  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -9,7 +10,7 @@
 
 #import "NSManagedObjectContext+BTICoreDataKitAdditions.h"
 
-#import "BTICoreDataKit.h"
+//#import "BTIMacros.h"
 
 @implementation NSManagedObjectContext (BTICoreDataKitAdditions)
 
@@ -59,7 +60,7 @@
         NSArray *detailedErrors = [[error userInfo] objectForKey:NSDetailedErrorsKey];
         if (detailedErrors != nil && [detailedErrors count] > 0)
         {
-            for (NSError *detailedError in detailedErrors)
+            for (__unused NSError *detailedError in detailedErrors)
             {
                 NSLog(@"  DetailedError: %@", [detailedError userInfo]);
             }

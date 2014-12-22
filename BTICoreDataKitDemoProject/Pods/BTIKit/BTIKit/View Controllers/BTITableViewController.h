@@ -1,6 +1,7 @@
 //
 //  BTITableViewController.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -66,5 +67,14 @@
  @param indexPath The location in \em tableView to populate.
  */
 - (id)itemInTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath;    
+
+
+/**
+ Designated method for defining the cells and header/footer views for a given table view. Default implementation does nothing. Subclasses should override, call to super is not necessary. This method will be automatically called from viewDidLoad for the primary table view. It will need to be called manually for any other table views, ex: search table view
+ 
+ @param tableView The table view for which nibs should be registered.
+ */
+- (void)registerNibsForTableView:(UITableView *)tableView;
+
 
 @end

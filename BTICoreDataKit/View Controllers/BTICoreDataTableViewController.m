@@ -1,6 +1,7 @@
 //
 //  BTICoreDataTableViewController.m
 //  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -10,7 +11,7 @@
 #import "BTICoreDataTableViewController.h"
 
 // Models and other global
-#import "BTICoreDataKit.h"
+#import "BTIFetchedResultsControllerTableViewManager.h"
 
 // Sub-controllers
 
@@ -170,6 +171,16 @@
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return controller;
+}
+
+- (BOOL)isMainFetchedResultsControllerLoaded
+{
+    return (_mainFetchedResultsController != nil);
+}
+
+- (BOOL)isSearchFetchedResultsControllerLoaded
+{
+    return (_searchFetchedResultsController != nil);
 }
 
 #pragma mark - UITableViewDataSource Methods

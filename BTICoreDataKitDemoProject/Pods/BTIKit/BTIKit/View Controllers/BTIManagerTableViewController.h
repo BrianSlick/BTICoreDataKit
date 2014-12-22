@@ -1,6 +1,7 @@
 //
 //  BTIManagerTableViewController.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -11,7 +12,7 @@
  
  OVERVIEW
  
- This is a specific implementation of BTITableViewController that provides data storage via BTITableContentsManager(s), one for the main contents and one for the search contents.  itemInTableView:atIndexPath:
+ This is a specific implementation of BTITableViewController that provides data storage via BTITableContentsManager(s), one for the main contents and one for the search contents.  itemInTableView:atIndexPath: has been overridden accordingly.
  
  */
 

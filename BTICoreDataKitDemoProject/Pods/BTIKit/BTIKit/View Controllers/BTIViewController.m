@@ -1,6 +1,7 @@
 //
 //  BTIViewController.m
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -10,7 +11,7 @@
 #import "BTIViewController.h"
 
 // Models and other global
-#import "BTIKit.h"
+#import "BTIMacros.h"
 
 // Sub-controllers
 
@@ -37,23 +38,6 @@
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     [self stopListeningForAllNotifications];
-    
-    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-}
-
-- (void)didReceiveMemoryWarning
-{
-    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-       
-    [super didReceiveMemoryWarning];
-    
-    if ([self isViewLoaded])
-    {
-        if ([[self view] window] == nil)
-        {
-            [self setView:nil];
-        }
-    }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }

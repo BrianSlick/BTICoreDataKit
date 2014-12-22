@@ -1,6 +1,7 @@
 //
 //  BTIViewController.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -28,7 +29,7 @@
  */
 
 // Libraries
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 // Forward Declarations and Classes
 #import "BTINotificationInfo.h"
@@ -92,7 +93,8 @@
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
  @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
- */- (void)addVisibleNotificationInfoForName:(NSString *)name
+ */
+- (void)addVisibleNotificationInfoForName:(NSString *)name
                                  selector:(SEL)selector
                                    object:(id)object;
 

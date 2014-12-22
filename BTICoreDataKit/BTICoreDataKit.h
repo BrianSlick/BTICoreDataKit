@@ -1,22 +1,27 @@
 //
 //  BTICoreDataKit.h
-//  v1.0.2
+//  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
 //  https://github.com/BriTerIdeas/BTICoreDataKit
 //
 
+#pragma mark - Dependencies
+
 // BTICoreDataKit depends upon BTIKit
 // https://github.com/BriTerIdeas/BTIKit
 #import "BTIKit.h"
 
+// System Libraries
 @import CoreData;
 
 #pragma mark - Models
 
-#import "BTIFetchedResultsControllerTableViewManager.h"
 #import "BTICoreDataStackManager.h"
+#import "BTIFetchedResultsControllerTableViewManager.h"
+#import "BTIFetchedResultsControllerCollectionViewManager.h"
 
 #pragma mark - Categories
 

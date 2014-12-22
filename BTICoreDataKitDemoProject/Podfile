@@ -1,4 +1,4 @@
-platform :ios
+platform :ios, '7.0'
 
 pod 'BTIKit', :git =>'https://github.com/BriTerIdeas/BTIKit.git'
 

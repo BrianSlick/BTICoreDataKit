@@ -1,6 +1,7 @@
 //
 //  BTINotificationInfo.m
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -9,7 +10,8 @@
 
 #import "BTINotificationInfo.h"
 
-#import "BTIKit.h"
+// Models and other global
+#import "BTIMacros.h"
 
 @interface BTINotificationInfo ()
 

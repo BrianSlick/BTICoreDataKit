@@ -1,1 +1,0 @@
-../../BTIKit/BTIKit/Models/BTIObject.h

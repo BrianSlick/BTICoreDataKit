@@ -1,6 +1,7 @@
 //
 //  BTIFetchedResultsControllerTableViewManager.m
 //  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -11,7 +12,7 @@
 
 #import "BTIFetchedResultsControllerTableViewManager.h"
 
-#import "BTICoreDataKit.h"
+//#import "BTIMacros.h"
 
 @interface BTIFetchedResultsControllerTableViewManager () <NSFetchedResultsControllerDelegate>
 

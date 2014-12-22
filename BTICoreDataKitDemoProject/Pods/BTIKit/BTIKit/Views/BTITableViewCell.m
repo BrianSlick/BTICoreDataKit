@@ -1,6 +1,7 @@
 //
 //  BTITableViewCell.m
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -11,7 +12,7 @@
 #import "BTITableViewCell.h"
 
 // Models and other global
-#import "BTIKit.h"
+#import "BTIMacros.h"
 
 // Private Constants
 
@@ -65,6 +66,26 @@
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return NSStringFromClass([self class]);
+}
+
++ (void)registerNibForTableViewBTI:(UITableView *)tableView
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    NSString *className = NSStringFromClass([self class]);
+    
+    UINib *cellNib = [UINib nibWithNibName:className bundle:nil];
+    [tableView registerNib:cellNib forCellReuseIdentifier:className];
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
++ (instancetype)dequeueCellFromTableViewBTI:(UITableView *)tableView
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return [tableView dequeueReusableCellWithIdentifier:[[self class] reuseIdentifierBTI]];
 }
 
 @end

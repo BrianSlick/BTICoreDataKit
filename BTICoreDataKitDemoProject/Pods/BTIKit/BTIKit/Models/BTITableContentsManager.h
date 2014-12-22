@@ -1,6 +1,7 @@
 //
 //  BTITableContentsManager.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -22,6 +23,7 @@
  */
 
 // Libraries
+@import UIKit;
 
 // Classes and Forward Declarations
 #import "BTIObject.h"

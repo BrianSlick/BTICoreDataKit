@@ -1,6 +1,7 @@
 //
 //  BTITableSectionInfo+BTICoreDataKitAdditions.h
-//  BTICoreDataKitDemoProject
+//  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick on 5/2/14.
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -16,8 +17,9 @@
  
  */
 
+// Libraries
 @import CoreData;
-#import "BTITableSectionInfo.h"
+#import "BTIKit.h"
 
 @interface BTITableSectionInfo (BTICoreDataKitAdditions) <NSFetchedResultsSectionInfo>
 

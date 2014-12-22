@@ -8,6 +8,8 @@
 
 #import "BTIAppDelegate.h"
 
+#import "BTIMacros.h"
+
 #import "SampleTableViewController.h"
 
 @implementation BTIAppDelegate

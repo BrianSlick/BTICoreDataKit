@@ -1,6 +1,7 @@
 //
 //  BTICoreDataStackManager.m
 //  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -10,7 +11,9 @@
 #import "BTICoreDataStackManager.h"
 
 // Models and other global
-#import "BTICoreDataKit.h"
+#import "BTIKit.h"
+#import "NSManagedObjectContext+BTICoreDataKitAdditions.h"
+#import "NSPersistentStoreCoordinator+BTICoreDataKitAdditions.h"
 
 // Private Constants
 NSString *const kBTIManagedObjectModelFileExtension = @"momd";
@@ -236,7 +239,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 - (NSDictionary *)persistentStoreOptions
 {
-    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSMutableDictionary *options = [NSMutableDictionary dictionary];
     [options setObject:@YES forKey:NSMigratePersistentStoresAutomaticallyOption];
@@ -248,7 +251,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [options setObject:[NSDictionary dictionaryWithDictionary:pragmaOptions] forKey:NSSQLitePragmasOption];
     
-    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [NSDictionary dictionaryWithDictionary:options];
 }
 
@@ -256,13 +259,13 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
 
 - (void)loadPersistentStore
 {
-    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSPersistentStore *store = [self persistentStore];
     
     if (store != nil)
     {
-        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store already loaded", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store already loaded", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -270,7 +273,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     if (coordinator == nil)
     {
-        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - PSC does not exist", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - PSC does not exist", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -292,18 +295,18 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     }
     [self setPersistentStore:store];
     
-    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 - (void)unloadPersistentStore
 {
-    BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     NSPersistentStore *store = [self persistentStore];
     
     if (store == nil)
     {
-        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Fallback store doesn't exist", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Fallback store doesn't exist", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -313,7 +316,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     {
         [self setPersistentStore:nil];
         
-        BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store does not belong to PSC", self, __PRETTY_FUNCTION__);
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Store does not belong to PSC", self, __PRETTY_FUNCTION__);
         return;
     }
     
@@ -321,7 +324,7 @@ NSString *const kBTIDatabaseFileExtension = @"sqlite";
     
     [self setPersistentStore:nil];
     
-    BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - Major Database Operations

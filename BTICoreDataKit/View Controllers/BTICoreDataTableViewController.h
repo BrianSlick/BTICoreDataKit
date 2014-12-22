@@ -1,6 +1,7 @@
 //
 //  BTICoreDataTableViewController.h
 //  BTICoreDataKit
+//  v1.1
 //
 //  Created by Brian Slick in April 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -17,11 +18,11 @@
 
 
 // Libraries
-#import "BTICoreDataKit.h"
 @import CoreData;
 
 // Forward Declarations and Classes
 #import "BTITableViewController.h"
+@class BTIFetchedResultsControllerTableViewManager;
 
 // Public Constants
 
@@ -70,5 +71,20 @@
  @return Either \em mainFetchedResultsController or \em searchFetchedResultsController, or nil.
  */
 - (NSFetchedResultsController *)fetchedResultsControllerForTableView:(UITableView *)tableView;
+
+/**
+ Returns a boolean indicating whether or not \em mainFetchedResultsController has been loaded. Will not cause \em mainFetchedResultsController to load.
+ 
+ @return Boolean
+ */
+- (BOOL)isMainFetchedResultsControllerLoaded;
+
+/**
+ Returns a boolean indicating whether or not \em searchFetchedResultsController has been loaded. Will not cause \em searchFetchedResultsController to load.
+ 
+ @return Boolean
+ */
+- (BOOL)isSearchFetchedResultsControllerLoaded;
+
 
 @end

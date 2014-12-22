@@ -1,13 +1,15 @@
 //
 //  UITableViewCell+BTIKitAdditions.h
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
 //  https://github.com/BriTerIdeas/BTIKit
 //
 
-#import <UIKit/UIKit.h>
+// Libraries
+@import UIKit;
 
 @interface UITableViewCell (BTIKitAdditions)
 

@@ -1,6 +1,7 @@
 //
 //  BTITableViewController.m
 //  BTIKit
+//  v1.2
 //
 //  Created by Brian Slick in March 2014
 //  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
@@ -10,7 +11,7 @@
 #import "BTITableViewController.h"
 
 // Models and other global
-#import "BTIKit.h"
+#import "BTIMacros.h"
 
 // Sub-controllers
 
@@ -43,22 +44,6 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)didReceiveMemoryWarning
-{
-    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
-    [super didReceiveMemoryWarning];
-    
-    if (![self isViewLoaded])
-    {
-        [_tableView setDelegate:nil];
-        [_tableView setDataSource:nil];
-        [self setTableView:nil];
-    }
-
-    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-}
-
 #pragma mark - Initialization and UI Creation Methods
 
 
@@ -74,6 +59,17 @@
 }
 
 #pragma mark - UIViewController Overrides
+
+- (void)viewDidLoad
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    [super viewDidLoad];
+    
+    [self registerNibsForTableView:[self tableView]];
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -162,6 +158,15 @@
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return object;
+}
+
+- (void)registerNibsForTableView:(UITableView *)tableView
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    // Deliberately blank. Subclasses should override, no need to call super.
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
 #pragma mark - UITableViewDataSource Methods
