@@ -4,6 +4,8 @@ by **Brian Slick**
 Personal: [@BrianSlick](http://twitter.com/BrianSlick) | [Clinging To Ideas](http://clingingtoideas.blogspot.com)  
 Business: [@BriTerIdeas](http://twitter.com/BriTerIdeas) | [briterideas.com](http://briterideas.com)
 
+Newest version is v1.2
+
 ### What is BTIKit?
 
 **A handful of helpful classes and categories for iOS Core Data development.**

@@ -1,19 +1,22 @@
 //
-//  BTITableViewController.m
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #import "BTITableViewController.h"
 
-// Models and other global
+// Libraries
+
+// Other Global
 #import "BTIMacros.h"
 
-// Sub-controllers
+// Categories
+
+// Models
+
+// View Controllers
 
 // Views
 
@@ -66,17 +69,6 @@
 
     [super viewDidLoad];
     
-    [self registerNibsForTableView:[self tableView]];
-
-    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-    
-    [super viewWillAppear:animated];
-    
     UITableView *tableView = [self tableView];
     if (tableView == nil)
     {
@@ -92,12 +84,14 @@
     
     [tableView setDelegate:self];
     [tableView setDataSource:self];
-        
+    
     UISearchDisplayController *searchController = [self searchDisplayController];
     [searchController setDelegate:self];
     [searchController setSearchResultsDataSource:self];
     [searchController setSearchResultsDelegate:self];
-    
+
+    [self registerNibsForTableView:tableView];
+
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 

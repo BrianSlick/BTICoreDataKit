@@ -1,18 +1,15 @@
 //
-//  BTITableContentsManager.h
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 /*
  
  OVERVIEW
  
- The spirit of this class is to be a non-Core Data equivalent of a NSFetchedResultsController.  Currently the primary benefit of this class is to simplify UITableViewDataSource and UITableViewDelegate methods, in a similar way that NSFRC does, providing objectAtIndePath: style methods.
+ The spirit of this class is to be a non-Core Data equivalent of a NSFetchedResultsController.  Currently the primary benefit of this class is to simplify UITableViewDataSource and UITableViewDelegate methods, in a similar way that NSFRC does, providing objectAtIndexPath: style methods.
  
  This class utilizes the companion classes BTITableSectionInfo and BTITableRowInfo.  BTITableSectionInfo is analogous to NSFetchedResultsSectionInfo, and BTITableRowInfo is analogous to NSTreeNode (OS X).  The intention is to populate the 'sections' array with section info objects, which are in turn populated with row info objects.  Once populated, this class provides utility methods for retrieving information for handy use with table views.
  
@@ -27,8 +24,8 @@
 
 // Classes and Forward Declarations
 #import "BTIObject.h"
-@class BTITableSectionInfo;
-@class BTITableRowInfo;
+#import "BTITableSectionInfo.h"
+#import "BTITableRowInfo.h"
 
 // Public Constants
 
@@ -82,6 +79,13 @@
  @return A BTITableRowInfo object that is NOT managed by the receiver.
  */
 - (BTITableRowInfo *)dequeueReusableRowInfo;
+
+/**
+ Requests a BTITableRowInfo object from the local cache, creating one if necessary. This object is then added to the last section info currently being managed by the receiver. If no section infos are already in the array, a new one will be added, and this row info will be added to it.
+ 
+ @return A BTITableRowInfo object that has been added to the receiver's contents
+ */
+- (BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents;
 
 /**
  Adds a BTITableRowInfo object to a BTITableSectionInfo object.  If makeNewSelection is NO, the row info will be added to the last section info in the array.  If no section infos are already in the array, a new one will be added, and this row info will be added to it.  If makeNewSelection is YES, a new section info object will be added to the array, and this row info will be added to it.
@@ -156,6 +160,15 @@
 - (BTITableSectionInfo *)sectionInfoAtIndex:(NSInteger)index;
 
 /**
+ Returns the BTITableSectionInfo object for the given section identifier. Only the first match will be returned.
+ 
+ @param identifier Identifier for the section
+ 
+ @return The BTITableSectionInfo object with the \em identifier
+ */
+- (BTITableSectionInfo *)sectionInfoForIdentifier:(NSString *)identifier;
+
+/**
  Returns the BTITableSectionInfo's represented object at the specified index
  
  @param index Index for the section
@@ -172,6 +185,15 @@
  @return The BTITableRowInfo object at \em indexPath
  */
 - (BTITableRowInfo *)rowInfoAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ Returns the BTITableRowInfo object for the given row identifier. Only the first match will be returned.
+ 
+ @param identifier Identifier for the section
+ 
+ @return The BTITableRowInfo object with the \em identifier
+ */
+- (BTITableRowInfo *)rowInfoForIdentifier:(NSString *)identifier;
 
 /**
  Returns the BTITableRowInfo's represented object at the specified index

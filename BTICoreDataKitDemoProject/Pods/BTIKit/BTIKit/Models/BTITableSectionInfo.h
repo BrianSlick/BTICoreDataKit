@@ -1,11 +1,8 @@
 //
-//  BTITableSectionInfo.h
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 /*
@@ -24,7 +21,7 @@
 
 // Classes and Forward Declarations
 #import "BTIObject.h"
-@class BTITableRowInfo;
+#import "BTITableRowInfo.h"
 
 // Public Constants
 

@@ -4,12 +4,14 @@ by **Brian Slick**
 Personal: [@BrianSlick](http://twitter.com/BrianSlick) | [Clinging To Ideas](http://clingingtoideas.blogspot.com)  
 Business: [@BriTerIdeas](http://twitter.com/BriTerIdeas) | [briterideas.com](http://briterideas.com)
 
+Newest version is: v1.4
+
 ### What is BTIKit?
 
-**A collection of classes and categories intended to take some pain out of common activites.**
+**A collection of classes and categories intended to take some pain out of common activities.**
 
 - A set of view controllers that encourage consistent behaviors, and handle what would otherwise be boilerplate code.
-- A set of models that are used to support table views.
+- A set of models that are used to support table and collection views.
 - A miscellaneous set of categories to handle a variety of tasks.
 
 
@@ -24,13 +26,14 @@ In summary:
 - NSMutableArray: Remove the first object, and move object to new different index.
 - NSNotificationCenter: Make sure notifications are posted on the main thread.
 - NSNull: isEmpty. isIncompleteLibraryWithoutNSNullCategory.
-- NSString: Another error logging one. And isEmpty.
+- NSString: Another error logging one. And isEmpty. And email validation.
 - UICollectionView: IndexPath for a view.
 - UICollectionViewCell: Enclosing collection view, nib loading.
 - UIDevice: isIpad, isIphone, isRetina. Woo!
 - UITableView: IndexPath for a view. Not my idea.
 - UITableViewCell: Enclosing table view, nib loading.
 - UITableViewHeaderFooterView: Nib loading.
+- UIView. Nib loading.
 - UIViewController: Back button title.
 
 **Models**
@@ -51,17 +54,17 @@ In summary:
 
 - BTIViewController: Mostly shows how to use the notification helpers. Parent class for all of the following...
 
-Table View Stuff
+...for Table Views
 - BTITableViewController: Adds a table view.
 - BTIArrayTableViewController: Adds a simple array to BTITableViewController.
 - BTIManagerTableViewController: Uses a BTITableContentsManager with BTITableViewController.
 
-Collection View Stuff
+...for Collection Views
 - BTICollectionViewController: Adds a collection view.
 - BTIArrayCollectionViewController: Adds a simple array to BTICollectionViewController.
 - BTIManagerCollectionViewController: Uses a BTITableContentsManager with BTICollectionViewController.
 
-Web View Stuff
+...for Web Views
 - BTIWebViewController. Adds a web view.
 
 

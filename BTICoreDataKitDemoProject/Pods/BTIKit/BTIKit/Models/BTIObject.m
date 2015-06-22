@@ -1,18 +1,23 @@
 //
-//  BTIObject.m
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #import "BTIObject.h"
 
-// Models and other global
+// Libraries
 #import <objc/runtime.h>
+
+// Other Global
 #import "BTIMacros.h"
+
+// Categories
+
+// Models
+
+// Private Constants
 
 @interface BTIObject ()
 
@@ -28,6 +33,10 @@
 
 #pragma mark - Dealloc and Memory Management
 
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - Custom Getters and Setters
 

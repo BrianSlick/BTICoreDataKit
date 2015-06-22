@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0640"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "050441807C914CD37F8CDC24"
+               BlueprintIdentifier = "7ECA33956E3E2E34739EBC8C"
                BuildableName = "libPods-BTIKit.a"
                BlueprintName = "Pods-BTIKit"
                ReferencedContainer = "container:Pods.xcodeproj">

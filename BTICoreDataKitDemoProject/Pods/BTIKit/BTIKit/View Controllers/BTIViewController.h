@@ -1,11 +1,8 @@
 //
-//  BTIViewController.h
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 /*
@@ -66,6 +63,15 @@
 - (void)addNotificationInfo:(BTINotificationInfo *)info;
 
 /**
+ Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer, 'object' is nil.  See BTINotificationInfo and NSNotificationCenter for value definitions.
+ 
+ @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
+ @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
+ */
+- (void)addLifetimeNotificationInfoForName:(NSString *)name
+                                  selector:(SEL)selector;
+
+/**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.
  
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer. 
@@ -86,6 +92,15 @@
 - (void)addLifetimeNotificationInfoForName:(NSString *)name
                                     object:(id)object
                                 usingBlock:(void (^)(NSNotification *notification))block;
+
+/**
+ Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer, 'object' is nil.  See BTINotificationInfo and NSNotificationCenter for value definitions.
+ 
+ @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
+ @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
+ */
+- (void)addVisibleNotificationInfoForName:(NSString *)name
+                                 selector:(SEL)selector;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.

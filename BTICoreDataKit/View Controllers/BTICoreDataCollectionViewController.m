@@ -1,19 +1,22 @@
 //
-//  BTICoreDataCollectionViewController.h
-//  BTICoreDataKit
-//  v1.1
+//  BTICoreDataKit -- [https://github.com/BriTerIdeas/BTICoreDataKit]
+//  v1.2
 //
-//  Created by Brian Slick in April 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTICoreDataKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #import "BTICoreDataCollectionViewController.h"
 
-// Models and other global
-#import "BTIFetchedResultsControllerCollectionViewManager.h"
+// Libraries
 
-// Sub-controllers
+// Other Global
+#import "BTIMacros.h"
+
+// Categories
+
+// Models
+
+// View Controllers
 
 // Views
 

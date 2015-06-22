@@ -1,16 +1,22 @@
 //
-//  NSManagedObjectContext+BTICoreDataKitAdditions.m
-//  BTICoreDataKit
-//  v1.1
+//  BTICoreDataKit -- [https://github.com/BriTerIdeas/BTICoreDataKit]
+//  v1.2
 //
-//  Created by Brian Slick in April 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTICoreDataKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #import "NSManagedObjectContext+BTICoreDataKitAdditions.h"
 
-//#import "BTIMacros.h"
+// Libraries
+
+// Other Global
+#import "BTIMacros.h"
+
+// Categories
+
+// Models
+
+// Private Constants
 
 @implementation NSManagedObjectContext (BTICoreDataKitAdditions)
 

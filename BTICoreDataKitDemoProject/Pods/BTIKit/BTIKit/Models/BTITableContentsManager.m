@@ -1,19 +1,20 @@
 //
-//  BTITableContentsManager.m
-//  BTIKit
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #import "BTITableContentsManager.h"
 
-// Models and other global
+// Libraries
+
+// Other Global
 #import "BTIMacros.h"
-#import "BTITableSectionInfo.h"
-#import "BTITableRowInfo.h"
+
+// Categories
+
+// Models
 
 // Private Constants
 CGFloat const BTIStandardMinimumRowHeight = 44.0;
@@ -244,6 +245,33 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rowInfo;
 }
 
+- (BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    NSMutableSet *cache = [self rowInfoCache];
+    BTITableRowInfo *rowInfo = [cache anyObject];
+    if (rowInfo == nil)
+    {
+        rowInfo = [[BTITableRowInfo alloc] init];
+    }
+    else
+    {
+        [cache removeObject:rowInfo];
+    }
+
+    BTITableSectionInfo *sectionInfo = [[self sections] lastObject];
+    if (sectionInfo == nil)
+    {
+        sectionInfo = [self dequeueReusableSectionInfoAndAddToContents];
+    }
+    
+    [sectionInfo addRowsObject:rowInfo];
+
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return rowInfo;
+}
+
 - (void)addRowInfo:(BTITableRowInfo *)rowInfo
     makeNewSection:(BOOL)isNewSection
 {
@@ -381,6 +409,31 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return [[self sections] objectAtIndex:index];
 }
 
+- (BTITableSectionInfo *)sectionInfoForIdentifier:(NSString *)identifier
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    if (identifier == nil)
+    {
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Nil identifier", self, __PRETTY_FUNCTION__);
+        return nil;
+    }
+    
+    BTITableSectionInfo *sectionInfoToReturn = nil;
+    
+    for (BTITableSectionInfo *sectionInfo in [self sections])
+    {
+        if ([[sectionInfo identifier] isEqualToString:identifier])
+        {
+            sectionInfoToReturn = sectionInfo;
+            break;
+        }
+    }
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return sectionInfoToReturn;
+}
+
 - (id)representedObjectAtSectionIndex:(NSInteger)index
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
@@ -400,6 +453,39 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return rowInfo;
+}
+
+- (BTITableRowInfo *)rowInfoForIdentifier:(NSString *)identifier
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+
+    if (identifier == nil)
+    {
+        //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Nil identifier", self, __PRETTY_FUNCTION__);
+        return nil;
+    }
+    
+    BTITableRowInfo *rowInfoToReturn = nil;
+    
+    for (BTITableSectionInfo *sectionInfo in [self sections])
+    {
+        for (BTITableRowInfo *rowInfo in [sectionInfo enumeratorOfRows])
+        {
+            if ([[rowInfo identifier] isEqualToString:identifier])
+            {
+                rowInfoToReturn = rowInfo;
+                break;
+            }
+        }
+        
+        if (rowInfoToReturn != nil)
+        {
+            break;
+        }
+    }
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+    return rowInfoToReturn;
 }
 
 - (id)representedObjectAtIndexPath:(NSIndexPath *)indexPath

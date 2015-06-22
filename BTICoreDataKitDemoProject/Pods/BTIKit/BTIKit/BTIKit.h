@@ -1,10 +1,8 @@
 //
-//  BTIKit.h
-//  v1.2
+//  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
+//  v1.4
 //
-//  Created by Brian Slick in March 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTIKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 #pragma mark - Macros
@@ -39,6 +37,7 @@
 #import "UITableView+BTIKitAdditions.h"
 #import "UITableViewCell+BTIKitAdditions.h"
 #import "UITableViewHeaderFooterView+BTIKitAdditions.h"
+#import "UIView+BTIKitAdditions.h"
 #import "UIViewController+BTIKitAdditions.h"
 
 #pragma mark - View Controllers

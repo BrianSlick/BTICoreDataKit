@@ -1,11 +1,8 @@
 //
-//  BTICoreDataStackManager.h
-//  BTICoreDataKit
-//  v1.1
+//  BTICoreDataKit -- [https://github.com/BriTerIdeas/BTICoreDataKit]
+//  v1.2
 //
-//  Created by Brian Slick in April 2014
-//  Copyright (c) 2014 BriTer Ideas LLC. All rights reserved.
-//  https://github.com/BriTerIdeas/BTICoreDataKit
+//  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 

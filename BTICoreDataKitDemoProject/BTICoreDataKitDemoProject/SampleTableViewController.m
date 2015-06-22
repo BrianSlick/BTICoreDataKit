@@ -8,11 +8,17 @@
 
 #import "SampleTableViewController.h"
 
-// Models and other global
+// Libraries
 #import "BTICoreDataKit.h"
+
+// Other Global
+
+// Categories
+
+// Models
 #import "DemoPerson.h"
 
-// Sub-controllers
+// View Controllers
 
 // Views
 
