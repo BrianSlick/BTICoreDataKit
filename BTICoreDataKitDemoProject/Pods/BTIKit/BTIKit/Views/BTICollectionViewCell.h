@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -14,7 +14,7 @@
  */
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // Forward Declarations and Classes
 
@@ -34,14 +34,14 @@
  
  @return The class name as a string
  */
-+ (NSString *)reuseIdentifierBTI;
++ (nonnull NSString *)reuseIdentifierBTI;
 
 /**
  Creates and registers a UINib object matching the class name with the provided collection view
  
  @param collectionView The UICollectionView object with which to register the Nib
  */
-+ (void)registerNibForCollectionViewBTI:(UICollectionView *)collectionView;
++ (void)registerNibForCollectionViewBTI:(nullable UICollectionView *)collectionView;
 
 /**
  Dequeues a reusable cell of receiver's class type from the provided collection view, or nil if no nib is registered.
@@ -49,6 +49,6 @@
  @param collectionView the UICollectionView object from which to dequeue a cell.
  @param indexPath The index path specifying the location of the cell.
  */
-+ (instancetype)dequeueCellFromCollectionViewBTI:(UICollectionView *)collectionView forIndexPath:(NSIndexPath *)indexPath;
++ (nullable instancetype)dequeueCellFromCollectionViewBTI:(nullable UICollectionView *)collectionView forIndexPath:(nullable NSIndexPath *)indexPath;
 
 @end

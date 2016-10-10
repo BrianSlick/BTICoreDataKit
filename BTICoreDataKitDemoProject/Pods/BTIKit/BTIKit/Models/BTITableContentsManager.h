@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,7 +20,7 @@
  */
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // Classes and Forward Declarations
 #import "BTIObject.h"
@@ -36,7 +36,7 @@
 #pragma mark - Properties
 
 /// An array of BTITableSectionInfo objects
-@property (nonatomic, readonly) NSArray *sections;
+@property (nonnull, nonatomic, readonly) NSArray *sections;
 
 /// Default value is 44.0. Value will be used in concert with heightForRowAtIndexPath:
 @property (nonatomic, assign) CGFloat minimumRowHeight;
@@ -55,21 +55,21 @@
  
  @return A BTITableSectionInfo object that is NOT managed by the receiver.
  */
-- (BTITableSectionInfo *)dequeueReusableSectionInfo;
+- (nonnull BTITableSectionInfo *)dequeueReusableSectionInfo;
 
 /**
  Requests a BTITableSectionInfo object from the local cache, creating one if necessary.  This object is added to the sections array.
  
  @return A BTITableSectionInfo object that has been added to the receiver's contents.
  */
-- (BTITableSectionInfo *)dequeueReusableSectionInfoAndAddToContents;
+- (nonnull BTITableSectionInfo *)dequeueReusableSectionInfoAndAddToContents;
 
 /**
  Adds a BTITableSectionInfo to the sections array.
  
  @param sectionInfo A BTITableSectionInfo object to add to the receiver's contents.
  */
-- (void)addSectionInfo:(BTITableSectionInfo *)sectionInfo;
+- (void)addSectionInfo:(nullable BTITableSectionInfo *)sectionInfo;
 
 #pragma mark - BTITableRowInfoMethods
 
@@ -78,14 +78,14 @@
  
  @return A BTITableRowInfo object that is NOT managed by the receiver.
  */
-- (BTITableRowInfo *)dequeueReusableRowInfo;
+- (nonnull BTITableRowInfo *)dequeueReusableRowInfo;
 
 /**
  Requests a BTITableRowInfo object from the local cache, creating one if necessary. This object is then added to the last section info currently being managed by the receiver. If no section infos are already in the array, a new one will be added, and this row info will be added to it.
  
  @return A BTITableRowInfo object that has been added to the receiver's contents
  */
-- (BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents;
+- (nonnull BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents;
 
 /**
  Adds a BTITableRowInfo object to a BTITableSectionInfo object.  If makeNewSelection is NO, the row info will be added to the last section info in the array.  If no section infos are already in the array, a new one will be added, and this row info will be added to it.  If makeNewSelection is YES, a new section info object will be added to the array, and this row info will be added to it.
@@ -93,7 +93,7 @@
  @param rowInfo The row info object to be added
  @param isNewSection YES to create a new section when adding the row info. NO to add to the last section.
  */
-- (void)addRowInfo:(BTITableRowInfo *)rowInfo makeNewSection:(BOOL)isNewSection;    
+- (void)addRowInfo:(nullable BTITableRowInfo *)rowInfo makeNewSection:(BOOL)isNewSection;
 
 #pragma mark - UITableView Support Methods
 
@@ -111,7 +111,7 @@
  
  @return The header title for the section info at \em section
  */
-- (NSString *)headerTitleInSection:(NSInteger)section;
+- (nullable NSString *)headerTitleInSection:(NSInteger)section;
 
 /**
  Returns the 'footerTitle' value of the BTITableSectionInfo object at the specified index
@@ -121,7 +121,7 @@
  @return The footer title for the section info at \em section
 
  */
-- (NSString *)footerTitleInSection:(NSInteger)section;
+- (nullable NSString *)footerTitleInSection:(NSInteger)section;
 
 /**
  Returns the number of rows in the section at the specified index
@@ -139,14 +139,14 @@
  
  @return The height of the row at \em indexPath
  */
-- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)heightForRowAtIndexPath:(nullable NSIndexPath *)indexPath;
 
 /**
  Returns an array of all section index titles. Intended for use with sectionIndexTitlesForTableView:
  
  @return An array of NSString objects.
  */
-- (NSArray *)sectionIndexTitles;
+- (nonnull NSArray<NSString *> *)sectionIndexTitles;
 
 #pragma mark - Content Retrieval Methods
 
@@ -157,7 +157,7 @@
  
  @return The BTITableSectionInfo object at \em index.
  */
-- (BTITableSectionInfo *)sectionInfoAtIndex:(NSInteger)index;
+- (nonnull BTITableSectionInfo *)sectionInfoAtIndex:(NSInteger)index;
 
 /**
  Returns the BTITableSectionInfo object for the given section identifier. Only the first match will be returned.
@@ -166,7 +166,7 @@
  
  @return The BTITableSectionInfo object with the \em identifier
  */
-- (BTITableSectionInfo *)sectionInfoForIdentifier:(NSString *)identifier;
+- (nullable BTITableSectionInfo *)sectionInfoForIdentifier:(nullable NSString *)identifier;
 
 /**
  Returns the BTITableSectionInfo's represented object at the specified index
@@ -175,7 +175,7 @@
  
  @return The BTITableSectionInfo's represented object at \em index.
  */
-- (id)representedObjectAtSectionIndex:(NSInteger)index;
+- (nullable id)representedObjectAtSectionIndex:(NSInteger)index;
 
 /**
  Returns the BTITableRowInfo object at the specified index path
@@ -184,7 +184,7 @@
  
  @return The BTITableRowInfo object at \em indexPath
  */
-- (BTITableRowInfo *)rowInfoAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable BTITableRowInfo *)rowInfoAtIndexPath:(nullable NSIndexPath *)indexPath;
 
 /**
  Returns the BTITableRowInfo object for the given row identifier. Only the first match will be returned.
@@ -193,7 +193,7 @@
  
  @return The BTITableRowInfo object with the \em identifier
  */
-- (BTITableRowInfo *)rowInfoForIdentifier:(NSString *)identifier;
+- (nullable BTITableRowInfo *)rowInfoForIdentifier:(nullable NSString *)identifier;
 
 /**
  Returns the BTITableRowInfo's represented object at the specified index
@@ -202,7 +202,7 @@
  
  @return The BTITableRowInfo's represented object at \em indexPath
  */
-- (id)representedObjectAtIndexPath:(NSIndexPath *)indexPath;
+- (nullable id)representedObjectAtIndexPath:(nullable NSIndexPath *)indexPath;
 
 #pragma mark - Interrogation Methods
 
@@ -213,7 +213,7 @@
  
  @return The index of \em sectionInfo
  */
-- (NSInteger)indexOfSectionInfo:(BTITableSectionInfo *)sectionInfo;
+- (NSInteger)indexOfSectionInfo:(nullable BTITableSectionInfo *)sectionInfo;
 
 /**
  Returns the index of the section info's represented object
@@ -222,7 +222,7 @@
  
  @return The index of \em representedObject
  */
-- (NSInteger)indexOfRepresentedSectionObject:(id)representedObject;
+- (NSInteger)indexOfRepresentedSectionObject:(nullable id)representedObject;
 
 /**
  Returns the index of the section info object's identifier
@@ -231,7 +231,7 @@
  
  @return The index of \em identifier
  */
-- (NSInteger)indexOfSectionIdentifier:(NSString *)identifier;
+- (NSInteger)indexOfSectionIdentifier:(nullable NSString *)identifier;
 
 /**
  Returns the index path of the row info object
@@ -240,7 +240,7 @@
  
  @return The index path of \em rowInfo
  */
-- (NSIndexPath *)indexPathOfRowInfo:(BTITableRowInfo *)rowInfo;
+- (nullable NSIndexPath *)indexPathOfRowInfo:(nullable BTITableRowInfo *)rowInfo;
 
 /**
  Returns the index path of the row info object's represented object
@@ -249,7 +249,7 @@
  
  @return The indexPath of \em representedObject
  */
-- (NSIndexPath *)indexPathOfRepresentedRowObject:(id)representedObject;
+- (nullable NSIndexPath *)indexPathOfRepresentedRowObject:(nullable id)representedObject;
 
 /**
  Returns the index path of the row info object's identifier
@@ -258,20 +258,20 @@
  
  @return The index path of \em identifier
  */
-- (NSIndexPath *)indexPathOfRowIdentifier:(NSString *)identifier;
+- (nullable NSIndexPath *)indexPathOfRowIdentifier:(nullable NSString *)identifier;
 
 /**
  Returns an index set describing all section indexes.  This can be used before and after any content changes to help determine what changed.
  
  @return An index set for all sections
  */
-- (NSIndexSet *)allSectionIndexes;
+- (nonnull NSIndexSet *)allSectionIndexes;
 
 /**
  Returns an array containing all row index paths.  This can be used before and after any content changes to help determine what changed.
  
  @return An array containing NSIndexPath objects for each row in each section
  */
-- (NSArray *)allIndexPaths;
+- (nonnull NSArray *)allIndexPaths;
 
 @end

@@ -4,12 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BTIKit.xcscheme</key>
+		<key>BTIKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-BTICoreDataKitDemoProject.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-BTICoreDataKitDemoProjectTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>513C50E845DDAA8A5042FBAE</key>
+		<key>66871704B34DCFD10DD0E025BDFB9CA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7ECA33956E3E2E34739EBC8C</key>
+		<key>A76420A6587AF2D4B33D9756BA73D5EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C70AC2CAFBD6C9237AE0F35B23E82B50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

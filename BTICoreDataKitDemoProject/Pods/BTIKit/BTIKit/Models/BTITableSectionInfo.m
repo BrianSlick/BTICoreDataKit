@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -21,9 +21,9 @@
 @interface BTITableSectionInfo ()
 
 // Private Properties
-@property (nonatomic, copy) NSString *UUIDString;
+@property (nonnull, nonatomic, copy) NSString *UUIDString;
 
-@property (nonatomic, strong) NSMutableArray *rows;
+@property (nonnull, nonatomic, strong) NSMutableArray *rows;
 
 @end
 
@@ -37,7 +37,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableArray *)rows
+- (nonnull NSMutableArray *)rows
 {
     if (_rows == nil)
     {
@@ -102,7 +102,7 @@
 
 #pragma mark - Rows Accessor Methods
 
-- (NSArray *)objects
+- (nonnull NSArray *)objects
 {
     return [NSArray arrayWithArray:[self rows]];
 }
@@ -112,12 +112,12 @@
     return [[self rows] count];
 }
 
-- (id)objectInRowsAtIndex:(NSUInteger)index
+- (nonnull id)objectInRowsAtIndex:(NSUInteger)index
 {
     return [[self rows] objectAtIndex:index];
 }
 
-- (void)addRowsObject:(id)anObject
+- (void)addRowsObject:(nullable id)anObject
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -137,9 +137,14 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addRowsObjectsFromArray:(NSArray *)array
+- (void)addRowsObjectsFromArray:(nullable NSArray *)array
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (array == nil)
+    {
+        return;
+    }
     
     for (id object in array)
     {
@@ -149,7 +154,7 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addRowsObjectsFromSet:(NSSet *)set
+- (void)addRowsObjectsFromSet:(nullable NSSet *)set
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -158,9 +163,14 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)removeRowsObject:(id)anObject
+- (void)removeRowsObject:(nullable id)anObject
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (anObject == nil)
+    {
+        return;
+    }
     
     [[self rows] removeObject:anObject];
     
@@ -197,10 +207,15 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)insertObject:(id)anObject
+- (void)insertObject:(nullable id)anObject
        inRowsAtIndex:(NSUInteger)index
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (anObject == nil)
+    {
+        return;
+    }
     
     [[self rows] insertObject:anObject atIndex:index];
     
@@ -212,24 +227,29 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (NSUInteger)indexOfRowsObject:(id)anObject
+- (NSUInteger)indexOfRowsObject:(nullable id)anObject
 {
     return [[self rows] indexOfObject:anObject];
 }
 
-- (NSEnumerator *)enumeratorOfRows
+- (nonnull NSEnumerator *)enumeratorOfRows
 {
     return [[self rows] objectEnumerator];
 }
 
-- (void)sortRowsUsingDescriptors:(NSArray *)sortDescriptors
+- (void)sortRowsUsingDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors
 {
+    if (sortDescriptors == nil)
+    {
+        return;
+    }
+    
     [[self rows] sortUsingDescriptors:sortDescriptors];
 }
 
 #pragma mark - BTITableRowInfo/BTITableContentsManager Support Methods
 
-- (NSUInteger)indexOfIdentifier:(NSString *)identifier
+- (NSUInteger)indexOfIdentifier:(nullable NSString *)identifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -262,7 +282,7 @@
     return indexToReturn;
 }
 
-- (NSUInteger)indexOfRepresentedObject:(id)representedObject
+- (NSUInteger)indexOfRepresentedObject:(nullable id)representedObject
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -311,13 +331,13 @@
 
 #pragma mark - NSFastEnumeration Methods
 
-- (NSUInteger) countByEnumeratingWithState:(NSFastEnumerationState *)enumerationState
-                                   objects:(id __unsafe_unretained [])buffer
-                                     count:(NSUInteger)len
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)enumerationState
+                                  objects:(id __unsafe_unretained _Nullable [_Nonnull])buffer
+                                    count:(NSUInteger)len
 {
     return [[self rows] countByEnumeratingWithState:enumerationState
-                                                   objects:buffer
-                                                     count:len];
+                                            objects:buffer
+                                              count:len];
 }
 
 @end

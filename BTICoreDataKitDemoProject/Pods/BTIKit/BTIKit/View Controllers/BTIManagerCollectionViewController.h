@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -28,7 +28,7 @@
 #pragma mark - Public Properties
 
 /// Contents manager for data to display in the primary collection view.
-@property (nonatomic, strong, readonly) BTITableContentsManager *mainContentsManager;
+@property (nonnull, nonatomic, strong, readonly) BTITableContentsManager *mainContentsManager;
 
 #pragma mark - Public Methods
 
@@ -38,7 +38,7 @@
  
  @return Either \em mainContentsManager or nil, depending on which \em collectionView is provided.
  */
-- (BTITableContentsManager *)contentsManagerForCollectionView:(UICollectionView *)collectionView;
+- (nullable BTITableContentsManager *)contentsManagerForCollectionView:(nullable UICollectionView *)collectionView;
 
 /** Returns the BTITableSectionInfo object corresponding to the collectionView at the desired index.
  
@@ -47,7 +47,7 @@
  
  @return The BTITableSectionInfo object at \em index.
  */
-- (BTITableSectionInfo *)sectionInfoInCollectionView:(UICollectionView *)collectionView atIndex:(NSUInteger)index;
+- (nullable BTITableSectionInfo *)sectionInfoInCollectionView:(nullable UICollectionView *)collectionView atIndex:(NSUInteger)index;
 
 /** Returns the BTITableRowInfo object corresponding to the collectionView at the desired index path.
  
@@ -56,7 +56,7 @@
  
  @return The BTITableRowInfo object at \em indexPath
  */
-- (BTITableRowInfo *)rowInfoInCollectionView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath;
+- (nullable BTITableRowInfo *)rowInfoInCollectionView:(nullable UICollectionView *)collectionView atIndexPath:(nullable NSIndexPath *)indexPath;
 
 /** Returns the BTITableRowInfo's represented object corresponding to the collectionView at the desired index path.
  
@@ -65,6 +65,6 @@
  
  @return The BTITableRowInfo's represented object at \em indexPath
  */
-- (id)representedObjectInCollectionView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath;
+- (nullable id)representedObjectInCollectionView:(nullable UICollectionView *)collectionView atIndexPath:(nullable NSIndexPath *)indexPath;
 
 @end

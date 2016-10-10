@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,9 +20,14 @@
 
 @implementation NSNotificationCenter (BTIKitAdditions)
 
-- (void)postNotificationOnMainThreadBTI:(NSNotification *)notification
+- (void)postNotificationOnMainThreadBTI:(nullable NSNotification *)notification
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (notification == nil)
+    {
+        return;
+    }
     
     if ([NSThread isMainThread])
     {
@@ -36,11 +41,11 @@
             
         });
     }
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)postNotificationNameOnMainThreadBTI:(NSString *)notificationName
+- (void)postNotificationNameOnMainThreadBTI:(nullable NSString *)notificationName
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -51,8 +56,8 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)postNotificationNameOnMainThreadBTI:(NSString *)notificationName
-                                   userInfo:(NSDictionary *)userInfo
+- (void)postNotificationNameOnMainThreadBTI:(nullable NSString *)notificationName
+                                   userInfo:(nullable NSDictionary *)userInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -63,11 +68,16 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)postNotificationNameOnMainThreadBTI:(NSString *)notificationName
-                                     object:(id)object
-                                   userInfo:(NSDictionary *)userInfo
+- (void)postNotificationNameOnMainThreadBTI:(nullable NSString *)notificationName
+                                     object:(nullable id)object
+                                   userInfo:(nullable NSDictionary *)userInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (notificationName == nil)
+    {
+        return;
+    }
     
     NSNotification *notification = [NSNotification notificationWithName:notificationName
                                                                  object:object

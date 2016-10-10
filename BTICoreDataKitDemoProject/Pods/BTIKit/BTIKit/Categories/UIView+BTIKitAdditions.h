@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIView (BTIKitAdditions)
 
@@ -17,13 +17,13 @@
  
  @return A UIView (or subclass) object, or nil.
  */
-+ (instancetype)viewFromNibNameBTI:(NSString *)nibNameOrNil;
++ (nullable instancetype)viewFromNibNameBTI:(nullable NSString *)nibNameOrNil;
 
 /**
  Returns a view loaded from a nib with name matching the class name.
  
  @return A UIView (or subclass) object, or nil.
  */
-+ (instancetype)viewFromNibBTI;
++ (nullable instancetype)viewFromNibBTI;
 
 @end

@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,9 +20,14 @@
 
 @implementation UICollectionView (BTIKitAdditions)
 
-- (NSIndexPath *)indexPathForItemContainingViewBTI:(UIView *)view
+- (nullable NSIndexPath *)indexPathForItemContainingViewBTI:(nullable UIView *)view
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (view == nil)
+    {
+        return nil;
+    }
     
     CGPoint correctedPoint = [view convertPoint:[view bounds].origin toView:self];
     

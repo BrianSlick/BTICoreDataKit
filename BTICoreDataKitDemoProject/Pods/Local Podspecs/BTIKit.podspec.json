@@ -1,27 +1,26 @@
 {
   "name": "BTIKit",
-  "version": "1.4",
+  "version": "1.6",
   "summary": "A handful of helpful classes and categories for generic iOS development.",
+  "description": "A handful of helpful categories and classes for generic iOS development.",
   "homepage": "https://github.com/BriTerIdeas/BTIKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
   "authors": {
     "Brian Slick": "brianslick@mac.com"
   },
   "source": {
     "git": "https://github.com/BriTerIdeas/BTIKit.git",
-    "tag": "1.4"
+    "tag": "1.6"
   },
-  "description": "A handful of helpful classes and categories for generic iOS development.",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
   "source_files": [
     "BTIKit/*.{h,m}",
     "BTIKit/**/*.{h,m}"
-  ],
-  "requires_arc": true,
-  "license": {
-    "type": "MIT",
-    "file": "LICENSE"
-  },
-  "frameworks": [
-    "Foundation",
-    "UIKit"
   ]
 }

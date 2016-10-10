@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -27,15 +27,15 @@
 #pragma mark - IBOutlet Properties
 
 /// Returns the web view managed by this class. If it has not been supplied via IB or viewDidLoad, one will be created in viewWillAppear:
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nullable, nonatomic, strong) IBOutlet UIWebView *webView;
 
 #pragma mark - Other Public Properties
 
 /// The first url to be loaded by the web view. If present, will be automatically loaded in viewWillAppear:
-@property (nonatomic, copy) NSURL *url;
+@property (nullable, nonatomic, copy) NSURL *url;
 
 /// Nil by default. It will need to be manually populated. If present, it will be animated by the web view delegate methods at appropriate times.
-@property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
+@property (nullable, nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
 
 #pragma mark - Public Methods
 
@@ -44,6 +44,6 @@
  
  @param url the NSURL to load
  */
-- (void)loadURL:(NSURL *)url;
+- (void)loadURL:(nullable NSURL *)url;
 
 @end

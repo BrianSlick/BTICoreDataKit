@@ -1,18 +1,18 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSString (BTIKitAdditions)
 
 /** Passes directly through to writeToURL:atomically:encoding:error:
  */
-- (BOOL)writeToURLBTI:(NSURL *)url atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc;
+- (BOOL)writeToURLBTI:(nullable NSURL *)url atomically:(BOOL)useAuxiliaryFile encoding:(NSStringEncoding)enc;
 
 /**
  Returns whether the receiver is empty

@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UITableViewHeaderFooterView (BTIKitAdditions)
 
@@ -17,13 +17,13 @@
  
  @return A UITableViewHeaderFooterView (or subclass) object, or nil.
  */
-+ (instancetype)headerFooterViewFromNibNameBTI:(NSString *)nibNameOrNil;
++ (nullable instancetype)headerFooterViewFromNibNameBTI:(nullable NSString *)nibNameOrNil;
 
 /**
  Returns a view loaded from a nib with name matching the class name.
  
  @return A UITableViewHeaderFooterView (or subclass) object, or nil.
  */
-+ (instancetype)headerFooterViewFromNibBTI;
++ (nullable instancetype)headerFooterViewFromNibBTI;
 
 @end

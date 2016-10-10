@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,7 +25,7 @@
 @interface BTIViewController ()
 
 // Private Properties
-@property (nonatomic, strong) NSMutableSet *notificationInfos;
+@property (nonnull, nonatomic, strong) NSMutableSet *notificationInfos;
 
 @end
 
@@ -92,7 +92,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableSet *)notificationInfos
+- (nonnull NSMutableSet *)notificationInfos
 {
     if (_notificationInfos == nil)
     {
@@ -160,7 +160,7 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addNotificationInfo:(BTINotificationInfo *)info
+- (void)addNotificationInfo:(nullable BTINotificationInfo *)info
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -172,8 +172,8 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                  selector:(SEL)selector
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                  selector:(nullable SEL)selector
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -184,9 +184,9 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                  selector:(SEL)selector
-                                    object:(id)object
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                  selector:(nullable SEL)selector
+                                    object:(nullable id)object
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -200,9 +200,9 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                    object:(id)object
-                                usingBlock:(void (^)(NSNotification *notification))block
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                    object:(nullable id)object
+                                usingBlock:(nullable void (^)(NSNotification * _Nonnull notification))block
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -215,8 +215,8 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                 selector:(SEL)selector
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                 selector:(nullable SEL)selector
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -227,9 +227,9 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                 selector:(SEL)selector
-                                   object:(id)object
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                 selector:(nullable SEL)selector
+                                   object:(nullable id)object
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -243,9 +243,9 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                   object:(id)object
-                               usingBlock:(void (^)(NSNotification *notification))block
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                   object:(nullable id)object
+                               usingBlock:(nullable void (^)(NSNotification * _Nonnull notification))block
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -296,8 +296,6 @@
     {
         [info stopListening];
     }
-
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
 
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }

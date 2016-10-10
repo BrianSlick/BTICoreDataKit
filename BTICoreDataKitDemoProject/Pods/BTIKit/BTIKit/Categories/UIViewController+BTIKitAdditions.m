@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,7 +20,7 @@
 
 @implementation UIViewController (BTIKitAdditions)
 
-- (void)setBackBarButtonTitleBTI:(NSString *)title
+- (void)setBackBarButtonTitleBTI:(nullable NSString *)title
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 

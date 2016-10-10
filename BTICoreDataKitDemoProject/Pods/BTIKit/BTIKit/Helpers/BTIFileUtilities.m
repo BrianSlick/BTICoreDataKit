@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -40,7 +40,7 @@
 
 #pragma mark - Directories
 
-+ (NSURL *)documentsDirectoryURL
++ (nullable NSURL *)documentsDirectoryURL
 {
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
                                                            inDomains:NSUserDomainMask];
@@ -48,7 +48,7 @@
     return [urls firstObject];
 }
 
-+ (NSURL *)libraryDirectoryURL
++ (nullable NSURL *)libraryDirectoryURL
 {
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSLibraryDirectory
                                                            inDomains:NSUserDomainMask];
@@ -56,7 +56,7 @@
     return [urls firstObject];
 }
 
-+ (NSURL *)cacheDirectoryURL
++ (nullable NSURL *)cacheDirectoryURL
 {
     NSArray *urls = [[NSFileManager defaultManager] URLsForDirectory:NSCachesDirectory
                                                            inDomains:NSUserDomainMask];
@@ -64,7 +64,7 @@
     return [urls firstObject];
 }
 
-+ (NSURL *)libraryApplicationSupportDirectoryURL
++ (nullable NSURL *)libraryApplicationSupportDirectoryURL
 {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     

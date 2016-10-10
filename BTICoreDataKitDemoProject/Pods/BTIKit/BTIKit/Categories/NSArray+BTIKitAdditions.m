@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,14 +20,21 @@
 
 @implementation NSArray (BTIKitAdditions)
 
-- (id)objectAtRandomIndexBTI
+- (nullable id)objectAtRandomIndexBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
-    NSInteger index = arc4random() % [self count];
+    
+    id returnObject = nil;
+    
+    if ([self count] > 0)
+    {
+        NSInteger index = arc4random() % [self count];
+        
+        returnObject = [self objectAtIndex:index];
+    }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-    return [self objectAtIndex:index];
+    return returnObject;
 }
 
 @end

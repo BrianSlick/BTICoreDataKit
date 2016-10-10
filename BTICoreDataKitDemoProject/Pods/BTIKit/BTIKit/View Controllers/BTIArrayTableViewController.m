@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,8 +25,8 @@
 @interface BTIArrayTableViewController ()
 
 // Private Properties
-@property (nonatomic, strong) NSMutableArray *mainContents;
-@property (nonatomic, strong) NSMutableArray *searchContents;
+@property (nonnull, nonatomic, strong) NSMutableArray *mainContents;
+@property (nonnull, nonatomic, strong) NSMutableArray *searchContents;
 
 @end
 
@@ -43,7 +43,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableArray *)mainContents
+- (nonnull NSMutableArray *)mainContents
 {
     if (_mainContents == nil)
     {
@@ -52,7 +52,7 @@
     return _mainContents;
 }
 
-- (NSMutableArray *)searchContents
+- (nonnull NSMutableArray *)searchContents
 {
     if (_searchContents == nil)
     {
@@ -69,8 +69,8 @@
 
 #pragma mark - BTITableViewController Overrides
 
-- (id)itemInTableView:(UITableView *)tableView
-          atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)itemInTableView:(nullable UITableView *)tableView
+                   atIndexPath:(nullable NSIndexPath *)indexPath;
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -78,15 +78,15 @@
     
     id object = nil;
     
-    if (tableView == [self tableView])
-    {
-        // Main contents
-        object = [[self mainContents] objectAtIndex:row];
-    }
-    else if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if ([[self searchController] isActive])
     {
         // Search contents
         object = [[self searchContents] objectAtIndex:row];
+    }
+    else
+    {
+        // Main contents
+        object = [[self mainContents] objectAtIndex:row];
     }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
@@ -111,15 +111,17 @@
     
     NSInteger rows = 0;
     
-    if (tableView == [self tableView])
+    if ([[self searchController] isActive])
     {
-        rows = [[self mainContents] count];
+        // Search contents
+        rows = [[self searchContents] count];
     }
     else
     {
-        rows = [[self searchContents] count];
+        // Main contents
+        rows = [[self mainContents] count];
     }
-        
+    
     BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return rows;
 }
@@ -128,7 +130,7 @@
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     // Build Cell
     
     static NSString *blankCellIdentifier = @"blankCellIdentifier";
@@ -152,9 +154,5 @@
 }
 
 #pragma mark - UITableViewDelegate Methods
-
-
-#pragma mark - UISearchDisplayDelegate Methods
-
 
 @end

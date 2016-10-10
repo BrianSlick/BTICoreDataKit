@@ -4,7 +4,7 @@ by **Brian Slick**
 Personal: [@BrianSlick](http://twitter.com/BrianSlick) | [Clinging To Ideas](http://clingingtoideas.blogspot.com)  
 Business: [@BriTerIdeas](http://twitter.com/BriTerIdeas) | [briterideas.com](http://briterideas.com)
 
-Newest version is: v1.4
+Newest version is: v1.5
 
 ### What is BTIKit?
 
@@ -13,6 +13,7 @@ Newest version is: v1.4
 - A set of view controllers that encourage consistent behaviors, and handle what would otherwise be boilerplate code.
 - A set of models that are used to support table and collection views.
 - A miscellaneous set of categories to handle a variety of tasks.
+- An operation and queue manager for dealing with multiple alerts
 
 
 ### Yeah, Yeah, Seriously, What Is It?
@@ -43,6 +44,14 @@ In summary:
 - BTITableRowInfo: Encapsulate useful stuff for table rows.
 - BTITableSectionInfo: Encapsulate useful stuff for table sections.
 - BTITableContentsManager: Combine rowInfos and sectionInfos to manage your table view.
+
+**Operations**
+
+- BTIAlertOperation: Encapsulates UIAlertController
+
+**Managers**
+
+- BTIAlertManager: Works with BTIAlertOperation to enable sequential display of alerts
 
 **Views**
 
@@ -87,8 +96,7 @@ BTIKit can be cloned from its git repository on github. You can find the reposit
 
 ### Requirements and supported OS versions
 
-- **iOS 6.0** or later (**with ARC**) for iPhone, iPad and iPod touch
-- Older iOS versions can be supported by commenting out NSUUID objects in a couple of places. Most of this stuff can actually go back pretty far.
+- **iOS 8.0** or later ( **with ARC** ) for iPhone, iPad and iPod touch
 
 ### License
 

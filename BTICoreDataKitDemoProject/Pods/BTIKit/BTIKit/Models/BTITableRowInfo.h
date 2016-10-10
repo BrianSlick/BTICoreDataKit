@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -16,7 +16,7 @@
  */
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // Classes and Forward Declarations
 #import "BTIObject.h"
@@ -32,21 +32,21 @@ typedef void(^BTIRowSelectionBlock)(void);
 #pragma mark - Properties
 
 /// A string value that can be used to enable special-case customization beyond what this class otherwise provides.
-@property (nonatomic, copy) NSString *identifier;
+@property (nullable, nonatomic, copy) NSString *identifier;
 
 /// The object that the row info represents. Concept from NSTreeNode.
-@property (nonatomic, strong) id representedObject;
+@property (nullable, nonatomic, strong) id representedObject;
 
 /// The parent table section info, if present.
-@property (nonatomic, weak) BTITableSectionInfo *parentSectionInfo;
+@property (nullable, nonatomic, weak) BTITableSectionInfo *parentSectionInfo;
 
 #pragma mark - Table Cell Display Properties
 
 /// Corresponds to UITableViewCell textLabel property.
-@property (nonatomic, copy) NSString *text;
+@property (nullable, nonatomic, copy) NSString *text;
 
 /// Corresponds to UITableViewCell detailTextLabel property.
-@property (nonatomic, copy) NSString *detailText;
+@property (nullable, nonatomic, copy) NSString *detailText;
 
 /// Corresponds to UITableViewCell accessoryType property.
 @property (nonatomic, assign) UITableViewCellAccessoryType cellAccessoryType;
@@ -58,21 +58,21 @@ typedef void(^BTIRowSelectionBlock)(void);
 // The checking order will be: 1) image, 2) imageName, 3) imageFileURL
 
 /// Image object to be supplied to cell's imageView
-@property (nonatomic, strong) UIImage *image;
+@property (nullable, nonatomic, strong) UIImage *image;
 
 /// Image name for cell's imageView, to be loaded with +imageNamed:
-@property (nonatomic, copy) NSString *imageName;
+@property (nullable, nonatomic, copy) NSString *imageName;
 
 /// URL to image for cell's imageView
-@property (nonatomic, copy) NSURL *imageFileURL;
+@property (nullable, nonatomic, copy) NSURL *imageFileURL;
 
 #pragma mark - Table Cell Action Properties
 
 /// Block to be executed upon row tap
-@property (nonatomic, copy) BTIRowSelectionBlock rowSelectionBlock;
+@property (nullable, nonatomic, copy) BTIRowSelectionBlock rowSelectionBlock;
 
 /// Block to be executed upon row accessory tap
-@property (nonatomic, copy) BTIRowSelectionBlock rowAccessorySelectionBlock;
+@property (nullable, nonatomic, copy) BTIRowSelectionBlock rowAccessorySelectionBlock;
 
 #pragma mark - Misc Methods
 
@@ -84,7 +84,7 @@ typedef void(^BTIRowSelectionBlock)(void);
 /**
  Populates the provided cell using the properties of this class. Intended to be used in tableView:cellForRowAtIndexPath:.  This method should be called before any special-case cell formatting.
  */
-- (void)populateCell:(UITableViewCell *)cell;
+- (void)populateCell:(nullable UITableViewCell *)cell;
 
 /**
  Executes the rowSelectionBlock. Safe to call even if there is no block.

@@ -1,6 +1,6 @@
 //
 //  BTICoreDataKit -- [https://github.com/BriTerIdeas/BTICoreDataKit]
-//  v1.2
+//  v1.3
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //

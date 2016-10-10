@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UICollectionViewCell (BTIKitAdditions)
 
@@ -15,7 +15,7 @@
  
  @return A UICollectionView object, or nil
  */
-- (UICollectionView *)enclosingCollectionViewBTI;
+- (nullable UICollectionView *)enclosingCollectionViewBTI;
 
 /**
  Returns a cell loaded from a nib with the provided name
@@ -24,13 +24,13 @@
  
  @return A UICollectionViewCell (or subclass) object, or nil.
  */
-+ (instancetype)cellFromNibNameBTI:(NSString *)nibNameOrNil;
++ (nullable instancetype)cellFromNibNameBTI:(nullable NSString *)nibNameOrNil;
 
 /**
  Returns a cell loaded from a nib with name matching the class name.
  
  @return A UICollectionViewCell (or subclass) object, or nil.
  */
-+ (instancetype)cellFromNibBTI;
++ (nullable instancetype)cellFromNibBTI;
 
 @end

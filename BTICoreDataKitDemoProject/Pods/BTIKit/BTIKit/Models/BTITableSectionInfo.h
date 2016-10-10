@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -33,22 +33,22 @@
 #pragma mark - Public Properties
 
 /// A string value that can be used to enable special-case customization beyond what this class otherwise provides.
-@property (nonatomic, copy) NSString *identifier;
+@property (nullable, nonatomic, copy) NSString *identifier;
 
 /// The object that the section info represents. Concept from NSTreeNode.
-@property (nonatomic, strong) id representedObject;
+@property (nullable, nonatomic, strong) id representedObject;
 
 /// Section header. Should be used for tableView:titleForHeaderInSection:
-@property (nonatomic, copy) NSString *headerTitle;
+@property (nullable, nonatomic, copy) NSString *headerTitle;
 
 /// Section footer. Should be used for tableView:titleForFooterInSection:
-@property (nonatomic, copy) NSString *footerTitle;
+@property (nullable, nonatomic, copy) NSString *footerTitle;
 
 /// Section index (appears on right side of table views).  Should be used in sectionIndexTitlesForTableView:
-@property (nonatomic, copy) NSString *sectionIndexTitle;
+@property (nullable, nonatomic, copy) NSString *sectionIndexTitle;
 
 /// The array of objects in the section
-@property (nonatomic, readonly) NSArray *objects;
+@property (nonnull, nonatomic, readonly) NSArray *objects;
 
 #pragma mark - Misc Methods
 
@@ -73,35 +73,35 @@
  
  @return The object located at \em index.
  */
-- (id)objectInRowsAtIndex:(NSUInteger)index;
+- (nonnull id)objectInRowsAtIndex:(NSUInteger)index;
 
 /**
  Inserts the given object at the end of the row contents
  
  @param anObject The object to add to the end of the rows contents.
  */
-- (void)addRowsObject:(id)anObject;
+- (void)addRowsObject:(nullable id)anObject;
 
 /**
  Adds the objects contained in an array to the end of the row contents
  
  @param array An array of objects to add to the end of the row contents
  */
-- (void)addRowsObjectsFromArray:(NSArray *)array;
+- (void)addRowsObjectsFromArray:(nullable NSArray *)array;
 
 /**
  Adds the objects contained in a set to the end of the row contents. As sets do not have order, this method should probably be followed up with sortRowsUsingDescriptors: in order to get reliable results.
  
  @param set A set of objects to add to the end of the row contents
  */
-- (void)addRowsObjectsFromSet:(NSSet *)set;
+- (void)addRowsObjectsFromSet:(nullable NSSet *)set;
 
 /**
  Remove all occurrences in the row contents of a given object
  
  @param anObject The object to remove from the contents
  */
-- (void)removeRowsObject:(id)anObject;
+- (void)removeRowsObject:(nullable id)anObject;
 
 /**
  Removes the object at \em index
@@ -120,7 +120,7 @@
  @param anObject The object to add to the row contents
  @param index The index in the row contents at which to insert \em anObject.
  */
-- (void)insertObject:(id)anObject inRowsAtIndex:(NSUInteger)index;
+- (void)insertObject:(nullable id)anObject inRowsAtIndex:(NSUInteger)index;
 
 /**
  Returns the lowest index whose corresponding row contents value is equal to a given object
@@ -129,21 +129,21 @@
  
  @return Index of the object
  */
-- (NSUInteger)indexOfRowsObject:(id)anObject;
+- (NSUInteger)indexOfRowsObject:(nullable id)anObject;
 
 /**
  Returns an enumerator object that lets you access each object in the row contents
  
  @return NSEnumerator object for the row contents
  */
-- (NSEnumerator *)enumeratorOfRows;
+- (nonnull NSEnumerator *)enumeratorOfRows;
 
 /**
  Sorts the row contents using the given array of sort descriptors
  
  @param sortDescriptors An array containing the NSSortDescriptor objects to use to sort the row contents
  */
-- (void)sortRowsUsingDescriptors:(NSArray *)sortDescriptors;
+- (void)sortRowsUsingDescriptors:(nullable NSArray<NSSortDescriptor *> *)sortDescriptors;
 
 #pragma mark - BTITableRowInfo/BTITableContentsManager Support Methods
 
@@ -154,7 +154,7 @@
  
  @return Index of the identifier
  */
-- (NSUInteger)indexOfIdentifier:(NSString *)identifier;
+- (NSUInteger)indexOfIdentifier:(nullable NSString *)identifier;
 
 /**
  Returns the index of the row info's represented object. Returns NSNotFound if the contents are not BTITableRowInfo objects.
@@ -163,7 +163,7 @@
  
  @return Index of the represented object
  */
-- (NSUInteger)indexOfRepresentedObject:(id)representedObject;
+- (NSUInteger)indexOfRepresentedObject:(nullable id)representedObject;
 
 
 @end

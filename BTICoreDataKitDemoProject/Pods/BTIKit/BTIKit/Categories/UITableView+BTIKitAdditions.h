@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 
 @interface UITableView (BTIKitAdditions)
@@ -22,6 +22,6 @@
  
  @return An index path representing the row and section associated with \em view or nil.
  */
-- (NSIndexPath *)indexPathForRowContainingViewBTI:(UIView *)view;
+- (nullable NSIndexPath *)indexPathForRowContainingViewBTI:(nullable UIView *)view;
 
 @end

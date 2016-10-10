@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface UIViewController (BTIKitAdditions)
 
@@ -15,6 +15,6 @@
  
  @param title The title that should appear in the back button
  */
-- (void)setBackBarButtonTitleBTI:(NSString *)title;
+- (void)setBackBarButtonTitleBTI:(nullable NSString *)title;
 
 @end

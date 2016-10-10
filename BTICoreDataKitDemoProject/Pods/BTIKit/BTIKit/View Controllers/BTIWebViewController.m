@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -78,11 +78,11 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     [super viewWillDisappear:animated];
     
     [[self webView] stopLoading];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -97,16 +97,16 @@
 
 #pragma mark - Misc Methods
 
-- (void)loadURL:(NSURL *)url
+- (void)loadURL:(nullable NSURL *)url
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if (url == nil)
     {
         //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No URL", self, __PRETTY_FUNCTION__);
         return;
     }
-
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     [[self webView] loadRequest:request];
@@ -119,11 +119,11 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
     [[self activityIndicatorView] startAnimating];
     [[self activityIndicatorView] setHidden:NO];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -146,7 +146,7 @@ didFailLoadWithError:(NSError *)error
     [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     [[self activityIndicatorView] stopAnimating];
     [[self activityIndicatorView] setHidden:YES];
-
+    
     NSLog(@"webView:DidFailLoadWithError: %@", error);
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);

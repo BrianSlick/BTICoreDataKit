@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -26,7 +26,7 @@
  */
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // Forward Declarations and Classes
 #import "BTINotificationInfo.h"
@@ -60,7 +60,7 @@
 
  @param info A BTINotificationInfo object to be managed by this view controller.
  */
-- (void)addNotificationInfo:(BTINotificationInfo *)info;
+- (void)addNotificationInfo:(nullable BTINotificationInfo *)info;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer, 'object' is nil.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -68,8 +68,8 @@
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
  @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  */
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                  selector:(SEL)selector;
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                  selector:(nullable SEL)selector;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -78,9 +78,9 @@
  @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  */
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                  selector:(SEL)selector
-                                    object:(id)object;
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                  selector:(nullable SEL)selector
+                                    object:(nullable id)object;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -89,9 +89,9 @@
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  @param block The block to be executed when the notification is received.
  */
-- (void)addLifetimeNotificationInfoForName:(NSString *)name
-                                    object:(id)object
-                                usingBlock:(void (^)(NSNotification *notification))block;
+- (void)addLifetimeNotificationInfoForName:(nullable NSString *)name
+                                    object:(nullable id)object
+                                usingBlock:(nullable void (^)(NSNotification * _Nonnull notification))block;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer, 'object' is nil.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -99,8 +99,8 @@
  @param name The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.
  @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  */
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                 selector:(SEL)selector;
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                 selector:(nullable SEL)selector;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values, 'self' is the observer.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -109,9 +109,9 @@
  @param selector Selector that specifies the message the receiver sends the observer to notify it of the notification posting. The method specified by \em elector must have one and only one argument (an instance of NSNotification).
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  */
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                 selector:(SEL)selector
-                                   object:(id)object;
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                 selector:(nullable SEL)selector
+                                   object:(nullable id)object;
 
 /**
  Shortcut method for addNotificationInfo: with predefined values.  See BTINotificationInfo and NSNotificationCenter for value definitions.
@@ -120,9 +120,9 @@
  @param object The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.
  @param block The block to be executed when the notification is received.
  */
-- (void)addVisibleNotificationInfoForName:(NSString *)name
-                                   object:(id)object
-                               usingBlock:(void (^)(NSNotification *notification))block;
+- (void)addVisibleNotificationInfoForName:(nullable NSString *)name
+                                   object:(nullable id)object
+                               usingBlock:(nullable void (^)(NSNotification * _Nonnull notification))block;
 
 /**
  Registers all notifications with the specified lifespan.  Note that this class is already handling 'lifetime' and 'visible' notifications, so this method should probably only be used with custom lifespans.  Subclasses should not override this method.

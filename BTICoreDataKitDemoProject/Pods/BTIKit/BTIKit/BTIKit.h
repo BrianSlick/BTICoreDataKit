@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -9,6 +9,10 @@
 
 #import "BTIMacros.h"
 
+#pragma mark - Managers
+
+#import "BTIAlertManager.h"
+
 #pragma mark - Models
 
 #import "BTIObject.h"
@@ -16,6 +20,10 @@
 #import "BTITableRowInfo.h"
 #import "BTITableSectionInfo.h"
 #import "BTITableContentsManager.h"
+
+#pragma mark - Operations
+
+#import "BTIAlertOperation.h"
 
 #pragma mark - Views
 

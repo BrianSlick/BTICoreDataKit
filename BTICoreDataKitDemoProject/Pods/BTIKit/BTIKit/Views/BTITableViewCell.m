@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -64,7 +64,7 @@
 #pragma mark - Misc Methods
 
 // From http://iphonedevelopment.blogspot.com/2010/04/table-view-cells-redux.html
-+ (NSString *)reuseIdentifierBTI
++ (nonnull NSString *)reuseIdentifierBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -72,22 +72,22 @@
     return NSStringFromClass([self class]);
 }
 
-+ (void)registerNibForTableViewBTI:(UITableView *)tableView
++ (void)registerNibForTableViewBTI:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     NSString *className = NSStringFromClass([self class]);
     
     UINib *cellNib = [UINib nibWithNibName:className bundle:nil];
     [tableView registerNib:cellNib forCellReuseIdentifier:className];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-+ (instancetype)dequeueCellFromTableViewBTI:(UITableView *)tableView
++ (nullable instancetype)dequeueCellFromTableViewBTI:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [tableView dequeueReusableCellWithIdentifier:[[self class] reuseIdentifierBTI]];
 }

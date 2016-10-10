@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,9 +20,15 @@
 
 @implementation NSFileManager (BTIKitAdditions)
 
-- (NSArray *)contentsOfDirectoryAtPathBTI:(NSString *)path
+- (nullable NSArray<NSString *> *)contentsOfDirectoryAtPathBTI:(nullable NSString *)path
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (path == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to obtain contents of nil path");
+        return nil;
+    }
     
     NSError *error = nil;
     NSArray *contents = [self contentsOfDirectoryAtPath:path error:&error];
@@ -35,11 +41,17 @@
     return contents;
 }
 
-- (NSArray *)contentsOfDirectoryAtURLBTI:(NSURL *)url
-              includingPropertiesForKeys:(NSArray *)keys
-                                 options:(NSDirectoryEnumerationOptions)mask
+- (nullable NSArray *)contentsOfDirectoryAtURLBTI:(nullable NSURL *)url
+                       includingPropertiesForKeys:(nullable NSArray<NSURLResourceKey> *)keys
+                                          options:(NSDirectoryEnumerationOptions)mask
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (url == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to obtain contents of nil URL");
+        return nil;
+    }
     
     NSError *error = nil;
     NSArray *contents = [self contentsOfDirectoryAtURL:url
@@ -55,11 +67,17 @@
     return contents;
 }
 
-- (BOOL)createDirectoryAtPathBTI:(NSString *)path
+- (BOOL)createDirectoryAtPathBTI:(nullable NSString *)path
      withIntermediateDirectories:(BOOL)createIntermediates
-                      attributes:(NSDictionary *)attributes
+                      attributes:(nullable NSDictionary<NSString *, id> *)attributes
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (path == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to create directory at nil path");
+        return nil;
+    }
     
     NSError *error = nil;
     BOOL isCreateSuccessful = [self createDirectoryAtPath:path
@@ -75,11 +93,17 @@
     return isCreateSuccessful;
 }
 
-- (BOOL)createDirectoryAtURLBTI:(NSURL *)url
+- (BOOL)createDirectoryAtURLBTI:(nullable NSURL *)url
     withIntermediateDirectories:(BOOL)createIntermediates
-                     attributes:(NSDictionary *)attributes
+                     attributes:(nullable NSDictionary<NSString *, id> *)attributes
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (url == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to create directory at nil URL");
+        return nil;
+    }
     
     NSError *error = nil;
     BOOL isCreateSuccessful = [self createDirectoryAtURL:url
@@ -95,17 +119,28 @@
     return isCreateSuccessful;
 }
 
-- (BOOL)fileExistsAtFileURLBTI:(NSURL *)url
+- (BOOL)fileExistsAtFileURLBTI:(nullable NSURL *)url
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
+    if (url == nil)
+    {
+        return NO;
+    }
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [self fileExistsAtPath:[url path]];
 }
 
-- (BOOL)removeItemAtPathBTI:(NSString *)path
+- (BOOL)removeItemAtPathBTI:(nullable NSString *)path
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (path == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to remove item at nil path");
+        return NO;
+    }
     
     NSError *error = nil;
     BOOL isRemoveSuccessful = [self removeItemAtPath:path error:&error];
@@ -118,10 +153,22 @@
     return isRemoveSuccessful;
 }
 
-- (BOOL)setAttributesBTI:(NSDictionary *)attributes
-            ofItemAtPath:(NSString *)path
+- (BOOL)setAttributesBTI:(nullable NSDictionary<NSFileAttributeKey, id> *)attributes
+            ofItemAtPath:(nullable NSString *)path
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (path == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to set attributes for item at nil path");
+        return NO;
+    }
+    
+    if (attributes == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to set nil attributes for item at path");
+        return NO;
+    }
     
     NSError *error = nil;
     BOOL isAttributeSuccessful = [self setAttributes:attributes
@@ -137,10 +184,22 @@
 }
 
 - (BOOL)setUbiquitousBTI:(BOOL)flag
-               itemAtURL:(NSURL *)url
-          destinationURL:(NSURL *)destinationURL
+               itemAtURL:(nullable NSURL *)url
+          destinationURL:(nullable NSURL *)destinationURL
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (url == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to set ubiquitous for item at nil source URL");
+        return NO;
+    }
+    
+    if (destinationURL == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to set ubiquitous for item at nil destination URL");
+        return NO;
+    }
     
     NSError *error = nil;
     BOOL isUbiquitousSuccessful = [self setUbiquitous:flag
@@ -156,10 +215,10 @@
     return isUbiquitousSuccessful;
 }
 
-- (NSURL *)URLForDirectoryBTI:(NSSearchPathDirectory)directory
-                     inDomain:(NSSearchPathDomainMask)domain
-            appropriateForURL:(NSURL *)url
-                       create:(BOOL)shouldCreate
+- (nullable NSURL *)URLForDirectoryBTI:(NSSearchPathDirectory)directory
+                              inDomain:(NSSearchPathDomainMask)domain
+                     appropriateForURL:(nullable NSURL *)url
+                                create:(BOOL)shouldCreate
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

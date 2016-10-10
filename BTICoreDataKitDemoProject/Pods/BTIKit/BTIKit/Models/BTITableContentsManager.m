@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -69,7 +69,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableArray *)sectionInfos
+- (nonnull NSMutableArray *)sectionInfos
 {
     if (_sectionInfos == nil)
     {
@@ -78,7 +78,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return _sectionInfos;
 }
 
-- (NSMutableSet *)sectionInfoCache
+- (nonnull NSMutableSet *)sectionInfoCache
 {
     if (_sectionInfoCache == nil)
     {
@@ -87,7 +87,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return _sectionInfoCache;
 }
 
-- (NSMutableSet *)rowInfoCache;
+- (nonnull NSMutableSet *)rowInfoCache;
 {
     if (_rowInfoCache == nil)
     {
@@ -128,14 +128,14 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (NSArray *)sections
+- (nonnull NSArray *)sections
 {
     return [NSArray arrayWithArray:[self sectionInfos]];
 }
 
 #pragma mark - BTITableSectionInfo Methods
 
-- (BTITableSectionInfo *)dequeueReusableSectionInfo
+- (nonnull BTITableSectionInfo *)dequeueReusableSectionInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -155,7 +155,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return sectionInfo;
 }
 
-- (BTITableSectionInfo *)dequeueReusableSectionInfoAndAddToContents
+- (nonnull BTITableSectionInfo *)dequeueReusableSectionInfoAndAddToContents
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -167,7 +167,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return sectionInfo;
 }
 
-- (void)addSectionInfo:(BTITableSectionInfo *)sectionInfo
+- (void)addSectionInfo:(nullable BTITableSectionInfo *)sectionInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -182,7 +182,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)enqueueSectionInfo:(BTITableSectionInfo *)sectionInfo
+- (void)enqueueSectionInfo:(nullable BTITableSectionInfo *)sectionInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -225,7 +225,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 
 #pragma mark - BTITableRowInfoMethods
 
-- (BTITableRowInfo *)dequeueReusableRowInfo
+- (nonnull BTITableRowInfo *)dequeueReusableRowInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -245,7 +245,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rowInfo;
 }
 
-- (BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents
+- (nonnull BTITableRowInfo *)dequeueReusableRowInfoAndAddToContents
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -272,10 +272,15 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rowInfo;
 }
 
-- (void)addRowInfo:(BTITableRowInfo *)rowInfo
+- (void)addRowInfo:(nullable BTITableRowInfo *)rowInfo
     makeNewSection:(BOOL)isNewSection
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (rowInfo == nil)
+    {
+        return;
+    }
     
     if (isNewSection)
     {
@@ -302,7 +307,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)enqueueRowInfo:(BTITableRowInfo *)rowInfo
+- (void)enqueueRowInfo:(nullable BTITableRowInfo *)rowInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -326,7 +331,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return [[self sections] count];
 }
 
-- (NSString *)headerTitleInSection:(NSInteger)section
+- (nullable NSString *)headerTitleInSection:(NSInteger)section
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -338,7 +343,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return header;
 }
 
-- (NSString *)footerTitleInSection:(NSInteger)section
+- (nullable NSString *)footerTitleInSection:(NSInteger)section
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -362,10 +367,15 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rows;
 }
 
-- (CGFloat)heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)heightForRowAtIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
+    if (indexPath == nil)
+    {
+        return 0.0;
+    }
+    
     BTITableRowInfo *rowInfo = [self rowInfoAtIndexPath:indexPath];
 
     CGFloat height = [rowInfo rowHeight];
@@ -374,7 +384,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return MAX(height, [self minimumRowHeight]);
 }
 
-- (NSArray *)sectionIndexTitles
+- (nonnull NSArray<NSString *> *)sectionIndexTitles
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -401,7 +411,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 
 #pragma mark - Content Retrieval Methods
 
-- (BTITableSectionInfo *)sectionInfoAtIndex:(NSInteger)index
+- (nonnull BTITableSectionInfo *)sectionInfoAtIndex:(NSInteger)index
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -409,7 +419,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return [[self sections] objectAtIndex:index];
 }
 
-- (BTITableSectionInfo *)sectionInfoForIdentifier:(NSString *)identifier
+- (nullable BTITableSectionInfo *)sectionInfoForIdentifier:(nullable NSString *)identifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -434,7 +444,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return sectionInfoToReturn;
 }
 
-- (id)representedObjectAtSectionIndex:(NSInteger)index
+- (nullable id)representedObjectAtSectionIndex:(NSInteger)index
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -444,9 +454,14 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return [sectionInfo representedObject];
 }
 
-- (BTITableRowInfo *)rowInfoAtIndexPath:(NSIndexPath *)indexPath
+- (nullable BTITableRowInfo *)rowInfoAtIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (indexPath == nil)
+    {
+        return nil;
+    }
     
     BTITableSectionInfo *sectionInfo = [self sectionInfoAtIndex:[indexPath section]];
     BTITableRowInfo *rowInfo = [sectionInfo objectInRowsAtIndex:[indexPath row]];
@@ -455,7 +470,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rowInfo;
 }
 
-- (BTITableRowInfo *)rowInfoForIdentifier:(NSString *)identifier
+- (nullable BTITableRowInfo *)rowInfoForIdentifier:(nullable NSString *)identifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
@@ -488,7 +503,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return rowInfoToReturn;
 }
 
-- (id)representedObjectAtIndexPath:(NSIndexPath *)indexPath
+- (nullable id)representedObjectAtIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -500,18 +515,28 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 
 #pragma mark - Interrogation Methods
 
-- (NSInteger)indexOfSectionInfo:(BTITableSectionInfo *)sectionInfo
+- (NSInteger)indexOfSectionInfo:(nullable BTITableSectionInfo *)sectionInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (sectionInfo == nil)
+    {
+        return NSNotFound;
+    }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [[self sections] indexOfObject:sectionInfo];
 }
 
-- (NSInteger)indexOfRepresentedSectionObject:(id)representedObject
+- (NSInteger)indexOfRepresentedSectionObject:(nullable id)representedObject
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
+    if (representedObject == nil)
+    {
+        return NSNotFound;
+    }
+
     NSInteger returnIndex = NSNotFound;
     
     NSInteger index = -1;
@@ -530,10 +555,15 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return returnIndex;
 }
 
-- (NSInteger)indexOfSectionIdentifier:(NSString *)identifier
+- (NSInteger)indexOfSectionIdentifier:(nullable NSString *)identifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
+    if (identifier == nil)
+    {
+        return NSNotFound;
+    }
+
     NSInteger returnIndex = NSNotFound;
     
     NSInteger index = -1;
@@ -555,6 +585,11 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 - (NSIndexPath *)indexPathOfRowInfo:(BTITableRowInfo *)rowInfo
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (rowInfo == nil)
+    {
+        return nil;
+    }
     
     NSUInteger section = 0;
     NSUInteger row = NSNotFound;
@@ -582,10 +617,15 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return indexPath;
 }
 
-- (NSIndexPath *)indexPathOfRepresentedRowObject:(id)representedObject
+- (nullable NSIndexPath *)indexPathOfRepresentedRowObject:(nullable id)representedObject
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
+    if (representedObject == nil)
+    {
+        return nil;
+    }
+
     NSUInteger section = 0;
     NSUInteger row = NSNotFound;
     
@@ -612,10 +652,15 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return indexPath;
 }
 
-- (NSIndexPath *)indexPathOfRowIdentifier:(NSString *)identifier
+- (nullable NSIndexPath *)indexPathOfRowIdentifier:(nullable NSString *)identifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
+    if (identifier == nil)
+    {
+        return nil;
+    }
+
     NSUInteger section = 0;
     NSUInteger row = NSNotFound;
     
@@ -642,7 +687,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return indexPath;
 }
 
-- (NSIndexSet *)allSectionIndexes
+- (nonnull NSIndexSet *)allSectionIndexes
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -650,7 +695,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
     return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [[self sections] count])];
 }
 
-- (NSArray *)allIndexPaths
+- (nonnull NSArray *)allIndexPaths
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -674,7 +719,7 @@ CGFloat const BTIStandardMinimumRowHeight = 44.0;
 #pragma mark - NSFastEnumeration Methods
 
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)enumerationState
-                                  objects:(id __unsafe_unretained [])buffer
+                                  objects:(id __unsafe_unretained _Nullable [_Nonnull])buffer
                                     count:(NSUInteger)len
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);

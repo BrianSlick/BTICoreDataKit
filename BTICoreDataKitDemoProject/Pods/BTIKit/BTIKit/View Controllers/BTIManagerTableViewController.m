@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,8 +25,8 @@
 @interface BTIManagerTableViewController ()
 
 // Private Properties
-@property (nonatomic, strong) BTITableContentsManager *mainContentsManager;
-@property (nonatomic, strong) BTITableContentsManager *searchContentsManager;
+@property (nonnull, nonatomic, strong) BTITableContentsManager *mainContentsManager;
+@property (nonnull, nonatomic, strong) BTITableContentsManager *searchContentsManager;
 
 @end
 
@@ -43,7 +43,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (BTITableContentsManager *)mainContentsManager
+- (nonnull BTITableContentsManager *)mainContentsManager
 {
     if (_mainContentsManager == nil)
     {
@@ -53,7 +53,7 @@
     return _mainContentsManager;
 }
 
-- (BTITableContentsManager *)searchContentsManager
+- (nonnull BTITableContentsManager *)searchContentsManager
 {
     if (_searchContentsManager == nil)
     {
@@ -80,38 +80,38 @@
 
 #pragma mark - Misc Methods
 
-- (BTITableContentsManager *)contentsManagerForTableView:(UITableView *)tableView
+- (nullable BTITableContentsManager *)contentsManagerForTableView:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     BTITableContentsManager *manager = nil;
     
-    if (tableView == [self tableView])
-    {
-        manager = [self mainContentsManager];
-    }
-    else if (tableView == [[self searchDisplayController] searchResultsTableView])
+    if ([[self searchController] isActive])
     {
         manager = [self searchContentsManager];
+    }
+    else
+    {
+        manager = [self mainContentsManager];
     }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return manager;
 }
 
-- (BTITableSectionInfo *)sectionInfoInTableView:(UITableView *)tableView
-                                        atIndex:(NSUInteger)index
+- (nullable BTITableSectionInfo *)sectionInfoInTableView:(nullable UITableView *)tableView
+                                                 atIndex:(NSUInteger)index;
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     BTITableContentsManager *manager = [self contentsManagerForTableView:tableView];
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return [manager sectionInfoAtIndex:index];
 }
 
-- (BTITableRowInfo *)rowInfoInTableView:(UITableView *)tableView
-                            atIndexPath:(NSIndexPath *)indexPath
+- (nullable BTITableRowInfo *)rowInfoInTableView:(nullable UITableView *)tableView
+                                     atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -121,8 +121,8 @@
     return [manager rowInfoAtIndexPath:indexPath];
 }
 
-- (id)representedObjectInTableView:(UITableView *)tableView
-                       atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)representedObjectInTableView:(nullable UITableView *)tableView
+                                atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -38,7 +38,7 @@
 - (id)initWithReuseIdentifier:(NSString *)reuseIdentifier
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     self = [super initWithReuseIdentifier:[[self class] reuseIdentifierBTI]];
     if (self)
     {
@@ -61,7 +61,7 @@
 
 #pragma mark - Misc Methods
 
-+ (NSString *)reuseIdentifierBTI
++ (nonnull NSString *)reuseIdentifierBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -69,7 +69,7 @@
     return NSStringFromClass([self class]);
 }
 
-+ (void)registerNibForTableViewBTI:(UITableView *)tableView
++ (void)registerNibForTableViewBTI:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -81,7 +81,7 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-+ (instancetype)dequeueHeaderFooterViewFromTableViewBTI:(UITableView *)tableView
++ (nullable instancetype)dequeueHeaderFooterViewFromTableViewBTI:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

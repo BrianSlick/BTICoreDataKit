@@ -1,12 +1,12 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
 
 // Libraries
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 @interface NSMutableArray (BTIKitAdditions)
 
@@ -25,9 +25,9 @@
 
 /**
  Adds the provided string to the receiver. If the string is nil or blank, or if the object is not a string, it will not be added. This method is intended to be a companion to componentsJoinedByString:, allowing an array to be quickly populated with strings while removing a lot of validity checking boilerplate.
-
+ 
  @param string String object to be added to the array
  */
-- (void)safelyAddPopulatedStringBTI:(NSString *)string;
- 
+- (void)safelyAddPopulatedStringBTI:(nullable NSString *)string;
+
 @end

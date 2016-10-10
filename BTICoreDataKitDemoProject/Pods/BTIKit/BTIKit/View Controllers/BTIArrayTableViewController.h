@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -27,10 +27,10 @@
 #pragma mark - Public Properties
 
 /// Container for data to display in the primary table view.
-@property (nonatomic, strong, readonly) NSMutableArray *mainContents;
+@property (nonnull, nonatomic, strong, readonly) NSMutableArray *mainContents;
 
 /// Container for data to display in the search table view.
-@property (nonatomic, strong, readonly) NSMutableArray *searchContents;
+@property (nonnull, nonatomic, strong, readonly) NSMutableArray *searchContents;
 
 #pragma mark - Public Methods
 

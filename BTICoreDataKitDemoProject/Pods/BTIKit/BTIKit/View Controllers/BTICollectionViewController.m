@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,7 +25,7 @@
 @interface BTICollectionViewController ()
 
 // Private Properties
-@property (nonatomic, strong) NSMutableSet *selectionSet;
+@property (nonnull, nonatomic, strong) NSMutableSet *selectionSet;
 
 @end
 
@@ -52,7 +52,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableSet *)selectionSet
+- (nonnull NSMutableSet *)selectionSet
 {
     if (_selectionSet == nil)
     {
@@ -101,8 +101,8 @@
 
 #pragma mark - Misc Methods
 
-- (id)itemInCollectionView:(UICollectionView *)collectionView
-               atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)itemInCollectionView:(nonnull UICollectionView *)collectionView
+                        atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -120,7 +120,7 @@
     return object;
 }
 
-- (void)registerNibsForCollectionView:(UICollectionView *)collectionView
+- (void)registerNibsForCollectionView:(nonnull UICollectionView *)collectionView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,7 +25,7 @@
 @interface BTIArrayCollectionViewController ()
 
 // Private Properties
-@property (nonatomic, strong) NSMutableArray *mainContents;
+@property (nonnull, nonatomic, strong) NSMutableArray *mainContents;
 
 @end
 
@@ -42,7 +42,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableArray *)mainContents
+- (nonnull NSMutableArray *)mainContents
 {
     if (_mainContents == nil)
     {
@@ -59,11 +59,11 @@
 
 #pragma mark - BTICollectionViewController Overrides
 
-- (id)itemInCollectionView:(UICollectionView *)collectionView
-               atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)itemInCollectionView:(nonnull UICollectionView *)collectionView
+                        atIndexPath:(nullable NSIndexPath *)indexPath;
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     NSInteger row = [indexPath row];
     
     id object = nil;

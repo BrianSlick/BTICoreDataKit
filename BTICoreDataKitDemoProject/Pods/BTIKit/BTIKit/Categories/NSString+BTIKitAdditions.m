@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -20,11 +20,17 @@
 
 @implementation NSString (BTIKitAdditions)
 
-- (BOOL)writeToURLBTI:(NSURL *)url
+- (BOOL)writeToURLBTI:(nullable NSURL *)url
            atomically:(BOOL)useAuxiliaryFile
              encoding:(NSStringEncoding)enc
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (url == nil)
+    {
+        NSLog(@"BTI ERROR: Attempted to write to nil URL");
+        return NO;
+    }
     
     NSError *error = nil;
     BOOL isWriteSuccessful = [self writeToURL:url
@@ -43,7 +49,7 @@
 - (BOOL)isNotEmptyBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if ([self length] == 0)
     {
         //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - No length", self, __PRETTY_FUNCTION__);

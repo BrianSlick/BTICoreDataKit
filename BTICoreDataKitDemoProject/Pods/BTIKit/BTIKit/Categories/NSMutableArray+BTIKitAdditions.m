@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -24,7 +24,7 @@
 - (void)removeFirstObjectBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-        
+    
     if ([self count] > 0)
     {
         [self removeObjectAtIndex:0];
@@ -37,19 +37,19 @@
                      toIndex:(NSUInteger)toIndex
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     id movingObject = [self objectAtIndex:fromIndex];
     
     [self removeObjectAtIndex:fromIndex];
     [self insertObject:movingObject atIndex:toIndex];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)safelyAddPopulatedStringBTI:(NSString *)string
+- (void)safelyAddPopulatedStringBTI:(nullable NSString *)string
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     if (![string isKindOfClass:[NSString class]])
     {
         //BTITrackingLog(@"<<< Leaving  <%p> %s >>> EARLY - Input is not a string", self, __PRETTY_FUNCTION__);
@@ -63,7 +63,7 @@
     }
     
     [self addObject:string];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 

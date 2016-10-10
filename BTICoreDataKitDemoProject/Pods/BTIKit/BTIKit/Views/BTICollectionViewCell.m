@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -47,7 +47,7 @@
 
 #pragma mark - Misc Methods
 
-+ (NSString *)reuseIdentifierBTI
++ (nonnull NSString *)reuseIdentifierBTI
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -55,7 +55,7 @@
     return NSStringFromClass([self class]);
 }
 
-+ (void)registerNibForCollectionViewBTI:(UICollectionView *)collectionView
++ (void)registerNibForCollectionViewBTI:(nullable UICollectionView *)collectionView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -67,8 +67,8 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-+ (instancetype)dequeueCellFromCollectionViewBTI:(UICollectionView *)collectionView
-                                    forIndexPath:(NSIndexPath *)indexPath
++ (nullable instancetype)dequeueCellFromCollectionViewBTI:(nullable UICollectionView *)collectionView
+                                             forIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

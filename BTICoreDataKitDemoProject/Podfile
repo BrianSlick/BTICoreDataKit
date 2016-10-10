@@ -1,5 +1,11 @@
-platform :ios, '7.0'
+source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'BTIKit', :git =>'https://github.com/BriTerIdeas/BTIKit.git'
+platform :ios, '9.0'
 
-link_with 'BTICoreDataKitDemoProject', 'BTICoreDataKitDemoProjectTests'
+target 'BTICoreDataKitDemoProject' do
+	pod 'BTIKit', :git =>'https://github.com/BriTerIdeas/BTIKit.git'
+end
+
+target 'BTICoreDataKitDemoProjectTests' do
+	pod 'BTIKit', :git =>'https://github.com/BriTerIdeas/BTIKit.git'
+end

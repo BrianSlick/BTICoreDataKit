@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -28,10 +28,10 @@
 #pragma mark - Public Properties
 
 /// Contents manager for data to display in the primary table view.
-@property (nonatomic, strong, readonly) BTITableContentsManager *mainContentsManager;
+@property (nonnull, nonatomic, strong, readonly) BTITableContentsManager *mainContentsManager;
 
 /// Contents manager for data to display in the primary table view.
-@property (nonatomic, strong, readonly) BTITableContentsManager *searchContentsManager;
+@property (nonnull, nonatomic, strong, readonly) BTITableContentsManager *searchContentsManager;
 
 #pragma mark - Public Methods
 
@@ -41,7 +41,7 @@
  
  @return Either \em mainContentsManager or \em searchContentsManager, depending on which \em tableView is provided.
  */
-- (BTITableContentsManager *)contentsManagerForTableView:(UITableView *)tableView;
+- (nullable BTITableContentsManager *)contentsManagerForTableView:(nullable UITableView *)tableView;
 
 /** Returns the BTITableSectionInfo object corresponding to the tableView at the desired index.
  
@@ -49,8 +49,8 @@
  @param index Index for the section
  
  @return The BTITableSectionInfo object at \em index.
-*/
-- (BTITableSectionInfo *)sectionInfoInTableView:(UITableView *)tableView atIndex:(NSUInteger)index;
+ */
+- (nullable BTITableSectionInfo *)sectionInfoInTableView:(nullable UITableView *)tableView atIndex:(NSUInteger)index;
 
 /** Returns the BTITableRowInfo object corresponding to the tableView at the desired index path.
  
@@ -59,7 +59,7 @@
  
  @return The BTITableRowInfo object at \em indexPath
  */
-- (BTITableRowInfo *)rowInfoInTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath;
+- (nullable BTITableRowInfo *)rowInfoInTableView:(nullable UITableView *)tableView atIndexPath:(nullable NSIndexPath *)indexPath;
 
 /** Returns the BTITableRowInfo's represented object corresponding to the tableView at the desired index path.
  
@@ -68,6 +68,6 @@
  
  @return The BTITableRowInfo's represented object at \em indexPath
  */
-- (id)representedObjectInTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath;
+- (nullable id)representedObjectInTableView:(nullable UITableView *)tableView atIndexPath:(nullable NSIndexPath *)indexPath;
 
 @end

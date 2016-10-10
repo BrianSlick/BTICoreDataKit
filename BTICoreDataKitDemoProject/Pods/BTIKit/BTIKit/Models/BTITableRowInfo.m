@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -21,7 +21,7 @@
 @interface BTITableRowInfo ()
 
 // Private Properties
-@property (nonatomic, copy) NSString *UUIDString;
+@property (nonnull, nonatomic, copy) NSString *UUIDString;
 
 @end
 
@@ -99,10 +99,15 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (void)populateCell:(UITableViewCell *)cell
+- (void)populateCell:(nullable UITableViewCell *)cell
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
 
+    if (cell == nil)
+    {
+        return;
+    }
+    
     [[cell textLabel] setText:[self text]];
     [[cell detailTextLabel] setText:[self detailText]];
     [cell setAccessoryType:[self cellAccessoryType]];

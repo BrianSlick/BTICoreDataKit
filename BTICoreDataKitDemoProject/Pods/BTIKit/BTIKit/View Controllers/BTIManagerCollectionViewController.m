@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,7 +25,7 @@
 @interface BTIManagerCollectionViewController ()
 
 // Private Properties
-@property (nonatomic, strong) BTITableContentsManager *mainContentsManager;
+@property (nonnull, nonatomic, strong) BTITableContentsManager *mainContentsManager;
 
 @end
 
@@ -42,7 +42,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (BTITableContentsManager *)mainContentsManager
+- (nonnull BTITableContentsManager *)mainContentsManager
 {
     if (_mainContentsManager == nil)
     {
@@ -69,7 +69,7 @@
 
 #pragma mark - Misc Methods
 
-- (BTITableContentsManager *)contentsManagerForCollectionView:(UICollectionView *)collectionView
+- (nullable BTITableContentsManager *)contentsManagerForCollectionView:(nullable UICollectionView *)collectionView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -84,8 +84,8 @@
     return manager;
 }
 
-- (BTITableSectionInfo *)sectionInfoInCollectionView:(UICollectionView *)collectionView
-                                             atIndex:(NSUInteger)index
+- (nullable BTITableSectionInfo *)sectionInfoInCollectionView:(nullable UICollectionView *)collectionView
+                                                      atIndex:(NSUInteger)index
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -95,8 +95,8 @@
     return [manager sectionInfoAtIndex:index];
 }
 
-- (BTITableRowInfo *)rowInfoInCollectionView:(UICollectionView *)collectionView
-                                 atIndexPath:(NSIndexPath *)indexPath
+- (nullable BTITableRowInfo *)rowInfoInCollectionView:(nullable UICollectionView *)collectionView
+                                          atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -106,8 +106,8 @@
     return [manager rowInfoAtIndexPath:indexPath];
 }
 
-- (id)representedObjectInCollectionView:(UICollectionView *)collectionView
-                            atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)representedObjectInCollectionView:(nullable UICollectionView *)collectionView
+                                     atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     

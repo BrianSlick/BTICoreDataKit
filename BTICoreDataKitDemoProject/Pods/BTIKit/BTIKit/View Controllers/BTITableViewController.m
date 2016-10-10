@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -25,7 +25,8 @@
 @interface BTITableViewController ()
 
 // Private Properties
-@property (nonatomic, strong) NSMutableSet *selectionSet;
+@property (nullable, nonatomic, strong) UISearchController *searchController;
+@property (nonnull, nonatomic, strong) NSMutableSet *selectionSet;
 
 @end
 
@@ -40,10 +41,9 @@
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-    // Clear delegates and other global references
     [_tableView setDataSource:nil];
     [_tableView setDelegate:nil];
-        
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -52,7 +52,7 @@
 
 #pragma mark - Custom Getters and Setters
 
-- (NSMutableSet *)selectionSet
+- (nonnull NSMutableSet *)selectionSet
 {
     if (_selectionSet == nil)
     {
@@ -66,32 +66,17 @@
 - (void)viewDidLoad
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-
+    
     [super viewDidLoad];
     
     UITableView *tableView = [self tableView];
-    if (tableView == nil)
-    {
-        UIView *mainView = [self view];
-        
-        tableView = [[UITableView alloc] initWithFrame:[mainView bounds] style:UITableViewStylePlain];
-        [tableView setAutoresizingMask:[mainView autoresizingMask]];
-        
-        [mainView addSubview:tableView];
-        
-        [self setTableView:tableView];
-    }
+    NSAssert(tableView != nil, @"Table view was not created");
     
     [tableView setDelegate:self];
     [tableView setDataSource:self];
     
-    UISearchDisplayController *searchController = [self searchDisplayController];
-    [searchController setDelegate:self];
-    [searchController setSearchResultsDataSource:self];
-    [searchController setSearchResultsDelegate:self];
-
     [self registerNibsForTableView:tableView];
-
+    
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
@@ -103,7 +88,6 @@
     [super setEditing:editing animated:animated];
     
     [[self tableView] setEditing:editing animated:animated];
-    [[[self searchDisplayController] searchResultsTableView] setEditing:editing animated:animated];
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
@@ -119,7 +103,7 @@
 
 #pragma mark - Misc Methods
 
-- (void)handleSearchForTerm:(NSString *)searchTerm
+- (void)handleSearchForTerm:(nullable NSString *)searchTerm
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -130,8 +114,8 @@
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
 
-- (id)itemInTableView:(UITableView *)tableView
-          atIndexPath:(NSIndexPath *)indexPath
+- (nullable id)itemInTableView:(nullable UITableView *)tableView
+                   atIndexPath:(nullable NSIndexPath *)indexPath
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
@@ -139,26 +123,58 @@
     
     // Sample usage
     
-//    if (tableView == [self tableView])
-//    {
-//        // Main contents
-//        object = <something from primary array>;
-//    }
-//    else if (tableView == [[self searchDisplayController] searchResultsTableView])
-//    {
-//        // Search contents
-//        object = <something from search array>;
-//    }
+    //    if ([[self searchController] isActive])
+    //    {
+    //        // Search contents
+    //        object = <something from search array>;
+    //    }
+    //    else
+    //    {
+    //        // Main contents
+    //        object = <something from primary array>;
+    //    }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
     return object;
 }
 
-- (void)registerNibsForTableView:(UITableView *)tableView
+- (void)registerNibsForTableView:(nullable UITableView *)tableView
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
     // Deliberately blank. Subclasses should override, no need to call super.
+    
+    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
+}
+
+- (void)setSearchInterfaceVisible:(BOOL)isVisible
+{
+    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    
+    if (isVisible)
+    {
+        UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        [self setSearchController:searchController];
+        
+        [searchController setSearchResultsUpdater:self];
+        [searchController setDimsBackgroundDuringPresentation:NO];
+        
+        UISearchBar *searchBar = [searchController searchBar];
+        [[self tableView] setTableHeaderView:searchBar];
+        [searchBar sizeToFit];
+        
+        [self setDefinesPresentationContext:YES];
+    }
+    else
+    {
+        UISearchController *searchController = [self searchController];
+        [searchController setActive:NO];
+        [searchController setDelegate:nil];
+        [searchController setSearchResultsUpdater:nil];
+        [[self tableView] setTableHeaderView:nil];
+        
+        [self setSearchController:nil];
+    }
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }
@@ -184,33 +200,17 @@
 #pragma mark - UITableViewDelegate Methods
 
 
-#pragma mark - UISearchDisplayDelegate Methods
+#pragma mark - UISearchResultsUpdating Methods
 
-- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController
 {
     //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
     
-    [[self tableView] reloadData];
-    
-    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-}
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller
-shouldReloadTableForSearchString:(NSString *)searchString
-{
-    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
+    NSString *searchString = [[searchController searchBar] text];
     
     [self handleSearchForTerm:searchString];
     
-    //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
-    return YES;
-}
-
-- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller
-{
-    //BTITrackingLog(@">>> Entering <%p> %s <<<", self, __PRETTY_FUNCTION__);
-    
-    [self setSavedSearchTerm:nil];
+    [[self tableView] reloadData];
     
     //BTITrackingLog(@"<<< Leaving  <%p> %s >>>", self, __PRETTY_FUNCTION__);
 }

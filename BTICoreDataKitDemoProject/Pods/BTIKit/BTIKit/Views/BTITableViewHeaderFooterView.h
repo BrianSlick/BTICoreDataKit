@@ -1,6 +1,6 @@
 //
 //  BTIKit -- [https://github.com/BriTerIdeas/BTIKit]
-//  v1.4
+//  v1.6
 //
 //  Created by Brian Slick. Copyright (c) 2015 BriTer Ideas LLC. All rights reserved.
 //
@@ -14,7 +14,7 @@
  */
 
 // Libraries
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 // Forward Declarations and Classes
 
@@ -34,20 +34,20 @@
  
  @return The class name as a string
  */
-+ (NSString *)reuseIdentifierBTI;
++ (nonnull NSString *)reuseIdentifierBTI;
 
 /**
  Creates and registers a UINib object matching the class name with the provided table view
  
  @param tableView The UITableView object with which to register the Nib
  */
-+ (void)registerNibForTableViewBTI:(UITableView *)tableView;
++ (void)registerNibForTableViewBTI:(nullable UITableView *)tableView;
 
 /**
  Dequeues a reusable view of receiver's class type from the provided table view, or nil if no nib is registered.
  
  @param tableView the UITableView object from which to dequeue a header footer view.
  */
-+ (instancetype)dequeueHeaderFooterViewFromTableViewBTI:(UITableView *)tableView;
++ (nullable instancetype)dequeueHeaderFooterViewFromTableViewBTI:(nullable UITableView *)tableView;
 
 @end
